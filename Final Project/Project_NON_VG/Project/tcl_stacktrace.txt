@@ -1,0 +1,462 @@
+Wed Dec 06 18:44:02 CST 2023
+Trace back: bad window path name ".srcobjdlg"
+    while executing
+"winfo screenwidth $w"
+    (procedure "::tk::PlaceWindow" line 6)
+    invoked from within
+"::tk::PlaceWindow $w"
+    (procedure "tk_dialog" line 118)
+    invoked from within
+"tk_dialog .srcobjdlg "Warning!" "$msg" "" 1 Overwrite Reload Ignore"
+    (object "::.main_pane.source.interior.cs.body.srcobj" method "::vsimwidgets::Srcobj::CheckModification" body line 18)
+    invoked from within
+"::.main_pane.source.interior.cs.body.srcobj CheckModification"
+    (in namespace inscope "::vsimwidgets::Srcobj" script line 1)
+    invoked from within
+"namespace inscope ::vsimwidgets::Srcobj {::.main_pane.source.interior.cs.body.srcobj CheckModification}"
+    (command bound to event)
+  <2:C:/Users/dasas/Documents/modelsim/modelsim_ase/win32aloem/tk8.6/bgerror.tcl:106: ::tkerror {bad window path name ".srcobjdlg"}
+  <1:eval:1: ::tk::dialog::error::bgerror {bad window path name ".srcobjdlg"}
+Wed Dec 06 19:29:55 CST 2023
+Trace back: window ".srcobjdlg" was deleted before its visibility changed
+    while executing
+"tkwait visibility $w"
+    (procedure "tk_dialog" line 119)
+    invoked from within
+"tk_dialog .srcobjdlg "Warning!" "$msg" "" 1 Overwrite Reload Ignore"
+    (object "::.main_pane.source.interior.cs.body.srcobj" method "::vsimwidgets::Srcobj::CheckModification" body line 18)
+    invoked from within
+"::.main_pane.source.interior.cs.body.srcobj CheckModification"
+    (in namespace inscope "::vsimwidgets::Srcobj" script line 1)
+    invoked from within
+"namespace inscope ::vsimwidgets::Srcobj {::.main_pane.source.interior.cs.body.srcobj CheckModification}"
+    (command bound to event)
+  <2:C:/Users/dasas/Documents/modelsim/modelsim_ase/win32aloem/tk8.6/bgerror.tcl:106: ::tkerror {window ".srcobjdlg" was deleted before its visibility changed}
+  <1:proc:153: ::tk::dialog::error::bgerror {window ".srcobjdlg" was deleted before its visibility changed}
+Wed Dec 06 19:36:25 CST 2023
+Trace back: window ".srcobjdlg" was deleted before its visibility changed
+    while executing
+"tkwait visibility $w"
+    (procedure "tk_dialog" line 119)
+    invoked from within
+"tk_dialog .srcobjdlg "Warning!" "$msg" "" 1 Overwrite Reload Ignore"
+    (object "::.main_pane.source.interior.cs.body.srcobj" method "::vsimwidgets::Srcobj::CheckModification" body line 18)
+    invoked from within
+"::.main_pane.source.interior.cs.body.srcobj CheckModification"
+    (in namespace inscope "::vsimwidgets::Srcobj" script line 1)
+    invoked from within
+"namespace inscope ::vsimwidgets::Srcobj {::.main_pane.source.interior.cs.body.srcobj CheckModification}"
+    (command bound to event)
+  <2:C:/Users/dasas/Documents/modelsim/modelsim_ase/win32aloem/tk8.6/bgerror.tcl:106: ::tkerror {window ".srcobjdlg" was deleted before its visibility changed}
+  <1:proc:153: ::tk::dialog::error::bgerror {window ".srcobjdlg" was deleted before its visibility changed}
+Wed Dec 06 20:02:37 CST 2023
+Trace back: window ".srcobjdlg" was deleted before its visibility changed
+    while executing
+"tkwait visibility $w"
+    (procedure "tk_dialog" line 119)
+    invoked from within
+"tk_dialog .srcobjdlg "Warning!" "$msg" "" 1 Overwrite Reload Ignore"
+    (object "::.main_pane.source.interior.cs.body.srcobj" method "::vsimwidgets::Srcobj::CheckModification" body line 18)
+    invoked from within
+"::.main_pane.source.interior.cs.body.srcobj CheckModification"
+    (in namespace inscope "::vsimwidgets::Srcobj" script line 1)
+    invoked from within
+"namespace inscope ::vsimwidgets::Srcobj {::.main_pane.source.interior.cs.body.srcobj CheckModification}"
+    (command bound to event)
+  <2:C:/Users/dasas/Documents/modelsim/modelsim_ase/win32aloem/tk8.6/bgerror.tcl:106: ::tkerror {window ".srcobjdlg" was deleted before its visibility changed}
+  <1:proc:153: ::tk::dialog::error::bgerror {window ".srcobjdlg" was deleted before its visibility changed}
+Wed Dec 06 20:11:34 CST 2023
+Trace back: window ".srcobjdlg" was deleted before its visibility changed
+    while executing
+"tkwait visibility $w"
+    (procedure "tk_dialog" line 119)
+    invoked from within
+"tk_dialog .srcobjdlg "Warning!" "$msg" "" 1 Overwrite Reload Ignore"
+    (object "::.main_pane.source.interior.cs.body.srcobj" method "::vsimwidgets::Srcobj::CheckModification" body line 18)
+    invoked from within
+"::.main_pane.source.interior.cs.body.srcobj CheckModification"
+    (in namespace inscope "::vsimwidgets::Srcobj" script line 1)
+    invoked from within
+"namespace inscope ::vsimwidgets::Srcobj {::.main_pane.source.interior.cs.body.srcobj CheckModification}"
+    (command bound to event)
+  <2:C:/Users/dasas/Documents/modelsim/modelsim_ase/win32aloem/tk8.6/bgerror.tcl:106: ::tkerror {window ".srcobjdlg" was deleted before its visibility changed}
+  <1:proc:153: ::tk::dialog::error::bgerror {window ".srcobjdlg" was deleted before its visibility changed}
+Wed Dec 06 21:29:19 CST 2023
+Trace back: window ".srcobjdlg" was deleted before its visibility changed
+    while executing
+"tkwait visibility $w"
+    (procedure "tk_dialog" line 119)
+    invoked from within
+"tk_dialog .srcobjdlg "Warning!" "$msg" "" 1 Overwrite Reload Ignore"
+    (object "::.main_pane.source.interior.cs.body.srcobj" method "::vsimwidgets::Srcobj::CheckModification" body line 18)
+    invoked from within
+"::.main_pane.source.interior.cs.body.srcobj CheckModification"
+    (in namespace inscope "::vsimwidgets::Srcobj" script line 1)
+    invoked from within
+"namespace inscope ::vsimwidgets::Srcobj {::.main_pane.source.interior.cs.body.srcobj CheckModification}"
+    (command bound to event)
+  <2:C:/Users/dasas/Documents/modelsim/modelsim_ase/win32aloem/tk8.6/bgerror.tcl:106: ::tkerror {window ".srcobjdlg" was deleted before its visibility changed}
+  <1:proc:153: ::tk::dialog::error::bgerror {window ".srcobjdlg" was deleted before its visibility changed}
+Wed Dec 06 21:30:41 CST 2023
+Trace back: window ".srcobjdlg" was deleted before its visibility changed
+    while executing
+"tkwait visibility $w"
+    (procedure "tk_dialog" line 119)
+    invoked from within
+"tk_dialog .srcobjdlg "Warning!" "$msg" "" 1 Overwrite Reload Ignore"
+    (object "::.main_pane.source.interior.cs.body.srcobj" method "::vsimwidgets::Srcobj::CheckModification" body line 18)
+    invoked from within
+"::.main_pane.source.interior.cs.body.srcobj CheckModification"
+    (in namespace inscope "::vsimwidgets::Srcobj" script line 1)
+    invoked from within
+"namespace inscope ::vsimwidgets::Srcobj {::.main_pane.source.interior.cs.body.srcobj CheckModification}"
+    (command bound to event)
+  <2:C:/Users/dasas/Documents/modelsim/modelsim_ase/win32aloem/tk8.6/bgerror.tcl:106: ::tkerror {window ".srcobjdlg" was deleted before its visibility changed}
+  <1:proc:153: ::tk::dialog::error::bgerror {window ".srcobjdlg" was deleted before its visibility changed}
+Fri Dec 08 10:38:35 CST 2023
+Trace back: window ".srcobjdlg" was deleted before its visibility changed
+    while executing
+"tkwait visibility $w"
+    (procedure "tk_dialog" line 119)
+    invoked from within
+"tk_dialog .srcobjdlg "Warning!" "$msg" "" 1 Overwrite Reload Ignore"
+    (object "::.main_pane.source.interior.cs.body.srcobj" method "::vsimwidgets::Srcobj::CheckModification" body line 18)
+    invoked from within
+"::.main_pane.source.interior.cs.body.srcobj CheckModification"
+    (in namespace inscope "::vsimwidgets::Srcobj" script line 1)
+    invoked from within
+"namespace inscope ::vsimwidgets::Srcobj {::.main_pane.source.interior.cs.body.srcobj CheckModification}"
+    (command bound to event)
+  <2:C:/Users/dasas/Documents/modelsim/modelsim_ase/win32aloem/tk8.6/bgerror.tcl:106: ::tkerror {window ".srcobjdlg" was deleted before its visibility changed}
+  <1:proc:153: ::tk::dialog::error::bgerror {window ".srcobjdlg" was deleted before its visibility changed}
+Fri Dec 08 10:38:36 CST 2023
+Trace back: bad window path name ".srcobjdlg"
+    while executing
+"winfo screenwidth $w"
+    (procedure "::tk::PlaceWindow" line 6)
+    invoked from within
+"::tk::PlaceWindow $w"
+    (procedure "tk_dialog" line 118)
+    invoked from within
+"tk_dialog .srcobjdlg "Warning!" "$msg" "" 1 Overwrite Reload Ignore"
+    (object "::.main_pane.source.interior.cs.body.srcobj" method "::vsimwidgets::Srcobj::CheckModification" body line 18)
+    invoked from within
+"::.main_pane.source.interior.cs.body.srcobj CheckModification"
+    (in namespace inscope "::vsimwidgets::Srcobj" script line 1)
+    invoked from within
+"namespace inscope ::vsimwidgets::Srcobj {::.main_pane.source.interior.cs.body.srcobj CheckModification}"
+    (command bound to event)
+  <2:C:/Users/dasas/Documents/modelsim/modelsim_ase/win32aloem/tk8.6/bgerror.tcl:106: ::tkerror {bad window path name ".srcobjdlg"}
+  <1:C:/mtitcl/vsim/dataflow.tc_:24053: ::tk::dialog::error::bgerror {bad window path name ".srcobjdlg"}
+Fri Dec 08 10:50:29 CST 2023
+Trace back: window ".srcobjdlg" was deleted before its visibility changed
+    while executing
+"tkwait visibility $w"
+    (procedure "tk_dialog" line 119)
+    invoked from within
+"tk_dialog .srcobjdlg "Warning!" "$msg" "" 1 Overwrite Reload Ignore"
+    (object "::.main_pane.source.interior.cs.body.srcobj" method "::vsimwidgets::Srcobj::CheckModification" body line 18)
+    invoked from within
+"::.main_pane.source.interior.cs.body.srcobj CheckModification"
+    (in namespace inscope "::vsimwidgets::Srcobj" script line 1)
+    invoked from within
+"namespace inscope ::vsimwidgets::Srcobj {::.main_pane.source.interior.cs.body.srcobj CheckModification}"
+    (command bound to event)
+  <2:C:/Users/dasas/Documents/modelsim/modelsim_ase/win32aloem/tk8.6/bgerror.tcl:106: ::tkerror {window ".srcobjdlg" was deleted before its visibility changed}
+  <1:proc:153: ::tk::dialog::error::bgerror {window ".srcobjdlg" was deleted before its visibility changed}
+Fri Dec 08 10:50:30 CST 2023
+Trace back: bad window path name ".srcobjdlg"
+    while executing
+"winfo screenwidth $w"
+    (procedure "::tk::PlaceWindow" line 6)
+    invoked from within
+"::tk::PlaceWindow $w"
+    (procedure "tk_dialog" line 118)
+    invoked from within
+"tk_dialog .srcobjdlg "Warning!" "$msg" "" 1 Overwrite Reload Ignore"
+    (object "::.main_pane.source.interior.cs.body.srcobj" method "::vsimwidgets::Srcobj::CheckModification" body line 18)
+    invoked from within
+"::.main_pane.source.interior.cs.body.srcobj CheckModification"
+    (in namespace inscope "::vsimwidgets::Srcobj" script line 1)
+    invoked from within
+"namespace inscope ::vsimwidgets::Srcobj {::.main_pane.source.interior.cs.body.srcobj CheckModification}"
+    (command bound to event)
+  <2:C:/Users/dasas/Documents/modelsim/modelsim_ase/win32aloem/tk8.6/bgerror.tcl:106: ::tkerror {bad window path name ".srcobjdlg"}
+  <1:C:/mtitcl/vsim/vsimcmd.tc_:752: ::tk::dialog::error::bgerror {bad window path name ".srcobjdlg"}
+Fri Dec 08 11:08:47 CST 2023
+Trace back: bad window path name ".srcobjdlg"
+    while executing
+"winfo screenwidth $w"
+    (procedure "::tk::PlaceWindow" line 6)
+    invoked from within
+"::tk::PlaceWindow $w"
+    (procedure "tk_dialog" line 118)
+    invoked from within
+"tk_dialog .srcobjdlg "Warning!" "$msg" "" 1 Overwrite Reload Ignore"
+    (object "::.main_pane.source.interior.cs.body.srcobj" method "::vsimwidgets::Srcobj::CheckModification" body line 18)
+    invoked from within
+"::.main_pane.source.interior.cs.body.srcobj CheckModification"
+    (in namespace inscope "::vsimwidgets::Srcobj" script line 1)
+    invoked from within
+"namespace inscope ::vsimwidgets::Srcobj {::.main_pane.source.interior.cs.body.srcobj CheckModification}"
+    (command bound to event)
+  <2:C:/Users/dasas/Documents/modelsim/modelsim_ase/win32aloem/tk8.6/bgerror.tcl:106: ::tkerror {bad window path name ".srcobjdlg"}
+  <1:proc:153: ::tk::dialog::error::bgerror {bad window path name ".srcobjdlg"}
+Fri Dec 08 11:08:47 CST 2023
+Trace back: bad window path name ".srcobjdlg"
+    while executing
+"winfo screenwidth $w"
+    (procedure "::tk::PlaceWindow" line 6)
+    invoked from within
+"::tk::PlaceWindow $w"
+    (procedure "tk_dialog" line 118)
+    invoked from within
+"tk_dialog .srcobjdlg "Warning!" "$msg" "" 1 Overwrite Reload Ignore"
+    (object "::.main_pane.source.interior.cs.body.srcobj" method "::vsimwidgets::Srcobj::CheckModification" body line 18)
+    invoked from within
+"::.main_pane.source.interior.cs.body.srcobj CheckModification"
+    (in namespace inscope "::vsimwidgets::Srcobj" script line 1)
+    invoked from within
+"namespace inscope ::vsimwidgets::Srcobj {::.main_pane.source.interior.cs.body.srcobj CheckModification}"
+    (command bound to event)
+  <2:C:/Users/dasas/Documents/modelsim/modelsim_ase/win32aloem/tk8.6/bgerror.tcl:106: ::tkerror {bad window path name ".srcobjdlg"}
+  <1:C:/mtitcl/vsim/dataflow.tc_:24053: ::tk::dialog::error::bgerror {bad window path name ".srcobjdlg"}
+Fri Dec 08 11:23:31 CST 2023
+Trace back: window ".srcobjdlg" was deleted before its visibility changed
+    while executing
+"tkwait visibility $w"
+    (procedure "tk_dialog" line 119)
+    invoked from within
+"tk_dialog .srcobjdlg "Warning!" "$msg" "" 1 Overwrite Reload Ignore"
+    (object "::.main_pane.source.interior.cs.body.srcobj" method "::vsimwidgets::Srcobj::CheckModification" body line 18)
+    invoked from within
+"::.main_pane.source.interior.cs.body.srcobj CheckModification"
+    (in namespace inscope "::vsimwidgets::Srcobj" script line 1)
+    invoked from within
+"namespace inscope ::vsimwidgets::Srcobj {::.main_pane.source.interior.cs.body.srcobj CheckModification}"
+    (command bound to event)
+  <2:C:/Users/dasas/Documents/modelsim/modelsim_ase/win32aloem/tk8.6/bgerror.tcl:106: ::tkerror {window ".srcobjdlg" was deleted before its visibility changed}
+  <1:proc:153: ::tk::dialog::error::bgerror {window ".srcobjdlg" was deleted before its visibility changed}
+Fri Dec 08 11:23:32 CST 2023
+Trace back: bad window path name ".srcobjdlg"
+    while executing
+"winfo screenwidth $w"
+    (procedure "::tk::PlaceWindow" line 6)
+    invoked from within
+"::tk::PlaceWindow $w"
+    (procedure "tk_dialog" line 118)
+    invoked from within
+"tk_dialog .srcobjdlg "Warning!" "$msg" "" 1 Overwrite Reload Ignore"
+    (object "::.main_pane.source.interior.cs.body.srcobj" method "::vsimwidgets::Srcobj::CheckModification" body line 18)
+    invoked from within
+"::.main_pane.source.interior.cs.body.srcobj CheckModification"
+    (in namespace inscope "::vsimwidgets::Srcobj" script line 1)
+    invoked from within
+"namespace inscope ::vsimwidgets::Srcobj {::.main_pane.source.interior.cs.body.srcobj CheckModification}"
+    (command bound to event)
+  <2:C:/Users/dasas/Documents/modelsim/modelsim_ase/win32aloem/tk8.6/bgerror.tcl:106: ::tkerror {bad window path name ".srcobjdlg"}
+  <1:C:/mtitcl/vsim/dataflow.tc_:24053: ::tk::dialog::error::bgerror {bad window path name ".srcobjdlg"}
+Fri Dec 08 11:50:01 CST 2023
+Trace back: window ".srcobjdlg" was deleted before its visibility changed
+    while executing
+"tkwait visibility $w"
+    (procedure "tk_dialog" line 119)
+    invoked from within
+"tk_dialog .srcobjdlg "Warning!" "$msg" "" 1 Overwrite Reload Ignore"
+    (object "::.main_pane.source.interior.cs.body.srcobj" method "::vsimwidgets::Srcobj::CheckModification" body line 18)
+    invoked from within
+"::.main_pane.source.interior.cs.body.srcobj CheckModification"
+    (in namespace inscope "::vsimwidgets::Srcobj" script line 1)
+    invoked from within
+"namespace inscope ::vsimwidgets::Srcobj {::.main_pane.source.interior.cs.body.srcobj CheckModification}"
+    (command bound to event)
+  <2:C:/Users/dasas/Documents/modelsim/modelsim_ase/win32aloem/tk8.6/bgerror.tcl:106: ::tkerror {window ".srcobjdlg" was deleted before its visibility changed}
+  <1:proc:153: ::tk::dialog::error::bgerror {window ".srcobjdlg" was deleted before its visibility changed}
+Fri Dec 08 11:50:02 CST 2023
+Trace back: bad window path name ".srcobjdlg"
+    while executing
+"winfo screenwidth $w"
+    (procedure "::tk::PlaceWindow" line 6)
+    invoked from within
+"::tk::PlaceWindow $w"
+    (procedure "tk_dialog" line 118)
+    invoked from within
+"tk_dialog .srcobjdlg "Warning!" "$msg" "" 1 Overwrite Reload Ignore"
+    (object "::.main_pane.source.interior.cs.body.srcobj" method "::vsimwidgets::Srcobj::CheckModification" body line 18)
+    invoked from within
+"::.main_pane.source.interior.cs.body.srcobj CheckModification"
+    (in namespace inscope "::vsimwidgets::Srcobj" script line 1)
+    invoked from within
+"namespace inscope ::vsimwidgets::Srcobj {::.main_pane.source.interior.cs.body.srcobj CheckModification}"
+    (command bound to event)
+  <2:C:/Users/dasas/Documents/modelsim/modelsim_ase/win32aloem/tk8.6/bgerror.tcl:106: ::tkerror {bad window path name ".srcobjdlg"}
+  <1:C:/mtitcl/vsim/dataflow.tc_:24053: ::tk::dialog::error::bgerror {bad window path name ".srcobjdlg"}
+Fri Dec 08 17:19:35 CST 2023
+Trace back: window ".srcobjdlg" was deleted before its visibility changed
+    while executing
+"tkwait visibility $w"
+    (procedure "tk_dialog" line 119)
+    invoked from within
+"tk_dialog .srcobjdlg "Warning!" "$msg" "" 1 Overwrite Reload Ignore"
+    (object "::.main_pane.source.interior.cs.body.srcobj" method "::vsimwidgets::Srcobj::CheckModification" body line 18)
+    invoked from within
+"::.main_pane.source.interior.cs.body.srcobj CheckModification"
+    (in namespace inscope "::vsimwidgets::Srcobj" script line 1)
+    invoked from within
+"namespace inscope ::vsimwidgets::Srcobj {::.main_pane.source.interior.cs.body.srcobj CheckModification}"
+    (command bound to event)
+  <2:C:/Users/dasas/Documents/modelsim/modelsim_ase/win32aloem/tk8.6/bgerror.tcl:106: ::tkerror {window ".srcobjdlg" was deleted before its visibility changed}
+  <1:proc:153: ::tk::dialog::error::bgerror {window ".srcobjdlg" was deleted before its visibility changed}
+Fri Dec 08 17:19:36 CST 2023
+Trace back: bad window path name ".srcobjdlg"
+    while executing
+"winfo screenwidth $w"
+    (procedure "::tk::PlaceWindow" line 6)
+    invoked from within
+"::tk::PlaceWindow $w"
+    (procedure "tk_dialog" line 118)
+    invoked from within
+"tk_dialog .srcobjdlg "Warning!" "$msg" "" 1 Overwrite Reload Ignore"
+    (object "::.main_pane.source.interior.cs.body.srcobj" method "::vsimwidgets::Srcobj::CheckModification" body line 18)
+    invoked from within
+"::.main_pane.source.interior.cs.body.srcobj CheckModification"
+    (in namespace inscope "::vsimwidgets::Srcobj" script line 1)
+    invoked from within
+"namespace inscope ::vsimwidgets::Srcobj {::.main_pane.source.interior.cs.body.srcobj CheckModification}"
+    (command bound to event)
+  <2:C:/Users/dasas/Documents/modelsim/modelsim_ase/win32aloem/tk8.6/bgerror.tcl:106: ::tkerror {bad window path name ".srcobjdlg"}
+  <1:C:/mtitcl/vsim/vsimcmd.tc_:752: ::tk::dialog::error::bgerror {bad window path name ".srcobjdlg"}
+Fri Dec 08 20:57:54 CST 2023
+Trace back: window ".srcobjdlg" was deleted before its visibility changed
+    while executing
+"tkwait visibility $w"
+    (procedure "tk_dialog" line 119)
+    invoked from within
+"tk_dialog .srcobjdlg "Warning!" "$msg" "" 1 Overwrite Reload Ignore"
+    (object "::.main_pane.source1.interior.cs.body.srcobj" method "::vsimwidgets::Srcobj::CheckModification" body line 18)
+    invoked from within
+"::.main_pane.source1.interior.cs.body.srcobj CheckModification"
+    (in namespace inscope "::vsimwidgets::Srcobj" script line 1)
+    invoked from within
+"namespace inscope ::vsimwidgets::Srcobj {::.main_pane.source1.interior.cs.body.srcobj CheckModification}"
+    (command bound to event)
+  <2:C:/Users/dasas/Documents/modelsim/modelsim_ase/win32aloem/tk8.6/bgerror.tcl:106: ::tkerror {window ".srcobjdlg" was deleted before its visibility changed}
+  <1:eval:1: ::tk::dialog::error::bgerror {window ".srcobjdlg" was deleted before its visibility changed}
+Fri Dec 08 20:57:56 CST 2023
+Trace back: bad window path name ".srcobjdlg"
+    while executing
+"winfo screenwidth $w"
+    (procedure "::tk::PlaceWindow" line 6)
+    invoked from within
+"::tk::PlaceWindow $w"
+    (procedure "tk_dialog" line 118)
+    invoked from within
+"tk_dialog .srcobjdlg "Warning!" "$msg" "" 1 Overwrite Reload Ignore"
+    (object "::.main_pane.source1.interior.cs.body.srcobj" method "::vsimwidgets::Srcobj::CheckModification" body line 18)
+    invoked from within
+"::.main_pane.source1.interior.cs.body.srcobj CheckModification"
+    (in namespace inscope "::vsimwidgets::Srcobj" script line 1)
+    invoked from within
+"namespace inscope ::vsimwidgets::Srcobj {::.main_pane.source1.interior.cs.body.srcobj CheckModification}"
+    (command bound to event)
+  <2:C:/Users/dasas/Documents/modelsim/modelsim_ase/win32aloem/tk8.6/bgerror.tcl:106: ::tkerror {bad window path name ".srcobjdlg"}
+  <1:C:/mtitcl/vsim/vsimcmd.tc_:752: ::tk::dialog::error::bgerror {bad window path name ".srcobjdlg"}
+Fri Dec 08 21:16:40 CST 2023
+Trace back: window ".srcobjdlg" was deleted before its visibility changed
+    while executing
+"tkwait visibility $w"
+    (procedure "tk_dialog" line 119)
+    invoked from within
+"tk_dialog .srcobjdlg "Warning!" "$msg" "" 1 Overwrite Reload Ignore"
+    (object "::.main_pane.source1.interior.cs.body.srcobj" method "::vsimwidgets::Srcobj::CheckModification" body line 18)
+    invoked from within
+"::.main_pane.source1.interior.cs.body.srcobj CheckModification"
+    (in namespace inscope "::vsimwidgets::Srcobj" script line 1)
+    invoked from within
+"namespace inscope ::vsimwidgets::Srcobj {::.main_pane.source1.interior.cs.body.srcobj CheckModification}"
+    (command bound to event)
+  <2:C:/Users/dasas/Documents/modelsim/modelsim_ase/win32aloem/tk8.6/bgerror.tcl:106: ::tkerror {window ".srcobjdlg" was deleted before its visibility changed}
+  <1:proc:153: ::tk::dialog::error::bgerror {window ".srcobjdlg" was deleted before its visibility changed}
+Sat Dec 09 02:56:27 CST 2023
+Trace back: bad window path name ".srcobjdlg"
+    while executing
+"winfo screenwidth $w"
+    (procedure "::tk::PlaceWindow" line 6)
+    invoked from within
+"::tk::PlaceWindow $w"
+    (procedure "tk_dialog" line 118)
+    invoked from within
+"tk_dialog .srcobjdlg "Warning!" "$msg" "" 1 Overwrite Reload Ignore"
+    (object "::.main_pane.source.interior.cs.body.srcobj" method "::vsimwidgets::Srcobj::CheckModification" body line 18)
+    invoked from within
+"::.main_pane.source.interior.cs.body.srcobj CheckModification"
+    (in namespace inscope "::vsimwidgets::Srcobj" script line 1)
+    invoked from within
+"namespace inscope ::vsimwidgets::Srcobj {::.main_pane.source.interior.cs.body.srcobj CheckModification}"
+    (command bound to event)
+  <2:C:/Users/dasas/Documents/modelsim/modelsim_ase/win32aloem/tk8.6/bgerror.tcl:106: ::tkerror {bad window path name ".srcobjdlg"}
+  <1:eval:1: ::tk::dialog::error::bgerror {bad window path name ".srcobjdlg"}
+Sat Dec 09 17:16:29 CST 2023
+Trace back: bad window path name ".srcobjdlg"
+    while executing
+"winfo screenwidth $w"
+    (procedure "::tk::PlaceWindow" line 6)
+    invoked from within
+"::tk::PlaceWindow $w"
+    (procedure "tk_dialog" line 118)
+    invoked from within
+"tk_dialog .srcobjdlg "Warning!" "$msg" "" 1 Overwrite Reload Ignore"
+    (object "::.main_pane.source.interior.cs.body.srcobj" method "::vsimwidgets::Srcobj::CheckModification" body line 18)
+    invoked from within
+"::.main_pane.source.interior.cs.body.srcobj CheckModification"
+    (in namespace inscope "::vsimwidgets::Srcobj" script line 1)
+    invoked from within
+"namespace inscope ::vsimwidgets::Srcobj {::.main_pane.source.interior.cs.body.srcobj CheckModification}"
+    (command bound to event)
+  <2:C:/Users/dasas/Documents/modelsim/modelsim_ase/win32aloem/tk8.6/bgerror.tcl:106: ::tkerror {bad window path name ".srcobjdlg"}
+  <1:proc:153: ::tk::dialog::error::bgerror {bad window path name ".srcobjdlg"}
+Sat Dec 09 17:34:01 CST 2023
+Trace back: bad window path name ".srcobjdlg"
+    while executing
+"winfo screenwidth $w"
+    (procedure "::tk::PlaceWindow" line 6)
+    invoked from within
+"::tk::PlaceWindow $w"
+    (procedure "tk_dialog" line 118)
+    invoked from within
+"tk_dialog .srcobjdlg "Warning!" "$msg" "" 1 Overwrite Reload Ignore"
+    (object "::.main_pane.source.interior.cs.body.srcobj" method "::vsimwidgets::Srcobj::CheckModification" body line 18)
+    invoked from within
+"::.main_pane.source.interior.cs.body.srcobj CheckModification"
+    (in namespace inscope "::vsimwidgets::Srcobj" script line 1)
+    invoked from within
+"namespace inscope ::vsimwidgets::Srcobj {::.main_pane.source.interior.cs.body.srcobj CheckModification}"
+    (command bound to event)
+  <2:C:/Users/dasas/Documents/modelsim/modelsim_ase/win32aloem/tk8.6/bgerror.tcl:106: ::tkerror {bad window path name ".srcobjdlg"}
+  <1:C:/mtitcl/vsim/vsimcmd.tc_:850: ::tk::dialog::error::bgerror {bad window path name ".srcobjdlg"}
+Sat Dec 09 20:34:54 CST 2023
+Trace back: bad window path name ".srcobjdlg"
+    while executing
+"tk_dialog .srcobjdlg "Warning!" "$msg" "" 1 Overwrite Reload Ignore"
+    (object "::.main_pane.source.interior.cs.body.srcobj" method "::vsimwidgets::Srcobj::CheckModification" body line 18)
+    invoked from within
+"::.main_pane.source.interior.cs.body.srcobj CheckModification"
+    (in namespace inscope "::vsimwidgets::Srcobj" script line 1)
+    invoked from within
+"namespace inscope ::vsimwidgets::Srcobj {::.main_pane.source.interior.cs.body.srcobj CheckModification}"
+    (command bound to event)
+  <2:C:/Users/dasas/Documents/modelsim/modelsim_ase/win32aloem/tk8.6/bgerror.tcl:106: ::tkerror {bad window path name ".srcobjdlg"}
+  <1:eval:1: ::tk::dialog::error::bgerror {bad window path name ".srcobjdlg"}
+Sun Dec 10 15:41:52 CST 2023
+Trace back: bad window path name ".srcobjdlg"
+    while executing
+"tk_dialog .srcobjdlg "Warning!" "$msg" "" 1 Overwrite Reload Ignore"
+    (object "::.main_pane.source.interior.cs.body.srcobj" method "::vsimwidgets::Srcobj::CheckModification" body line 18)
+    invoked from within
+"::.main_pane.source.interior.cs.body.srcobj CheckModification"
+    (in namespace inscope "::vsimwidgets::Srcobj" script line 1)
+    invoked from within
+"namespace inscope ::vsimwidgets::Srcobj {::.main_pane.source.interior.cs.body.srcobj CheckModification}"
+    (command bound to event)
+  <2:C:/Users/dasas/Documents/modelsim/modelsim_ase/win32aloem/tk8.6/bgerror.tcl:106: ::tkerror {bad window path name ".srcobjdlg"}
+  <1:eval:1: ::tk::dialog::error::bgerror {bad window path name ".srcobjdlg"}

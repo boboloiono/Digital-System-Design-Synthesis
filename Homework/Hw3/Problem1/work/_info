@@ -1,0 +1,109 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/ECE551/Exercise/Ex12
+vss_A2D
+Z0 !s110 1697641222
+!i10b 1
+!s100 :Ai<;01Wg_][DzgkH^AbA3
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I^j0Fe;4H9gAJ75k2j>B?03
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+Z3 dC:/ECE551/Homework/Hw3/Problem1
+w1697212751
+8C:/ECE551/Homework/Hw3/Problem1/ss_A2D.v
+FC:/ECE551/Homework/Hw3/Problem1/ss_A2D.v
+!i122 49
+L0 1 25
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1697641221.000000
+!s107 C:/ECE551/Homework/Hw3/Problem1/ss_A2D.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/ECE551/Homework/Hw3/Problem1/ss_A2D.v|
+!i113 1
+Z5 o-work work
+Z6 tCvgOpt 0
+nss_@a2@d
+vss_A2D_datapath
+R0
+!i10b 1
+!s100 >fi3bZz1Y[E[]::1hV[gR1
+R1
+IQ_DUX8Nde^7:D>P8N3aoE3
+R2
+R3
+w1697212777
+8C:/ECE551/Homework/Hw3/Problem1/ss_A2D_datapath.v
+FC:/ECE551/Homework/Hw3/Problem1/ss_A2D_datapath.v
+!i122 50
+L0 1 97
+R4
+r1
+!s85 0
+31
+Z7 !s108 1697641222.000000
+!s107 C:/ECE551/Homework/Hw3/Problem1/ss_A2D_datapath.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/ECE551/Homework/Hw3/Problem1/ss_A2D_datapath.v|
+!i113 1
+R5
+R6
+nss_@a2@d_datapath
+vss_A2D_SM
+DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+R0
+!i10b 1
+!s100 NDG`ZSMo7S=H5nn5O48fW3
+R1
+IL0MCQ44IEC@BKFmN:4NbO0
+R2
+S1
+R3
+w1697515006
+8C:/ECE551/Homework/Hw3/Problem1/ss_A2D_SM.sv
+FC:/ECE551/Homework/Hw3/Problem1/ss_A2D_SM.sv
+!i122 52
+L0 1 86
+R4
+r1
+!s85 0
+31
+R7
+!s107 C:/ECE551/Homework/Hw3/Problem1/ss_A2D_SM.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/ECE551/Homework/Hw3/Problem1/ss_A2D_SM.sv|
+!i113 1
+o-work work -sv
+R6
+nss_@a2@d_@s@m
+vss_A2D_tb
+R0
+!i10b 1
+!s100 Pk=Hm`Q`k>O6Ld93@Vc`<1
+R1
+I6ZY_4ad@o:>CYF[VVZ`]U2
+R2
+R3
+w1697212760
+8C:/ECE551/Homework/Hw3/Problem1/ss_A2D_tb.v
+FC:/ECE551/Homework/Hw3/Problem1/ss_A2D_tb.v
+!i122 51
+L0 1 50
+R4
+r1
+!s85 0
+31
+R7
+!s107 C:/ECE551/Homework/Hw3/Problem1/ss_A2D_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/ECE551/Homework/Hw3/Problem1/ss_A2D_tb.v|
+!i113 1
+R5
+R6
+nss_@a2@d_tb

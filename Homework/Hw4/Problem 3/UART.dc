@@ -1,0 +1,62 @@
+read_file -format sverilog {./UART_tx.sv ./UART_rx.sv ./UART.sv}
+set current_design UART
+link
+###########################################
+# Define clock and set don't mess with it #
+###########################################
+create_clock -name "clk" -period 2 -waveform {0 1} {clk}
+set_dont_touch_network [find port clk]
+
+# setup pointer that contains all inputs except clock #
+set prim_inputs [remove_from_collection [all_inputs] [find port clk]]
+
+#########################################
+# Set input delay & drive on all inputs #
+#########################################
+set_input_delay -clock clk 0.2 [copy_collection $prim_inputs]
+set_driving_cell -lib_cell NAND2X2_LVT -library \saed32lvt_tt0p85v25c [copy_collection $prim_inputs]
+
+# tell it rst_n strongly driven so it won't buffer
+set_drive 0.4 rst_n
+
+##########################################
+# Set output delay & load on all outputs #
+##########################################
+set_output_delay -clock clk 0.4 [all_outputs]
+set_load 0.0001 [all_outputs]
+
+####################################
+# Wire load model allows it to     #
+# estimate internal parasitics     #
+####################################
+
+set_wire_load_model -name 16000 \-library saed32lvt_tt0p85v25c
+
+######################################################
+# Max transition time is important for Hot-E reasons #
+######################################################
+set_max_transition 0.15 [current_design]
+
+########################################
+# Now actually synthesize for 1st time #
+########################################
+compile -map_effort low
+
+check_design
+## design ware component caused extra pins
+report_area
+####################################
+# Take a look at max & min timings #
+####################################
+report_timing -path full -delay max -nworst 3
+report_timing -path full -delay min -nworst 3
+
+## smash the hierarchy (design ware component)
+ungroup -all -flatten
+
+compile -map_effort medium
+check_design
+report_area
+
+#### write out final netlist ######
+write -format verilog UART -output UART.vg

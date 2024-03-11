@@ -1,0 +1,213 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/ECE551/Exercise/Ex16
+vinert_inft_tb
+Z0 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+!s110 1700462876
+!i10b 1
+!s100 ?5GWPc0;7FM;z^Nbo<M9G2
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+Ij_n@2LbI:EfGHgllGf:e=1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+S1
+Z3 dC:/ECE551/Exercise/Ex20
+w1700111227
+8C:/ECE551/Exercise/Ex20/inert_inft_tb.sv
+FC:/ECE551/Exercise/Ex20/inert_inft_tb.sv
+!i122 180
+L0 1 27
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1700462876.000000
+!s107 C:/ECE551/Exercise/Ex20/inert_inft_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/ECE551/Exercise/Ex20/inert_inft_tb.sv|
+!i113 1
+Z5 o-work work -sv
+Z6 tCvgOpt 0
+vinert_inft_test
+R0
+!s110 1699991700
+!i10b 1
+!s100 YEK`>73;:@B]?:bN7@KIg1
+R1
+IcUZdK[jkKo0gT:Xh4[OH]0
+R2
+S1
+R3
+w1699991695
+8C:/ECE551/Exercise/Ex20/inert_inft_test.sv
+FC:/ECE551/Exercise/Ex20/inert_inft_test.sv
+!i122 2
+Z7 L0 1 68
+R4
+r1
+!s85 0
+31
+!s108 1699991700.000000
+!s107 C:/ECE551/Exercise/Ex20/inert_inft_test.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/ECE551/Exercise/Ex20/inert_inft_test.sv|
+!i113 1
+R5
+R6
+vinert_intf
+R0
+Z8 !s110 1700502287
+!i10b 1
+!s100 <AHnOA?8_:IW00<TR^^V52
+R1
+IXb]W1Ic9R:fB`C7=h4mO;0
+R2
+S1
+R3
+w1700455031
+8C:/ECE551/Exercise/Ex20/inert_intf.sv
+FC:/ECE551/Exercise/Ex20/inert_intf.sv
+!i122 187
+L0 7 159
+R4
+r1
+!s85 0
+31
+Z9 !s108 1700502287.000000
+!s107 C:/ECE551/Exercise/Ex20/inert_intf.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/ECE551/Exercise/Ex20/inert_intf.sv|
+!i113 1
+R5
+R6
+vinert_intf_test
+R0
+R8
+!i10b 1
+!s100 =7m>I168kHY1T57IhIgH]0
+R1
+IKXfC1FiS7KB6CTQz7imkW3
+R2
+S1
+R3
+w1700497005
+8C:/ECE551/Exercise/Ex20/inert_intf_test.sv
+FC:/ECE551/Exercise/Ex20/inert_intf_test.sv
+!i122 188
+R7
+R4
+r1
+!s85 0
+31
+R9
+!s107 C:/ECE551/Exercise/Ex20/inert_intf_test.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/ECE551/Exercise/Ex20/inert_intf_test.sv|
+!i113 1
+R5
+R6
+vinertial_integrator
+R0
+Z10 !s110 1700502288
+!i10b 1
+!s100 zFCz=?KO7bL<jUEdR_Y6D0
+R1
+I^[CmJ97IlX1IbgI>ofC;51
+R2
+S1
+R3
+w1695224487
+8C:/ECE551/Exercise/Ex20/inertial_integrator.sv
+FC:/ECE551/Exercise/Ex20/inertial_integrator.sv
+!i122 189
+L0 1 216
+R4
+r1
+!s85 0
+31
+R9
+!s107 C:/ECE551/Exercise/Ex20/inertial_integrator.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/ECE551/Exercise/Ex20/inertial_integrator.sv|
+!i113 1
+R5
+R6
+vreset_synch
+R0
+R10
+!i10b 1
+!s100 df3>J:TJ803Gk_IP5UeeT2
+R1
+I`4n0gniA=>[36FanBh6k?1
+R2
+S1
+R3
+w1700104637
+8C:/ECE551/Exercise/Ex20/reset_synch.sv
+FC:/ECE551/Exercise/Ex20/reset_synch.sv
+!i122 190
+L0 1 12
+R4
+r1
+!s85 0
+31
+Z11 !s108 1700502288.000000
+!s107 C:/ECE551/Exercise/Ex20/reset_synch.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/ECE551/Exercise/Ex20/reset_synch.sv|
+!i113 1
+R5
+R6
+vSPI_iNEMO2
+R0
+R10
+!i10b 1
+!s100 na1EHOZI[S>bkQzbB?3`C2
+R1
+I;7LkLX0SQnHQe;TLJ^iE:1
+R2
+S1
+R3
+w1699817153
+8C:/ECE551/Exercise/Ex20/SPI_iNEMO2.sv
+FC:/ECE551/Exercise/Ex20/SPI_iNEMO2.sv
+!i122 191
+L0 1 225
+R4
+r1
+!s85 0
+31
+R11
+!s107 C:/ECE551/Exercise/Ex20/SPI_iNEMO2.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/ECE551/Exercise/Ex20/SPI_iNEMO2.sv|
+!i113 1
+R5
+R6
+n@s@p@i_i@n@e@m@o2
+vSPI_mnrch
+R0
+R10
+!i10b 1
+!s100 ]7zk0<I89o;<46:0mJFU=2
+R1
+I@@E>=8WoWlY5ROL:Go7Ii0
+R2
+S1
+R3
+w1699816069
+8C:/ECE551/Exercise/Ex20/SPI_mnrch.sv
+FC:/ECE551/Exercise/Ex20/SPI_mnrch.sv
+!i122 192
+L0 1 123
+R4
+r1
+!s85 0
+31
+R11
+!s107 C:/ECE551/Exercise/Ex20/SPI_mnrch.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/ECE551/Exercise/Ex20/SPI_mnrch.sv|
+!i113 1
+R5
+R6
+n@s@p@i_mnrch

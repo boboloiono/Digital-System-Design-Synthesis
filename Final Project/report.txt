@@ -1,0 +1,246 @@
+Coverage Report Summary Data by file
+
+=================================================================================
+=== File: /filespace/p/plin78/ece551/MazeRunner/A2D_intf.sv
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        15        15         0   100.00%
+    Statements                      23        23         0   100.00%
+    Toggles                         96        68        28    70.83%
+
+=================================================================================
+=== File: /filespace/p/plin78/ece551/MazeRunner/ADC128S_FC.sv
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        27        25         2    92.59%
+    Conditions                       8         3         5    37.50%
+    Expressions                      2         2         0   100.00%
+    Statements                      22        21         1    95.45%
+    Toggles                        106        98         8    92.45%
+
+=================================================================================
+=== File: /filespace/p/plin78/ece551/MazeRunner/DutyScaleROM.sv
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        65         8        57    12.30%
+    Statements                      66        10        56    15.15%
+    Toggles                         50        48         2    96.00%
+
+=================================================================================
+=== File: /filespace/p/plin78/ece551/MazeRunner/MazeRunner.sv
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        10        10         0   100.00%
+    Expressions                     12        12         0   100.00%
+    Statements                       5         5         0   100.00%
+    Toggles                        434       403        31    92.85%
+
+=================================================================================
+=== File: /filespace/p/plin78/ece551/MazeRunner/MtrDrv.sv
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        12         8         4    66.66%
+    Conditions                       8         0         8     0.00%
+    Statements                      19        19         0   100.00%
+    Toggles                        434       432         2    99.53%
+
+=================================================================================
+=== File: /filespace/p/plin78/ece551/MazeRunner/PID.sv
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        34        34         0   100.00%
+    Conditions                      11        11         0   100.00%
+    Expressions                      3         3         0   100.00%
+    Statements                      38        38         0   100.00%
+    Toggles                        586       584         2    99.65%
+
+=================================================================================
+=== File: /filespace/p/plin78/ece551/MazeRunner/PWM12.sv
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        10        10         0   100.00%
+    Conditions                       3         3         0   100.00%
+    Statements                      11        11         0   100.00%
+    Toggles                         28        28         0   100.00%
+
+=================================================================================
+=== File: /filespace/p/plin78/ece551/MazeRunner/PWM8.sv
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                         6         6         0   100.00%
+    Expressions                      1         1         0   100.00%
+    Statements                       8         8         0   100.00%
+    Toggles                         22        22         0   100.00%
+
+=================================================================================
+=== File: /filespace/p/plin78/ece551/MazeRunner/RemoteComm.sv
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        19        19         0   100.00%
+    Statements                      22        22         0   100.00%
+    Toggles                        108       104         4    96.29%
+
+=================================================================================
+=== File: /filespace/p/plin78/ece551/MazeRunner/RunnerPhysics.sv
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                       112       103         9    91.96%
+    Conditions                      34        24        10    70.58%
+    Expressions                      4         3         1    75.00%
+    Statements                     137       128         9    93.43%
+    Toggles                        698       661        37    94.69%
+
+=================================================================================
+=== File: /filespace/p/plin78/ece551/MazeRunner/SPI_ADC128S.sv
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        27        27         0   100.00%
+    Expressions                      5         5         0   100.00%
+    Statements                      38        38         0   100.00%
+    Toggles                         88        87         1    98.86%
+
+=================================================================================
+=== File: /filespace/p/plin78/ece551/MazeRunner/SPI_iNEMO4.sv
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        53        39        14    73.58%
+    Conditions                       2         2         0   100.00%
+    Expressions                      3         1         2    33.33%
+    Statements                      84        60        24    71.42%
+    Toggles                        134       114        20    85.07%
+
+=================================================================================
+=== File: /filespace/p/plin78/ece551/MazeRunner/SPI_mnrch.sv
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        35        35         0   100.00%
+    Conditions                       5         5         0   100.00%
+    Statements                      42        42         0   100.00%
+    Toggles                         76        76         0   100.00%
+
+=================================================================================
+=== File: /filespace/p/plin78/ece551/MazeRunner/UART.sv
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Toggles                         22        22         0   100.00%
+
+=================================================================================
+=== File: /filespace/p/plin78/ece551/MazeRunner/UART_rx.sv
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        23        23         0   100.00%
+    Conditions                       3         3         0   100.00%
+    Expressions                      1         1         0   100.00%
+    Statements                      33        33         0   100.00%
+    Toggles                         68        68         0   100.00%
+
+=================================================================================
+=== File: /filespace/p/plin78/ece551/MazeRunner/UART_tx.sv
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        22        22         0   100.00%
+    Conditions                       3         3         0   100.00%
+    Expressions                      1         1         0   100.00%
+    Statements                      28        28         0   100.00%
+    Toggles                         64        64         0   100.00%
+
+=================================================================================
+=== File: /filespace/p/plin78/ece551/MazeRunner/UART_wrapper.sv
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        14        14         0   100.00%
+    Conditions                       2         1         1    50.00%
+    Statements                      21        21         0   100.00%
+    Toggles                         98        82        16    83.67%
+
+=================================================================================
+=== File: /filespace/p/plin78/ece551/MazeRunner/cmd_proc.sv
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        31        29         2    93.54%
+    Conditions                       4         3         1    75.00%
+    Statements                      47        45         2    95.74%
+    Toggles                         66        64         2    96.96%
+
+=================================================================================
+=== File: /filespace/p/plin78/ece551/MazeRunner/inert_intf.sv
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        27        27         0   100.00%
+    Statements                      41        41         0   100.00%
+    Toggles                        188       176        12    93.61%
+
+=================================================================================
+=== File: /filespace/p/plin78/ece551/MazeRunner/inertial_integrator.sv
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        30        29         1    96.66%
+    Conditions                       3         3         0   100.00%
+    Expressions                      1         1         0   100.00%
+    Statements                      49        46         3    93.87%
+    Toggles                        304       215        89    70.72%
+
+=================================================================================
+=== File: /filespace/p/plin78/ece551/MazeRunner/maze_solve.sv
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        34        33         1    97.05%
+    Statements                      42        41         1    97.61%
+    Toggles                         56        54         2    96.42%
+
+=================================================================================
+=== File: /filespace/p/plin78/ece551/MazeRunner/piezo_drv.sv
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        83        71        12    85.54%
+    Conditions                      50        27        23    54.00%
+    Statements                      85        80         5    94.11%
+    Toggles                        126       107        19    84.92%
+
+=================================================================================
+=== File: /filespace/p/plin78/ece551/MazeRunner/reset_synch.sv
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                         2         2         0   100.00%
+    Statements                       5         5         0   100.00%
+    Toggles                          4         4         0   100.00%
+
+=================================================================================
+=== File: /filespace/p/plin78/ece551/MazeRunner/sensor_intf.sv
+=================================================================================
+    Enabled Coverage              Bins      Hits    Misses  Coverage
+    ----------------              ----      ----    ------  --------
+    Branches                        83        83         0   100.00%
+    Conditions                      11        11         0   100.00%
+    Expressions                     10        10         0   100.00%
+    Statements                     121       121         0   100.00%
+    Toggles                        730       582       148    79.72%
+
+
+TOTAL ASSERTION COVERAGE: 100.00%  ASSERTIONS: 18
+
+Total Coverage By File (code coverage only, filtered view): 85.54%
+

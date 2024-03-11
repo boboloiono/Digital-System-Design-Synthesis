@@ -1,0 +1,249 @@
+# //  Questa Sim
+# //  Version 2023.2_1 linux May 12 2023
+# //
+# //  Copyright 1991-2023 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading project Project_VG
+project open /filespace/d/das38/ece551/Project/Project_VG
+# Compile of A2D_intf.sv was successful.
+# Compile of ADC128S_FC.sv was successful.
+# Compile of cmd_proc.sv was successful.
+# Compile of DutyScaleROM.sv was successful.
+# Compile of inert_intf.sv was successful.
+# Compile of inertial_integrator.sv was successful.
+# Compile of IR_Math.sv was successful.
+# Compile of maze_solve.sv was successful.
+# Compile of MazeRunner.sv was successful.
+# Compile of MazeRunner_tb.sv was successful.
+# Compile of MtrDrv.sv was successful.
+# Compile of navigate.sv was successful.
+# Compile of PID.sv was successful.
+# Compile of piezo_drv.sv was successful.
+# Compile of PWM8.sv was successful.
+# Compile of PWM12.sv was successful.
+# Compile of RemoteComm.sv was successful.
+# Compile of reset_synch.sv was successful.
+# Compile of RunnerPhysics.sv was successful with warnings.
+# Compile of sensor_intf.sv was successful with warnings.
+# Compile of SPI_ADC128S.sv was successful.
+# Compile of SPI_iNEMO4.sv was successful.
+# Compile of SPI_mnrch.sv was successful.
+# Compile of tasks_tb4.sv was successful.
+# Compile of tb_task(1).sv was successful.
+# Compile of Test_vg.sv was successful.
+# Compile of UART.sv was successful.
+# Compile of UART_rx.sv was successful.
+# Compile of UART_tx.sv was successful.
+# Compile of UART_wrapper.sv was successful.
+# 30 compiles, 0 failed with no errors.
+vsim work.Test_vg -t ns +notimingchecks -L /filespace/d/das38/ece551/SAED32_lib -voptargs=+acc
+# vsim work.Test_vg -t ns "+notimingchecks" -L /filespace/d/das38/ece551/SAED32_lib -voptargs="+acc" 
+# Start time: 19:07:36 on Dec 11,2023
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading sv_std.std
+# Loading work.Test_vg(fast)
+# Loading work.MazeRunner(fast)
+# Loading work.reset_synch(fast)
+# Loading work.UART_wrapper(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.cmd_proc(fast)
+# Loading work.maze_solve(fast)
+# Loading work.navigate(fast)
+# Loading work.inert_intf(fast)
+# Loading work.SPI_mnrch(fast)
+# Loading work.inertial_integrator(fast)
+# Loading work.IR_Math(fast)
+# Loading work.PID(fast)
+# Loading work.MtrDrv(fast)
+# Loading work.DutyScaleROM(fast)
+# Loading work.PWM12(fast)
+# Loading work.sensor_intf(fast)
+# Loading work.A2D_intf(fast)
+# Loading work.PWM8(fast)
+# Loading work.piezo_drv(fast)
+# Loading work.RemoteComm(fast)
+# Loading work.RunnerPhysics(fast)
+# Loading work.SPI_iNEMO4(fast)
+# Loading work.inverse_PWM12e(fast)
+# Loading work.ADC128S_FC(fast)
+# Loading work.SPI_ADC128S(fast)
+run -all
+# pass calibration
+# pass heading_robot to west
+# The piezo toggles
+# The piezo toggles and the piezo_n does too
+# Yahoo! VG test passed
+# ** Note: $stop    : /filespace/d/das38/ece551/Project/Test_vg.sv(111)
+#    Time: 8624345 ns  Iteration: 4  Instance: /Test_vg
+# Break in Module Test_vg at /filespace/d/das38/ece551/Project/Test_vg.sv line 111
+quit -sim
+# End time: 19:08:59 on Dec 11,2023, Elapsed time: 0:01:23
+# Errors: 0, Warnings: 2
+project open /filespace/d/das38/ece551/Project/Project_final
+# reading /cae/apps/data/mentor-2023/questasim/linux/../modelsim.ini
+# Loading project Project_final
+project open /filespace/d/das38/ece551/Project/Final_project
+# reading /cae/apps/data/mentor-2023/questasim/linux/../modelsim.ini
+# Loading project Final_project
+# reading /cae/apps/data/mentor-2023/questasim/linux/../modelsim.ini
+# Loading project Final_demo
+# Compile of A2D_intf.sv was successful.
+# Compile of ADC128S_FC.sv was successful.
+# Compile of cmd_proc.sv was successful.
+# Compile of DutyScaleROM.sv was successful.
+# Compile of inert_intf.sv was successful.
+# Compile of inertial_integrator.sv was successful.
+# Compile of IR_Math.sv was successful.
+# Compile of maze_solve.sv was successful.
+# Compile of MazeRunner.sv was successful.
+# Compile of MazeRunner_tb.sv was successful.
+# Compile of MtrDrv.sv was successful.
+# Compile of navigate.sv was successful.
+# Compile of PID.sv was successful.
+# Compile of piezo_drv.sv was successful.
+# Compile of PWM8.sv was successful.
+# Compile of PWM12.sv was successful.
+# Compile of RemoteComm.sv was successful.
+# Compile of reset_synch.sv was successful.
+# Compile of RunnerPhysics.sv was successful with warnings.
+# Compile of sensor_intf.sv was successful with warnings.
+# Compile of SPI_ADC128S.sv was successful.
+# Compile of SPI_iNEMO4.sv was successful.
+# Compile of SPI_mnrch.sv was successful.
+# Compile of tasks_tb4.sv was successful.
+# Compile of tb_task(1).sv was successful.
+# Compile of UART.sv was successful.
+# Compile of UART_rx.sv was successful.
+# Compile of UART_tx.sv was successful.
+# Compile of UART_wrapper.sv was successful.
+# 29 compiles, 0 failed with no errors.
+vsim -t ns +notimingchecks -L /filespace/d/das38/ece551/SAED32_lib -voptargs=+acc work.MazeRunner_tb
+# vsim -t ns "+notimingchecks" -L /filespace/d/das38/ece551/SAED32_lib -voptargs="+acc" work.MazeRunner_tb 
+# Start time: 19:10:35 on Dec 11,2023
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
+# ** Note: (vopt-143) Recognized 1 FSM in module "RemoteComm(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "A2D_intf(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "sensor_intf(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "piezo_drv(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "inertial_integrator(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "SPI_iNEMO4(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "navigate(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "cmd_proc(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "inert_intf(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "SPI_mnrch(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "maze_solve(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "SPI_ADC128S(fast)".
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=1.
+# Loading sv_std.std
+# Loading work.MazeRunner_tb(fast)
+# Loading work.MazeRunner(fast)
+# Loading work.reset_synch(fast)
+# Loading work.UART_wrapper(fast)
+# Loading work.UART(fast)
+# Loading work.UART_tx(fast)
+# Loading work.UART_rx(fast)
+# Loading work.cmd_proc(fast)
+# Loading work.maze_solve(fast)
+# Loading work.navigate(fast)
+# Loading work.inert_intf(fast)
+# Loading work.SPI_mnrch(fast)
+# Loading work.inertial_integrator(fast)
+# Loading work.IR_Math(fast)
+# Loading work.PID(fast)
+# Loading work.MtrDrv(fast)
+# Loading work.DutyScaleROM(fast)
+# Loading work.PWM12(fast)
+# Loading work.sensor_intf(fast)
+# Loading work.A2D_intf(fast)
+# Loading work.PWM8(fast)
+# Loading work.piezo_drv(fast)
+# Loading work.RemoteComm(fast)
+# Loading work.RunnerPhysics(fast)
+# Loading work.SPI_iNEMO4(fast)
+# Loading work.inverse_PWM12e(fast)
+# Loading work.ADC128S_FC(fast)
+# Loading work.SPI_ADC128S(fast)
+add wave -position insertpoint sim:/MazeRunner_tb/iDUT/*
+run -all
+# pass calibration
+# pass heading_robot to north
+# pass move to (2,1)
+# pass heading_robot to west
+# pass move to (1,1)
+# pass heading_robot to south
+# pass move to (1,0)
+# pass heading_robot to west
+# pass move to (0,0)
+# pass heading_robot to north
+# pass move to (0,3)
+# pass heading_robot to east
+# pass move to (3,3)
+# Pass! cmd_md deasserted when start to solve maze puzzle.
+# Yahoo! The cmd_proc testing passes the route of (2,0)->(2,1)->(1,1)->(1,0)->(0,0)->(0,3)->(3,3).
+# Calibration is successful
+# The mv_cmplt is successful
+# The robot is correctly at x = 10257 and y =  6273
+# The mv_cmplt is successful
+# The robot is pointing in the  1004 direction
+# The mv_cmplt is successful
+# The robot is correctly at x =  6344 and y =  6341
+# The mv_cmplt is successful
+# The robot is pointing in the  2021 direction
+# The mv_cmplt is successful
+# The robot is correctly at x =  6318 and y =  2293
+# The mv_cmplt is successful
+# The robot is pointing in the  1047 direction
+# The mv_cmplt is successful
+# The robot is correctly at x =  1919 and y =  2117
+# The mv_cmplt is successful
+# The robot is pointing in the    29 direction
+# The mv_cmplt is successful
+# The robot is correctly at x =  1923 and y = 14104
+# The mv_cmplt is successful
+# The robot is pointing in the -1007 direction
+# The mv_cmplt is successful
+# The robot is correctly at x = 14087 and y = 14555
+# LEFT AFFINITY: found the magnet!!!
+# Test 1 passes.
+# Waiting for response = A5 passed.
+# The mv_cmplt is successful
+# The robot is correctly at x = 10258 and y =  6266
+# The mv_cmplt is successful
+# The robot is pointing in the  1003 direction
+# The mv_cmplt is successful
+# The robot is correctly at x =  6345 and y =  6334
+# The mv_cmplt is successful
+# The mv_cmplt is successful
+# The mv_cmplt is successful
+# The mv_cmplt is successful
+# The mv_cmplt is successful
+# The mv_cmplt is successful
+# The mv_cmplt is successful
+# The robot is pointing in the   -28 direction
+# The sol_complt is successful
+# The mv_cmplt is successful
+# The robot is correctly at x = 14580 and y = 14485
+# Test 2 passes.
+# Waiting for response = A5 passed.
+# The sol_complt is successful
+# The mv_cmplt is successful
+# The piezo toggles
+# The piezo toggles and the piezo_n does too
+# The robot is correctly at x =  1893 and y = 14109
+# Test 3 passes.
+# At the end. Does everything pass?
+# ** Note: $stop    : /filespace/d/das38/ece551/Project_final/Project/MazeRunner_tb.sv(451)
+#    Time: 546374260 ns  Iteration: 1  Instance: /MazeRunner_tb
+# Break in Module MazeRunner_tb at /filespace/d/das38/ece551/Project_final/Project/MazeRunner_tb.sv line 451

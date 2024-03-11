@@ -1,0 +1,22 @@
+C:/ECE551/Exercise/Ex17/SPI_mnrch.sv {1 {vlog -work work -sv -stats=none C:/ECE551/Exercise/Ex17/SPI_mnrch.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module SPI_mnrch
+
+Top level modules:
+	SPI_mnrch
+
+} {} {}} C:/ECE551/Exercise/Ex17/SPI_mnrch_tb.sv {1 {vlog -work work -sv -stats=none C:/ECE551/Exercise/Ex17/SPI_mnrch_tb.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module SPI_mnrch_tb
+
+Top level modules:
+	SPI_mnrch_tb
+
+} {} {}} C:/ECE551/Exercise/Ex17/SPI_iNEMO1.sv {1 {vlog -work work -sv -stats=none C:/ECE551/Exercise/Ex17/SPI_iNEMO1.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module SPI_iNEMO1
+
+Top level modules:
+	SPI_iNEMO1
+
+} {} {}}

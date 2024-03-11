@@ -1,0 +1,63 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/ECE551/Homework/Hw2/Q1
+vPWM12
+Z0 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z1 !s110 1696260281
+!i10b 1
+!s100 oCQ<J8DmD>`=gSzEUX`M41
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IlIB>4j2<_d0D3E4GVbbJ<2
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+S1
+Z4 dC:/ECE551/Exercise/Ex10
+w1696259520
+8C:/ECE551/Exercise/Ex10/PWM12.sv
+FC:/ECE551/Exercise/Ex10/PWM12.sv
+!i122 38
+L0 1 31
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z6 !s108 1696260281.000000
+!s107 C:/ECE551/Exercise/Ex10/PWM12.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/ECE551/Exercise/Ex10/PWM12.sv|
+!i113 1
+Z7 o-work work -sv
+Z8 tCvgOpt 0
+n@p@w@m12
+vPWM12_tb
+R0
+R1
+!i10b 1
+!s100 bZGH<z]iSccS9PzM5eDK71
+R2
+I3>RM@`?WEE_g@W;L`NdNe3
+R3
+S1
+R4
+w1696260277
+8C:/ECE551/Exercise/Ex10/PWM12_tb.sv
+FC:/ECE551/Exercise/Ex10/PWM12_tb.sv
+!i122 39
+L0 1 59
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/ECE551/Exercise/Ex10/PWM12_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/ECE551/Exercise/Ex10/PWM12_tb.sv|
+!i113 1
+R7
+R8
+n@p@w@m12_tb

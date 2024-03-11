@@ -1,0 +1,115 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/ECE551/Exercise/Ex11
+vUART_rx
+Z0 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z1 !s110 1697086715
+!i10b 1
+!s100 @o`^R6_K:Ql>iPY14i:G_2
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IVA`bcinQmBOmTN`9A_Q[30
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+S1
+Z4 dC:/ECE551/Exercise/Ex12
+w1697086710
+8C:/ECE551/Exercise/Ex13/UART_rx.sv
+FC:/ECE551/Exercise/Ex13/UART_rx.sv
+!i122 172
+L0 1 82
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z6 !s108 1697086715.000000
+!s107 C:/ECE551/Exercise/Ex13/UART_rx.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/ECE551/Exercise/Ex13/UART_rx.sv|
+!i113 1
+Z7 o-work work -sv
+Z8 tCvgOpt 0
+n@u@a@r@t_rx
+vUART_tb
+R0
+R1
+!i10b 1
+!s100 :A6nmF9lG8T8;g61W7_Jo0
+R2
+IW@D6TB^UIe7[@]3NK07Rd1
+R3
+S1
+R4
+w1697086651
+8C:/ECE551/Exercise/Ex13/UART_tb.sv
+FC:/ECE551/Exercise/Ex13/UART_tb.sv
+!i122 173
+L0 1 66
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/ECE551/Exercise/Ex13/UART_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/ECE551/Exercise/Ex13/UART_tb.sv|
+!i113 1
+R7
+R8
+n@u@a@r@t_tb
+vUART_tx
+R0
+R1
+!i10b 1
+!s100 I>jzPb40=gK7<ThXGfSSb2
+R2
+Ii`Rh[fBz]ZMQ<RO:gMkCI1
+R3
+S1
+R4
+w1697056451
+8C:/ECE551/Exercise/Ex13/UART_tx.sv
+FC:/ECE551/Exercise/Ex13/UART_tx.sv
+!i122 174
+L0 1 80
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/ECE551/Exercise/Ex13/UART_tx.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/ECE551/Exercise/Ex13/UART_tx.sv|
+!i113 1
+R7
+R8
+n@u@a@r@t_tx
+vUART_tx_tb
+R0
+!s110 1697058829
+!i10b 1
+!s100 ;3dT64E8DY1=KkTa:I>5R1
+R2
+IzCVB5OGV4A_ADgH`[5Tn?3
+R3
+S1
+R4
+w1697058825
+8C:/ECE551/Exercise/Ex12/UART_tx_tb.sv
+FC:/ECE551/Exercise/Ex12/UART_tx_tb.sv
+!i122 64
+L0 1 41
+R5
+r1
+!s85 0
+31
+!s108 1697058829.000000
+!s107 C:/ECE551/Exercise/Ex12/UART_tx_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/ECE551/Exercise/Ex12/UART_tx_tb.sv|
+!i113 1
+R7
+R8
+n@u@a@r@t_tx_tb

@@ -1,0 +1,86 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/ECE551/Exercise/Ex02
+vex03
+Z0 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z1 !s110 1695055476
+!i10b 1
+!s100 NEgcO=QfHkk1=4g^Th==V2
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+ITRg_`<0fhk1n;W@LmGMA90
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+S1
+Z4 dC:/ECE551/Exercise/Ex03
+w1695054848
+8C:/ECE551/Exercise/Ex03/ex03.sv
+FC:/ECE551/Exercise/Ex03/ex03.sv
+!i122 98
+L0 1 19
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z6 !s108 1695055476.000000
+!s107 C:/ECE551/Exercise/Ex03/ex03.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/ECE551/Exercise/Ex03/ex03.sv|
+!i113 1
+Z7 o-work work -sv
+Z8 tCvgOpt 0
+vex03_tb
+R0
+R1
+!i10b 1
+!s100 Q<PbfAKYiz2Teeh6oKJ3U3
+R2
+I_DFN96lOoFBY:DToBgQOR2
+R3
+S1
+R4
+w1695055474
+8C:/ECE551/Exercise/Ex03/ex03_tb.sv
+FC:/ECE551/Exercise/Ex03/ex03_tb.sv
+!i122 99
+L0 1 25
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/ECE551/Exercise/Ex03/ex03_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/ECE551/Exercise/Ex03/ex03_tb.sv|
+!i113 1
+R7
+R8
+vex3
+R0
+!s110 1694620036
+!i10b 1
+!s100 5fz7K0eaB:<ZIIZf6Nn`33
+R2
+I84PZf0=[j?6O;RlMYb[`53
+R3
+S1
+R4
+w1694618828
+8C:\ECE551\Exercise\Ex03\ex03.sv
+FC:\ECE551\Exercise\Ex03\ex03.sv
+!i122 33
+L0 1 14
+R5
+r1
+!s85 0
+31
+!s108 1694620036.000000
+!s107 C:\ECE551\Exercise\Ex03\ex03.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:\ECE551\Exercise\Ex03\ex03.sv|
+!i113 1
+R7
+R8

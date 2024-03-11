@@ -1,0 +1,19 @@
+# Compile of cmd_proc.sv was successful.
+# Compile of cmd_proc_tb.sv was successful with warnings.
+# Compile of CommTB.v was successful.
+# Compile of inert_intf.sv was successful.
+# Compile of inert_intf_test.sv was successful.
+# Compile of inertial_integrator.sv was successful.
+# Compile of navigate.sv was successful.
+# Load canceled
+# Compile of piezo_drv.sv was successful.
+# Compile of piezo_drv_test.sv failed with 2 errors.
+# Compile of RemoteComm.sv was successful.
+# Compile of reset_synch.sv was successful.
+# Compile of SPI_iNEMO2.sv was successful.
+# Compile of SPI_mnrch.sv was successful.
+# Compile of UART.sv was successful.
+# Compile of UART_rx.sv was successful.
+# Compile of UART_tx.sv was successful.
+# Compile of UART_wrapper.sv was successful.
+# 17 compiles, 1 failed with 2 errors.

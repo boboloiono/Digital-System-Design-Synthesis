@@ -1,0 +1,51 @@
+# Compile of counter.sv was successful.
+# Compile of counter_tb.v was successful.
+# 2 compiles, 0 failed with no errors.
+vsim -gui work.up_dwn_tb
+# vsim -gui work.up_dwn_tb 
+# Start time: 22:34:02 on Sep 08,2023
+# Loading work.up_dwn_tb
+# Loading sv_std.std
+# Loading work.counter
+# ** Warning: (vsim-2685) [TFMPC] - Too few port connections for 'iDUT'.  Expected 5, found 4.
+#    Time: 0 ps  Iteration: 0  Instance: /up_dwn_tb/iDUT File: C:/ECE551/Ex01/counter_tb.v Line: 7
+# ** Warning: (vsim-3722) C:/ECE551/Ex01/counter_tb.v(7): [TFMPC] - Missing connection for port 'cnt'.
+add wave -position insertpoint sim:/up_dwn_tb/iDUT/*
+add wave -position insertpoint  \
+sim:/up_dwn_tb/iDUT/cnt
+run -all
+# ** Note: $stop    : C:/ECE551/Ex01/counter_tb.v(23)
+#    Time: 125 ps  Iteration: 1  Instance: /up_dwn_tb
+# Break in Module up_dwn_tb at C:/ECE551/Ex01/counter_tb.v line 23
+step
+# Next activity is in 5 ps.
+step
+step
+# Next activity is in 5 ps.
+step
+step
+step
+step
+step
+step
+step
+step
+# Next activity is in 5 ps.
+step -over
+step -out
+# Compile of counter.sv was successful.
+# Compile of counter_tb.v was successful.
+# 2 compiles, 0 failed with no errors.
+# Break key hit
+# Break key hit
+# Break key hit
+# Break key hit
+# Break key hit
+# Break key hit
+# Break key hit
+# Compile of counter.sv was successful.
+# Compile of counter_tb.v was successful.
+# 2 compiles, 0 failed with no errors.
+# Break key hit
+# Break key hit
+# ** UI-Msg: (vish-4000) A design must be loaded before the "vsim_break" command can be used.

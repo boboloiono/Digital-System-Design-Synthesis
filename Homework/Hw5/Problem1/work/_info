@@ -1,0 +1,63 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/ECE551/Exercise/Ex21
+vPID
+Z0 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z1 !s110 1701289268
+!i10b 1
+!s100 `b72TzJO0HDzYCAg8;XGD2
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+ILfm<>>L;5HHP2MLliXjb11
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+S1
+Z4 dC:/ECE551/Homework/Hw5/Problem1
+w1701289264
+8C:\ECE551\Homework\Hw5\Problem1\PID.sv
+FC:\ECE551\Homework\Hw5\Problem1\PID.sv
+!i122 72
+L0 1 113
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z6 !s108 1701289268.000000
+!s107 C:\ECE551\Homework\Hw5\Problem1\PID.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:\ECE551\Homework\Hw5\Problem1\PID.sv|
+!i113 1
+Z7 o-work work -sv
+Z8 tCvgOpt 0
+n@p@i@d
+vPID_tb
+R0
+R1
+!i10b 1
+!s100 [gja0FaWlfZ_H^fJ@[BOT2
+R2
+I5KE@aKMVd?iQk[8[C8WOn2
+R3
+S1
+R4
+w1701139140
+8C:/ECE551/Homework/Hw5/Problem1/PID_tb.sv
+FC:/ECE551/Homework/Hw5/Problem1/PID_tb.sv
+!i122 73
+L0 1 67
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/ECE551/Homework/Hw5/Problem1/PID_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/ECE551/Homework/Hw5/Problem1/PID_tb.sv|
+!i113 1
+R7
+R8
+n@p@i@d_tb

@@ -1,0 +1,115 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/ECE551/Exercise/Ex10
+vDterm
+Z0 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+!s110 1696572558
+!i10b 1
+!s100 i6oA3Td[L_;oN^@JX<NX?0
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+IYcQQPj5Lk@T7QI2VG@GN@1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+S1
+Z3 dC:/ECE551/Exercise/Ex11
+w1696572415
+8C:/ECE551/Exercise/Ex11/Dterm.sv
+FC:/ECE551/Exercise/Ex11/Dterm.sv
+!i122 29
+L0 1 29
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1696572558.000000
+!s107 C:/ECE551/Exercise/Ex11/Dterm.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/ECE551/Exercise/Ex11/Dterm.sv|
+!i113 1
+Z5 o-work work -sv
+Z6 tCvgOpt 0
+n@dterm
+vDterm_tb
+R0
+!s110 1696572559
+!i10b 1
+!s100 eXf^dJ^32Ka4_c2B4f]7?0
+R1
+IBUTNQcTcUR748Qif]f;GX3
+R2
+S1
+R3
+w1696572554
+8C:/ECE551/Exercise/Ex11/Dterm_tb.sv
+FC:/ECE551/Exercise/Ex11/Dterm_tb.sv
+!i122 30
+L0 1 66
+R4
+r1
+!s85 0
+31
+!s108 1696572559.000000
+!s107 C:/ECE551/Exercise/Ex11/Dterm_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/ECE551/Exercise/Ex11/Dterm_tb.sv|
+!i113 1
+R5
+R6
+n@dterm_tb
+vPID
+R0
+Z7 !s110 1696606874
+!i10b 1
+!s100 eN=SOoMdnoP4OENX?DGS31
+R1
+IYc8kSW3RZLF_n7XD^DQDn3
+R2
+S1
+R3
+w1696606864
+8C:/ECE551/Exercise/Ex11/PID.sv
+FC:/ECE551/Exercise/Ex11/PID.sv
+!i122 62
+L0 1 94
+R4
+r1
+!s85 0
+31
+Z8 !s108 1696606874.000000
+!s107 C:/ECE551/Exercise/Ex11/PID.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/ECE551/Exercise/Ex11/PID.sv|
+!i113 1
+R5
+R6
+n@p@i@d
+vPID_tb
+R0
+R7
+!i10b 1
+!s100 35SKTIIKafiB?3@YU9K^i3
+R1
+I@E17DIelmRAAHeY[_Pz`k0
+R2
+S1
+R3
+w1694789841
+8C:/ECE551/Exercise/Ex11/PID_tb.sv
+FC:/ECE551/Exercise/Ex11/PID_tb.sv
+!i122 63
+L0 1 108
+R4
+r1
+!s85 0
+31
+R8
+!s107 C:/ECE551/Exercise/Ex11/PID_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/ECE551/Exercise/Ex11/PID_tb.sv|
+!i113 1
+R5
+R6
+n@p@i@d_tb

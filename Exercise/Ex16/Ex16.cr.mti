@@ -1,0 +1,43 @@
+C:/ECE551/Exercise/Ex16/UART.sv {1 {vlog -work work -sv -stats=none C:/ECE551/Exercise/Ex16/UART.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module UART
+
+Top level modules:
+	UART
+
+} {} {}} C:/ECE551/Exercise/Ex16/RemoteComm.sv {1 {vlog -work work -sv -stats=none C:/ECE551/Exercise/Ex16/RemoteComm.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module RemoteComm
+
+Top level modules:
+	RemoteComm
+
+} {} {}} C:/ECE551/Exercise/Ex16/UART_wrapper.sv {1 {vlog -work work -sv -stats=none C:/ECE551/Exercise/Ex16/UART_wrapper.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module UART_wrapper
+
+Top level modules:
+	UART_wrapper
+
+} {} {}} C:/ECE551/Exercise/Ex16/UART_tb.sv {1 {vlog -work work -sv -stats=none C:/ECE551/Exercise/Ex16/UART_tb.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module UART_tb
+
+Top level modules:
+	UART_tb
+
+} {} {}} C:/ECE551/Exercise/Ex16/UART_rx.sv {1 {vlog -work work -sv -stats=none C:/ECE551/Exercise/Ex16/UART_rx.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module UART_rx
+
+Top level modules:
+	UART_rx
+
+} {} {}} C:/ECE551/Exercise/Ex16/UART_tx.sv {1 {vlog -work work -sv -stats=none C:/ECE551/Exercise/Ex16/UART_tx.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module UART_tx
+
+Top level modules:
+	UART_tx
+
+} {} {}}

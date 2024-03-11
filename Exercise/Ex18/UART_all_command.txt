@@ -1,0 +1,1628 @@
+tux-168:~$ cp ~ejhoffman/ece551/public/designvision/.synopsys_dc.setup .
+cp: overwrite './.synopsys_dc.setup'? y
+tux-168:~$ vi .synopsys_dc.setup
+tux-168:~$ cd ece551
+tux-168:~/ece551$ ls
+command.log  designvision/  Exercise18/  filenames.log  modelsim/
+tux-168:~/ece551$ cd Exercise18/
+tux-168:~/ece551/Exercise18$ ls
+command.log  default.svf  designvision/  UART_rx.sv  UART.sv  UART_tx.sv
+tux-168:~/ece551/Exercise18$ dc_shell
+
+                           Design Compiler Graphical
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+               Version U-2022.12-SP4 for linux64 - May 23, 2023
+
+                    Copyright (c) 1988 - 2023 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+Initializing...
+Initializing gui preferences from file  /filespace/p/plin78/.synopsys_dc_gui/preferences
+Information: Term was not able to be set up using xterm . Using "xterm" by default inste
+Warning: Cannot use command line editor for terminal type 'xterm'.  (UI-74)
+dc_shell> read_file -format sverilog { ./UART_tx.sv ./UART_rx.sv ./UART.sv}
+Loading db file '/cae/apps/data/saed32_edk-2022/lib/stdcell_lvt/db_nldm/saed32lvt_tt0p85
+Loading db file '/cae/apps/data/saed32_edk-2022/lib/io_std/db_nldm/saed32io_wb_tt1p05v25
+Loading db file '/cae/apps/data/synopsys-2023/syn/U-2022.12-SP4/libraries/syn/gtech.db'
+Loading db file '/cae/apps/data/synopsys-2023/syn/U-2022.12-SP4/libraries/syn/standard.s
+  Loading link library 'saed32lvt_tt0p85v25c'
+  Loading link library 'saed32io_wb_tt1p05v25c_2p5v'
+  Loading link library 'gtech'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /filespace/p/plin78/ece551/Exercise18/UART_tx.sv
+Warning:  /filespace/p/plin78/ece551/Exercise18/UART_tx.sv:55: The value 1111 is too laric data type being used (VER-1)
+Compiling source file /filespace/p/plin78/ece551/Exercise18/UART_rx.sv
+Warning:  /filespace/p/plin78/ece551/Exercise18/UART_rx.sv:16: the undeclared symbol 'shhave the default net type, which is 'wire'. (VER-936)
+Compiling source file /filespace/p/plin78/ece551/Exercise18/UART.sv
+Warning:  Little argument or return value checking implemented for system task or functi-209)
+
+Statistics for case statements in always block at line 17 in file
+        '/filespace/p/plin78/ece551/Exercise18/UART_tx.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            22            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+        in routine UART_tx line 40 in file
+                '/filespace/p/plin78/ece551/Exercise18/UART_tx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     bit_cnt_reg     | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine UART_tx line 47 in file
+                '/filespace/p/plin78/ece551/Exercise18/UART_tx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    baud_cnt_reg     | Flip-flop |  12   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine UART_tx line 54 in file
+                '/filespace/p/plin78/ece551/Exercise18/UART_tx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   tx_shft_reg_reg   | Flip-flop |   3   |  Y  | N  | N  | Y  | N  | N  | N  |
+|   tx_shft_reg_reg   | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine UART_tx line 66 in file
+                '/filespace/p/plin78/ece551/Exercise18/UART_tx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     tx_done_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine UART_tx line 74 in file
+                '/filespace/p/plin78/ece551/Exercise18/UART_tx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Warning:  /filespace/p/plin78/ece551/Exercise18/UART_rx.sv:16: signed to unsigned assignR-318)
+
+Statistics for case statements in always block at line 18 in file
+        '/filespace/p/plin78/ece551/Exercise18/UART_rx.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            23            |    auto/auto     |
+===============================================
+$display output: set_rdy00
+
+Inferred memory devices in process
+        in routine UART_rx line 40 in file
+                '/filespace/p/plin78/ece551/Exercise18/UART_rx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    baud_cnt_reg     | Flip-flop |  12   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine UART_rx line 48 in file
+                '/filespace/p/plin78/ece551/Exercise18/UART_rx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     rx_data_reg     | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|  rx_shift_reg_reg   | Flip-flop |   9   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine UART_rx line 56 in file
+                '/filespace/p/plin78/ece551/Exercise18/UART_rx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     bit_cnt_reg     | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine UART_rx line 63 in file
+                '/filespace/p/plin78/ece551/Exercise18/UART_rx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       rdy_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine UART_rx line 73 in file
+                '/filespace/p/plin78/ece551/Exercise18/UART_rx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     RX_ff1_reg      | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine UART_rx line 77 in file
+                '/filespace/p/plin78/ece551/Exercise18/UART_rx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     RX_ff2_reg      | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine UART_rx line 82 in file
+                '/filespace/p/plin78/ece551/Exercise18/UART_rx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Loaded 3 designs.
+Current design is 'UART_tx'.
+UART_tx UART_rx UART
+dc_shell> set current_design UART
+UART
+dc_shell> link
+
+  Linking design 'UART'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  UART                        /filespace/p/plin78/ece551/Exercise18/UART.db
+  saed32lvt_tt0p85v25c (library) /cae/apps/data/saed32_edk-2022/lib/stdcell_lvt/db_nldm/v25c.db
+  saed32io_wb_tt1p05v25c_2p5v (library) /cae/apps/data/saed32_edk-2022/lib/io_std/db_nld1p05v25c_2p5v.db
+  * (2 designs)               /filespace/p/plin78/ece551/Exercise18/UART_tx.db, etc
+
+1
+dc_shell> create_clock -name "clk" -period 2 -waveform {0 1} {clk}
+1
+dc_shell> set_dont_touch_network [find port clk]
+1
+dc_shell> set prim_inputs [remove_from_collection [all_inputs] [find port clk]]
+{rst_n RX clr_rx_rdy trmt tx_data[7] tx_data[6] tx_data[5] tx_data[4] tx_data[3] tx_datax_data[0]}
+dc_shell> set_input_delay -clock clk 0.2 [copy_collection $prim_inputs]
+1
+dc_shell> set_driving_cell -lib_cell NAND2X2_LVT -library \saed32lvt_tt0p85v25c [copy_conputs]
+Warning: Design rule attributes from the driving cell will be set on the port 'rst_n'. (
+Warning: Design rule attributes from the driving cell will be set on the port 'RX'. (UID
+Warning: Design rule attributes from the driving cell will be set on the port 'clr_rx_rd
+Warning: Design rule attributes from the driving cell will be set on the port 'trmt'. (U
+Warning: Design rule attributes from the driving cell will be set on the port 'tx_data[7
+Warning: Design rule attributes from the driving cell will be set on the port 'tx_data[6
+Warning: Design rule attributes from the driving cell will be set on the port 'tx_data[5
+Warning: Design rule attributes from the driving cell will be set on the port 'tx_data[4
+Warning: Design rule attributes from the driving cell will be set on the port 'tx_data[3
+Warning: Design rule attributes from the driving cell will be set on the port 'tx_data[2
+Warning: Design rule attributes from the driving cell will be set on the port 'tx_data[1
+Warning: Design rule attributes from the driving cell will be set on the port 'tx_data[0
+1
+dc_shell> set_drive 0.4 rst_n
+1
+dc_shell> set_output_delay -clock clk 0.4 [all_outputs]
+1
+dc_shell> set_load 0.0001 [all_outputs]
+1
+dc_shell> set_wire_load_model -name 16000 \-library saed32lvt_tt0p85v25c
+1
+dc_shell> set_max_transition 0.15 [current_design]
+1
+dc_shell> compile -map_effort low
+Warning: The compile -map_effort low is obsolete. Setting this variable now defaults to ort medium. Please update your script accordingly. (OPT-1303)
+Warning: Setting attribute 'fix_multiple_port_nets' on design 'UART'. (UIO-59)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | U-2022.12-DWBB_202212.4 |     *     |
+| Licensed DW Building Blocks        |                         |           |
+============================================================================
+
+========================================================================================
+| Flow Information
+----------------------------------------------------------------------------------------
+| Flow         | Design Compiler
+========================================================================================
+| Design Information                                      | Value
+========================================================================================
+| Number of Scenarios                                     | 0
+| Leaf Cell Count                                         | 196
+| Number of User Hierarchies                              | 2
+| Sequential Cell Count                                   | 64
+| Macro Count                                             | 0
+| Number of Power Domains                                 | 0
+| Number of Path Groups                                   | 2
+| Number of VT Class                                      | 2
+| Number of Clocks                                        | 1
+| Number of Dont Touch Cells                              | 50
+| Number of Dont Touch Nets                               | 3
+| Number of Size Only Cells                               | 0
+| Design with UPF Data                                    | false
+========================================================================================
+
+Information: There are 4 potential problems in your design. Please run 'check_design' foon. (LINT-99)
+
+
+Warning: Operating condition tt0p85v25c set on design UART has different process,
+voltage and temperatures parameters than the parameters at which target library
+saed32io_wb_tt1p05v25c_2p5v is characterized. Delays may be inaccurate as a result. (OPT
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'UART_rx'
+  Processing 'UART_tx'
+  Processing 'UART'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'UART_rx_DW01_dec_0'
+  Processing 'UART_tx_DW01_inc_0_DW01_inc_2'
+Information: Command 'do_operand_isolation' is obsolete and is being ignored.  Please recement command 'set power_enable_datapath_gating true' instead. (INFO-118)
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+Information: Command 'do_operand_isolation' is obsolete and is being ignored.  Please recement command 'set power_enable_datapath_gating true' instead. (INFO-118)
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL
+   ELAPSED            WORST NEG   SETUP    DESIGN
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:01     870.2      0.00       0.0     345.7
+    0:00:01     870.2      0.00       0.0     345.7
+    0:00:01     844.3      0.00       0.0     345.7
+
+
+  Beginning Design Rule Fixing  (max_transition)
+  ----------------------------
+
+                                  TOTAL
+   ELAPSED            WORST NEG   SETUP    DESIGN
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:01     844.3      0.00       0.0     345.7
+    0:00:01     848.3      0.00       0.0       8.7
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL
+   ELAPSED            WORST NEG   SETUP    DESIGN
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:01     848.3      0.00       0.0       8.7
+    0:00:01     848.3      0.00       0.0       8.7
+    0:00:01     806.7      0.00       0.0       8.7
+    0:00:01     806.7      0.00       0.0       8.7
+    0:00:01     806.7      0.00       0.0       8.7
+    0:00:01     806.7      0.00       0.0       8.7
+    0:00:01     806.7      0.00       0.0       8.7
+    0:00:01     798.0      0.00       0.0       8.7
+    0:00:01     798.0      0.00       0.0       8.7
+    0:00:01     798.0      0.00       0.0       8.7
+    0:00:01     798.0      0.00       0.0       8.7
+    0:00:01     798.0      0.00       0.0       8.7
+    0:00:01     798.0      0.00       0.0       8.7
+    0:00:01     798.0      0.00       0.0       8.7
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios
+
+
+  Optimization Complete
+  ---------------------
+1
+dc_shell> check_design
+1
+dc_shell> report_area
+
+****************************************
+Report : area
+Design : UART
+Version: U-2022.12-SP4
+Date   : Fri Nov  3 10:36:19 2023
+****************************************
+
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    saed32lvt_tt0p85v25c (File: /cae/apps/data/saed32_edk-2022/lib/stdcell_lvt/db_nldm/s25c.db)
+
+Number of ports:                           98
+Number of nets:                           339
+Number of cells:                          222
+Number of combinational cells:            154
+Number of sequential cells:                64
+Number of macros/black boxes:               0
+Number of buf/inv:                         23
+Number of references:                       4
+
+Combinational area:                367.492228
+Buf/Inv area:                       31.259712
+Noncombinational area:             430.519948
+Macro/Black Box area:                0.000000
+Net Interconnect area:             168.517062
+--More--
+Information: Ignoring interrupt signal since design is being mapped.
+             One more interrupt will abort optimization without
+             transferring the design... (INT-7)
+
+Information: Aborting optimization without transferring the design... (INT-8)
+
+
+
+--More--Information: Process terminated by interrupt. (INT-4)
+tux-168:~/ece551/Exercise18$ dc_shell
+
+                           Design Compiler Graphical
+                                 DC Ultra (TM)
+                                  DFTMAX (TM)
+                              Power Compiler (TM)
+                                 DesignWare (R)
+                                 DC Expert (TM)
+                               Design Vision (TM)
+                               HDL Compiler (TM)
+                               VHDL Compiler (TM)
+                                  DFT Compiler
+                               Design Compiler(R)
+
+               Version U-2022.12-SP4 for linux64 - May 23, 2023
+
+                    Copyright (c) 1988 - 2023 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+Initializing...
+Initializing gui preferences from file  /filespace/p/plin78/.synopsys_dc_gui/preferences
+Information: Term was not able to be set up using xterm . Using "xterm" by default inste
+Warning: Cannot use command line editor for terminal type 'xterm'.  (UI-74)
+dc_shell> read_file -format sverilog { ./UART_tx.sv ./UART_rx.sv ./UART.sv}
+Loading db file '/cae/apps/data/saed32_edk-2022/lib/stdcell_lvt/db_nldm/saed32lvt_tt0p85
+Loading db file '/cae/apps/data/saed32_edk-2022/lib/io_std/db_nldm/saed32io_wb_tt1p05v25
+Loading db file '/cae/apps/data/synopsys-2023/syn/U-2022.12-SP4/libraries/syn/gtech.db'
+Loading db file '/cae/apps/data/synopsys-2023/syn/U-2022.12-SP4/libraries/syn/standard.s
+  Loading link library 'saed32lvt_tt0p85v25c'
+  Loading link library 'saed32io_wb_tt1p05v25c_2p5v'
+  Loading link library 'gtech'
+Detecting input file type automatically (-rtl or -netlist).
+Reading with Presto HDL Compiler (equivalent to -rtl option).
+Running PRESTO HDLC
+Compiling source file /filespace/p/plin78/ece551/Exercise18/UART_tx.sv
+Warning:  /filespace/p/plin78/ece551/Exercise18/UART_tx.sv:55: The value 1111 is too laric data type being used (VER-1)
+Compiling source file /filespace/p/plin78/ece551/Exercise18/UART_rx.sv
+Warning:  /filespace/p/plin78/ece551/Exercise18/UART_rx.sv:16: the undeclared symbol 'shhave the default net type, which is 'wire'. (VER-936)
+Compiling source file /filespace/p/plin78/ece551/Exercise18/UART.sv
+Warning:  Little argument or return value checking implemented for system task or functi-209)
+
+Statistics for case statements in always block at line 17 in file
+        '/filespace/p/plin78/ece551/Exercise18/UART_tx.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            22            |    auto/auto     |
+===============================================
+
+Inferred memory devices in process
+        in routine UART_tx line 40 in file
+                '/filespace/p/plin78/ece551/Exercise18/UART_tx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     bit_cnt_reg     | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine UART_tx line 47 in file
+                '/filespace/p/plin78/ece551/Exercise18/UART_tx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    baud_cnt_reg     | Flip-flop |  12   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine UART_tx line 54 in file
+                '/filespace/p/plin78/ece551/Exercise18/UART_tx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|   tx_shft_reg_reg   | Flip-flop |   3   |  Y  | N  | N  | Y  | N  | N  | N  |
+|   tx_shft_reg_reg   | Flip-flop |   6   |  Y  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine UART_tx line 66 in file
+                '/filespace/p/plin78/ece551/Exercise18/UART_tx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     tx_done_reg     | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine UART_tx line 74 in file
+                '/filespace/p/plin78/ece551/Exercise18/UART_tx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Warning:  /filespace/p/plin78/ece551/Exercise18/UART_rx.sv:16: signed to unsigned assignR-318)
+
+Statistics for case statements in always block at line 18 in file
+        '/filespace/p/plin78/ece551/Exercise18/UART_rx.sv'
+===============================================
+|           Line           |  full/ parallel  |
+===============================================
+|            23            |    auto/auto     |
+===============================================
+$display output: set_rdy00
+
+Inferred memory devices in process
+        in routine UART_rx line 40 in file
+                '/filespace/p/plin78/ece551/Exercise18/UART_rx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|    baud_cnt_reg     | Flip-flop |  12   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine UART_rx line 48 in file
+                '/filespace/p/plin78/ece551/Exercise18/UART_rx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     rx_data_reg     | Flip-flop |   8   |  Y  | N  | N  | N  | N  | N  | N  |
+|  rx_shift_reg_reg   | Flip-flop |   9   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine UART_rx line 56 in file
+                '/filespace/p/plin78/ece551/Exercise18/UART_rx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     bit_cnt_reg     | Flip-flop |   4   |  Y  | N  | N  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine UART_rx line 63 in file
+                '/filespace/p/plin78/ece551/Exercise18/UART_rx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|       rdy_reg       | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine UART_rx line 73 in file
+                '/filespace/p/plin78/ece551/Exercise18/UART_rx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     RX_ff1_reg      | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine UART_rx line 77 in file
+                '/filespace/p/plin78/ece551/Exercise18/UART_rx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|     RX_ff2_reg      | Flip-flop |   1   |  N  | N  | N  | Y  | N  | N  | N  |
+===============================================================================
+
+Inferred memory devices in process
+        in routine UART_rx line 82 in file
+                '/filespace/p/plin78/ece551/Exercise18/UART_rx.sv'.
+===============================================================================
+|    Register Name    |   Type    | Width | Bus | MB | AR | AS | SR | SS | ST |
+===============================================================================
+|      state_reg      | Flip-flop |   1   |  N  | N  | Y  | N  | N  | N  | N  |
+===============================================================================
+Presto compilation completed successfully.
+Loaded 3 designs.
+Current design is 'UART_tx'.
+UART_tx UART_rx UART
+dc_shell> set current_design UART
+UART
+dc_shell> link
+
+  Linking design 'UART'
+  Using the following designs and libraries:
+  --------------------------------------------------------------------------
+  UART                        /filespace/p/plin78/ece551/Exercise18/UART.db
+  saed32lvt_tt0p85v25c (library) /cae/apps/data/saed32_edk-2022/lib/stdcell_lvt/db_nldm/v25c.db
+  saed32io_wb_tt1p05v25c_2p5v (library) /cae/apps/data/saed32_edk-2022/lib/io_std/db_nld1p05v25c_2p5v.db
+  * (2 designs)               /filespace/p/plin78/ece551/Exercise18/UART_tx.db, etc
+
+1
+dc_shell> create_clock -name "clk" -period 2 -waveform {0 1} {clk}
+1
+dc_shell> set_dont_touch_network [find port clk]
+1
+dc_shell> set prim_inputs [remove_from_collection [all_inputs] [find port clk]]
+{rst_n RX clr_rx_rdy trmt tx_data[7] tx_data[6] tx_data[5] tx_data[4] tx_data[3] tx_datax_data[0]}
+dc_shell> set_input_delay -clock clk 0.2 [copy_collection $prim_inputs]
+1
+dc_shell> set_driving_cell -lib_cell NAND2X2_LVT -library \saed32lvt_tt0p85v25c [copy_conputs]
+Warning: Design rule attributes from the driving cell will be set on the port 'rst_n'. (
+Warning: Design rule attributes from the driving cell will be set on the port 'RX'. (UID
+Warning: Design rule attributes from the driving cell will be set on the port 'clr_rx_rd
+Warning: Design rule attributes from the driving cell will be set on the port 'trmt'. (U
+Warning: Design rule attributes from the driving cell will be set on the port 'tx_data[7
+Warning: Design rule attributes from the driving cell will be set on the port 'tx_data[6
+Warning: Design rule attributes from the driving cell will be set on the port 'tx_data[5
+Warning: Design rule attributes from the driving cell will be set on the port 'tx_data[4
+Warning: Design rule attributes from the driving cell will be set on the port 'tx_data[3
+Warning: Design rule attributes from the driving cell will be set on the port 'tx_data[2
+Warning: Design rule attributes from the driving cell will be set on the port 'tx_data[1
+Warning: Design rule attributes from the driving cell will be set on the port 'tx_data[0
+1
+dc_shell> set_drive 0.4 rst_n
+1
+dc_shell> set_output_delay -clock clk 0.4 [all_outputs]
+1
+dc_shell> set_load 0.0001 [all_outputs]
+1
+dc_shell> set_wire_load_model -name 16000 \-library saed32lvt_tt0p85v25c
+1
+dc_shell> set_max_transition 0.15 [current_design]
+1
+dc_shell> compile -map_effort low
+Warning: The compile -map_effort low is obsolete. Setting this variable now defaults to ort medium. Please update your script accordingly. (OPT-1303)
+Warning: Setting attribute 'fix_multiple_port_nets' on design 'UART'. (UIO-59)
+Information: Evaluating DesignWare library utilization. (UISN-27)
+
+============================================================================
+| DesignWare Building Block Library  |         Version         | Available |
+============================================================================
+| Basic DW Building Blocks           | U-2022.12-DWBB_202212.4 |     *     |
+| Licensed DW Building Blocks        |                         |           |
+============================================================================
+
+========================================================================================
+| Flow Information
+----------------------------------------------------------------------------------------
+| Flow         | Design Compiler
+========================================================================================
+| Design Information                                      | Value
+========================================================================================
+| Number of Scenarios                                     | 0
+| Leaf Cell Count                                         | 196
+| Number of User Hierarchies                              | 2
+| Sequential Cell Count                                   | 64
+| Macro Count                                             | 0
+| Number of Power Domains                                 | 0
+| Number of Path Groups                                   | 2
+| Number of VT Class                                      | 2
+| Number of Clocks                                        | 1
+| Number of Dont Touch Cells                              | 50
+| Number of Dont Touch Nets                               | 3
+| Number of Size Only Cells                               | 0
+| Design with UPF Data                                    | false
+========================================================================================
+
+Information: There are 4 potential problems in your design. Please run 'check_design' foon. (LINT-99)
+
+
+Warning: Operating condition tt0p85v25c set on design UART has different process,
+voltage and temperatures parameters than the parameters at which target library
+saed32io_wb_tt1p05v25c_2p5v is characterized. Delays may be inaccurate as a result. (OPT
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'UART_rx'
+  Processing 'UART_tx'
+  Processing 'UART'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Implementation Selection
+  ----------------------------------
+  Processing 'UART_rx_DW01_dec_0'
+  Processing 'UART_tx_DW01_inc_0_DW01_inc_2'
+Information: Command 'do_operand_isolation' is obsolete and is being ignored.  Please recement command 'set power_enable_datapath_gating true' instead. (INFO-118)
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+Information: Command 'do_operand_isolation' is obsolete and is being ignored.  Please recement command 'set power_enable_datapath_gating true' instead. (INFO-118)
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL
+   ELAPSED            WORST NEG   SETUP    DESIGN
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:00     870.2      0.00       0.0     345.7
+    0:00:00     870.2      0.00       0.0     345.7
+    0:00:01     844.3      0.00       0.0     345.7
+
+
+  Beginning Design Rule Fixing  (max_transition)
+  ----------------------------
+
+                                  TOTAL
+   ELAPSED            WORST NEG   SETUP    DESIGN
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:01     844.3      0.00       0.0     345.7
+    0:00:01     848.3      0.00       0.0       8.7
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL
+   ELAPSED            WORST NEG   SETUP    DESIGN
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:01     848.3      0.00       0.0       8.7
+    0:00:01     848.3      0.00       0.0       8.7
+    0:00:01     806.7      0.00       0.0       8.7
+    0:00:01     806.7      0.00       0.0       8.7
+    0:00:01     806.7      0.00       0.0       8.7
+    0:00:01     806.7      0.00       0.0       8.7
+    0:00:01     806.7      0.00       0.0       8.7
+    0:00:01     798.0      0.00       0.0       8.7
+    0:00:01     798.0      0.00       0.0       8.7
+    0:00:01     798.0      0.00       0.0       8.7
+    0:00:01     798.0      0.00       0.0       8.7
+    0:00:01     798.0      0.00       0.0       8.7
+    0:00:01     798.0      0.00       0.0       8.7
+    0:00:01     798.0      0.00       0.0       8.7
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios
+
+
+  Optimization Complete
+  ---------------------
+1
+dc_shell> check_design
+1
+dc_shell> report_timing -path full -delay max -nworst 3
+Information: Updating design information... (UID-85)
+
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -nworst 3
+        -max_paths 3
+Design : UART
+Version: U-2022.12-SP4
+Date   : Fri Nov  3 10:40:28 2023
+****************************************
+
+Operating Conditions: tt0p85v25c   Library: saed32lvt_tt0p85v25c
+Wire Load Model Mode: enclosed
+
+  Startpoint: iRX/baud_cnt_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: iRX/baud_cnt_reg[11]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  UART               16000                 saed32lvt_tt0p85v25c
+  UART_rx            8000                  saed32lvt_tt0p85v25c
+--More--
+  UART_rx_DW01_dec_0 ForQA                 saed32lvt_tt0p85v25c
+--More--
+
+--More--
+  Point                                           Incr       Path
+--More--
+  ------------------------------------------------------------------
+--More--
+  clock clk (rise edge)                           0.00       0.00
+--More--
+  clock network delay (ideal)                     0.00       0.00
+--More--
+  iRX/baud_cnt_reg[0]/CLK (DFFX1_LVT)             0.00       0.00 r
+--More--
+  iRX/baud_cnt_reg[0]/Q (DFFX1_LVT)               0.08       0.08 r
+--More--
+  iRX/sub_44_S2/A[0] (UART_rx_DW01_dec_0)         0.00       0.08 r
+--More--
+  iRX/sub_44_S2/U30/Y (OR2X1_LVT)                 0.06       0.14 r
+--More--
+  iRX/sub_44_S2/U29/Y (OR2X1_LVT)                 0.06       0.20 r
+--More--
+  iRX/sub_44_S2/U28/Y (OR2X1_LVT)                 0.06       0.26 r
+--More--
+  iRX/sub_44_S2/U27/Y (OR2X1_LVT)                 0.06       0.32 r
+--More--
+  iRX/sub_44_S2/U26/Y (OR2X1_LVT)                 0.06       0.38 r
+--More--
+  iRX/sub_44_S2/U25/Y (OR2X1_LVT)                 0.06       0.44 r
+--More--
+  iRX/sub_44_S2/U24/Y (OR2X1_LVT)                 0.06       0.50 r
+--More--
+  iRX/sub_44_S2/U23/Y (OR2X1_LVT)                 0.06       0.56 r
+--More--
+  iRX/sub_44_S2/U22/Y (NOR2X0_LVT)                0.07       0.62 f
+--More--
+  iRX/sub_44_S2/U20/Y (NAND2X0_LVT)               0.05       0.67 r
+--More--
+  iRX/sub_44_S2/U19/Y (XNOR2X1_LVT)               0.09       0.76 r
+--More--
+  iRX/sub_44_S2/SUM[11] (UART_rx_DW01_dec_0)      0.00       0.76 r
+--More--
+  iRX/U45/Y (AO221X1_LVT)                         0.06       0.82 r
+--More--
+  iRX/baud_cnt_reg[11]/D (DFFX1_LVT)              0.01       0.83 r
+--More--
+  data arrival time                                          0.83
+--More--
+
+--More--
+  clock clk (rise edge)                           2.00       2.00
+--More--
+  clock network delay (ideal)                     0.00       2.00
+--More--
+  iRX/baud_cnt_reg[11]/CLK (DFFX1_LVT)            0.00       2.00 r
+--More--
+  library setup time                             -0.03       1.97
+--More--
+  data required time                                         1.97
+--More--
+  ------------------------------------------------------------------
+--More--
+  data required time                                         1.97
+--More--
+  data arrival time                                         -0.83
+--More--
+  ------------------------------------------------------------------
+--More--
+  slack (MET)                                                1.14
+--More--
+
+--More--
+
+--More--
+  Startpoint: iRX/baud_cnt_reg[0]
+--More--
+              (rising edge-triggered flip-flop clocked by clk)
+--More--
+  Endpoint: iRX/baud_cnt_reg[11]
+--More--
+            (rising edge-triggered flip-flop clocked by clk)
+--More--
+  Path Group: clk
+--More--
+  Path Type: max
+--More--
+
+--More--
+  Des/Clust/Port     Wire Load Model       Library
+--More--
+  ------------------------------------------------
+--More--
+  UART               16000                 saed32lvt_tt0p85v25c
+--More--
+  UART_rx            8000                  saed32lvt_tt0p85v25c
+--More--
+  UART_rx_DW01_dec_0 ForQA                 saed32lvt_tt0p85v25c
+--More--
+
+--More--
+  Point                                           Incr       Path
+--More--
+  ------------------------------------------------------------------
+--More--
+  clock clk (rise edge)                           0.00       0.00
+--More--
+  clock network delay (ideal)                     0.00       0.00
+--More--
+  iRX/baud_cnt_reg[0]/CLK (DFFX1_LVT)             0.00       0.00 r
+--More--
+  iRX/baud_cnt_reg[0]/Q (DFFX1_LVT)               0.09       0.09 f
+--More--
+  iRX/sub_44_S2/A[0] (UART_rx_DW01_dec_0)         0.00       0.09 f
+--More--
+  iRX/sub_44_S2/U30/Y (OR2X1_LVT)                 0.06       0.15 f
+--More--
+  iRX/sub_44_S2/U29/Y (OR2X1_LVT)                 0.06       0.20 f
+--More--
+  iRX/sub_44_S2/U28/Y (OR2X1_LVT)                 0.06       0.26 f
+--More--
+  iRX/sub_44_S2/U27/Y (OR2X1_LVT)                 0.06       0.32 f
+--More--
+  iRX/sub_44_S2/U26/Y (OR2X1_LVT)                 0.06       0.38 f
+--More--
+  iRX/sub_44_S2/U25/Y (OR2X1_LVT)                 0.06       0.44 f
+--More--
+  iRX/sub_44_S2/U24/Y (OR2X1_LVT)                 0.06       0.50 f
+--More--
+  iRX/sub_44_S2/U23/Y (OR2X1_LVT)                 0.06       0.56 f
+--More--
+  iRX/sub_44_S2/U22/Y (NOR2X0_LVT)                0.07       0.63 r
+--More--
+  iRX/sub_44_S2/U20/Y (NAND2X0_LVT)               0.04       0.68 f
+--More--
+  iRX/sub_44_S2/U19/Y (XNOR2X1_LVT)               0.09       0.76 r
+--More--
+  iRX/sub_44_S2/SUM[11] (UART_rx_DW01_dec_0)      0.00       0.76 r
+--More--
+  iRX/U45/Y (AO221X1_LVT)                         0.06       0.82 r
+--More--
+  iRX/baud_cnt_reg[11]/D (DFFX1_LVT)              0.01       0.83 r
+--More--
+  data arrival time                                          0.83
+--More--
+
+--More--
+  clock clk (rise edge)                           2.00       2.00
+--More--
+  clock network delay (ideal)                     0.00       2.00
+--More--
+  iRX/baud_cnt_reg[11]/CLK (DFFX1_LVT)            0.00       2.00 r
+--More--
+  library setup time                             -0.03       1.97
+--More--
+  data required time                                         1.97
+--More--
+  ------------------------------------------------------------------
+--More--
+  data required time                                         1.97
+--More--
+  data arrival time                                         -0.83
+--More--
+  ------------------------------------------------------------------
+--More--
+  slack (MET)                                                1.14
+--More--
+
+--More--
+
+--More--
+  Startpoint: iRX/baud_cnt_reg[1]
+--More--
+              (rising edge-triggered flip-flop clocked by clk)
+--More--
+  Endpoint: iRX/baud_cnt_reg[11]
+--More--
+            (rising edge-triggered flip-flop clocked by clk)
+--More--
+  Path Group: clk
+--More--
+  Path Type: max
+--More--
+
+--More--
+  Des/Clust/Port     Wire Load Model       Library
+--More--
+  ------------------------------------------------
+--More--
+  UART               16000                 saed32lvt_tt0p85v25c
+--More--
+  UART_rx            8000                  saed32lvt_tt0p85v25c
+--More--
+  UART_rx_DW01_dec_0 ForQA                 saed32lvt_tt0p85v25c
+--More--
+
+--More--
+  Point                                           Incr       Path
+--More--
+  ------------------------------------------------------------------
+--More--
+  clock clk (rise edge)                           0.00       0.00
+--More--
+  clock network delay (ideal)                     0.00       0.00
+--More--
+  iRX/baud_cnt_reg[1]/CLK (DFFX1_LVT)             0.00       0.00 r
+--More--
+  iRX/baud_cnt_reg[1]/Q (DFFX1_LVT)               0.08       0.08 f
+--More--
+  iRX/sub_44_S2/A[1] (UART_rx_DW01_dec_0)         0.00       0.08 f
+--More--
+  iRX/sub_44_S2/U30/Y (OR2X1_LVT)                 0.06       0.14 f
+--More--
+  iRX/sub_44_S2/U29/Y (OR2X1_LVT)                 0.06       0.20 f
+--More--
+  iRX/sub_44_S2/U28/Y (OR2X1_LVT)                 0.06       0.26 f
+--More--
+  iRX/sub_44_S2/U27/Y (OR2X1_LVT)                 0.06       0.32 f
+--More--
+  iRX/sub_44_S2/U26/Y (OR2X1_LVT)                 0.06       0.38 f
+--More--
+  iRX/sub_44_S2/U25/Y (OR2X1_LVT)                 0.06       0.44 f
+--More--
+  iRX/sub_44_S2/U24/Y (OR2X1_LVT)                 0.06       0.50 f
+--More--
+  iRX/sub_44_S2/U23/Y (OR2X1_LVT)                 0.06       0.56 f
+--More--
+  iRX/sub_44_S2/U22/Y (NOR2X0_LVT)                0.07       0.63 r
+--More--
+  iRX/sub_44_S2/U20/Y (NAND2X0_LVT)               0.04       0.67 f
+--More--
+  iRX/sub_44_S2/U19/Y (XNOR2X1_LVT)               0.09       0.76 r
+--More--
+  iRX/sub_44_S2/SUM[11] (UART_rx_DW01_dec_0)      0.00       0.76 r
+--More--
+  iRX/U45/Y (AO221X1_LVT)                         0.06       0.82 r
+--More--
+  iRX/baud_cnt_reg[11]/D (DFFX1_LVT)              0.01       0.83 r
+--More--
+  data arrival time                                          0.83
+--More--
+
+--More--
+  clock clk (rise edge)                           2.00       2.00
+--More--
+  clock network delay (ideal)                     0.00       2.00
+--More--
+  iRX/baud_cnt_reg[11]/CLK (DFFX1_LVT)            0.00       2.00 r
+--More--
+  library setup time                             -0.03       1.97
+--More--
+  data required time                                         1.97
+--More--
+  ------------------------------------------------------------------
+--More--
+  data required time                                         1.97
+--More--
+  data arrival time                                         -0.83
+--More--
+  ------------------------------------------------------------------
+--More--
+  slack (MET)                                                1.14
+--More--
+
+--More--
+
+1
+dc_shell>
+dc_shell>
+dc_shell>
+dc_shell>
+dc_shell>
+dc_shell>
+dc_shell>
+dc_shell>
+dc_shell>
+dc_shell>
+dc_shell>
+dc_shell>
+dc_shell>
+dc_shell>
+dc_shell>
+dc_shell>
+dc_shell>
+dc_shell>
+dc_shell>
+dc_shell>
+dc_shell>
+dc_shell>
+dc_shell>
+dc_shell>
+dc_shell>
+dc_shell> report_timing -path full -delay min -nworst 3
+
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -nworst 3
+        -max_paths 3
+Design : UART
+Version: U-2022.12-SP4
+Date   : Fri Nov  3 10:44:58 2023
+****************************************
+
+Operating Conditions: tt0p85v25c   Library: saed32lvt_tt0p85v25c
+Wire Load Model Mode: enclosed
+
+  Startpoint: iRX/RX_ff1_reg
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: iRX/RX_ff2_reg
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: min
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  UART               16000                 saed32lvt_tt0p85v25c
+  UART_rx            8000                  saed32lvt_tt0p85v25c
+--More--
+
+--More--
+  Point                                    Incr       Path
+--More--
+  -----------------------------------------------------------
+--More--
+  clock clk (rise edge)                    0.00       0.00
+--More--
+  clock network delay (ideal)              0.00       0.00
+--More--
+  iRX/RX_ff1_reg/CLK (DFFASX1_LVT)         0.00       0.00 r
+--More--
+  iRX/RX_ff1_reg/Q (DFFASX1_LVT)           0.08       0.08 r
+--More--
+  iRX/RX_ff2_reg/D (DFFASX1_LVT)           0.01       0.09 r
+--More--
+  data arrival time                                   0.09
+--More--
+
+--More--
+  clock clk (rise edge)                    0.00       0.00
+--More--
+  clock network delay (ideal)              0.00       0.00
+--More--
+  iRX/RX_ff2_reg/CLK (DFFASX1_LVT)         0.00       0.00 r
+--More--
+  library hold time                       -0.01      -0.01
+--More--
+  data required time                                 -0.01
+--More--
+  -----------------------------------------------------------
+--More--
+  data required time                                 -0.01
+--More--
+  data arrival time                                  -0.09
+--More--
+  -----------------------------------------------------------
+--More--
+  slack (MET)                                         0.10
+--More--
+
+--More--
+
+--More--
+  Startpoint: iRX/RX_ff1_reg
+--More--
+              (rising edge-triggered flip-flop clocked by clk)
+--More--
+  Endpoint: iRX/RX_ff2_reg
+--More--
+            (rising edge-triggered flip-flop clocked by clk)
+--More--
+  Path Group: clk
+--More--
+  Path Type: min
+--More--
+
+--More--
+  Des/Clust/Port     Wire Load Model       Library
+--More--
+  ------------------------------------------------
+--More--
+  UART               16000                 saed32lvt_tt0p85v25c
+--More--
+  UART_rx            8000                  saed32lvt_tt0p85v25c
+--More--
+
+--More--
+  Point                                    Incr       Path
+--More--
+  -----------------------------------------------------------
+--More--
+  clock clk (rise edge)                    0.00       0.00
+--More--
+  clock network delay (ideal)              0.00       0.00
+--More--
+  iRX/RX_ff1_reg/CLK (DFFASX1_LVT)         0.00       0.00 r
+--More--
+  iRX/RX_ff1_reg/Q (DFFASX1_LVT)           0.09       0.09 f
+--More--
+  iRX/RX_ff2_reg/D (DFFASX1_LVT)           0.01       0.10 f
+--More--
+  data arrival time                                   0.10
+--More--
+
+--More--
+  clock clk (rise edge)                    0.00       0.00
+--More--
+  clock network delay (ideal)              0.00       0.00
+--More--
+  iRX/RX_ff2_reg/CLK (DFFASX1_LVT)         0.00       0.00 r
+--More--
+  library hold time                       -0.01      -0.01
+--More--
+  data required time                                 -0.01
+--More--
+  -----------------------------------------------------------
+--More--
+  data required time                                 -0.01
+--More--
+  data arrival time                                  -0.10
+--More--
+  -----------------------------------------------------------
+--More--
+  slack (MET)                                         0.11
+--More--
+
+--More--
+
+--More--
+  Startpoint: iRX/bit_cnt_reg[1]
+--More--
+              (rising edge-triggered flip-flop clocked by clk)
+--More--
+  Endpoint: iRX/bit_cnt_reg[1]
+--More--
+            (rising edge-triggered flip-flop clocked by clk)
+--More--
+  Path Group: clk
+--More--
+  Path Type: min
+--More--
+
+--More--
+  Des/Clust/Port     Wire Load Model       Library
+--More--
+  ------------------------------------------------
+--More--
+  UART               16000                 saed32lvt_tt0p85v25c
+--More--
+  UART_rx            8000                  saed32lvt_tt0p85v25c
+--More--
+
+--More--
+  Point                                    Incr       Path
+--More--
+  -----------------------------------------------------------
+--More--
+  clock clk (rise edge)                    0.00       0.00
+--More--
+  clock network delay (ideal)              0.00       0.00
+--More--
+  iRX/bit_cnt_reg[1]/CLK (DFFX1_LVT)       0.00       0.00 r
+--More--
+  iRX/bit_cnt_reg[1]/QN (DFFX1_LVT)        0.06       0.06 f
+--More--
+  iRX/U34/Y (AO22X1_LVT)                   0.04       0.09 f
+--More--
+  iRX/bit_cnt_reg[1]/D (DFFX1_LVT)         0.01       0.10 f
+--More--
+  data arrival time                                   0.10
+--More--
+
+--More--
+  clock clk (rise edge)                    0.00       0.00
+--More--
+  clock network delay (ideal)              0.00       0.00
+--More--
+  iRX/bit_cnt_reg[1]/CLK (DFFX1_LVT)       0.00       0.00 r
+--More--
+  library hold time                       -0.01      -0.01
+--More--
+  data required time                                 -0.01
+--More--
+  -----------------------------------------------------------
+--More--
+  data required time                                 -0.01
+--More--
+  data arrival time                                  -0.10
+--More--
+  -----------------------------------------------------------
+--More--
+  slack (MET)                                         0.11
+--More--
+
+--More--
+
+1
+dc_shell>
+dc_shell>
+dc_shell>
+dc_shell>
+dc_shell>
+dc_shell>
+dc_shell>
+dc_shell>
+dc_shell>
+dc_shell>
+dc_shell>
+dc_shell> report_timing
+
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : UART
+Version: U-2022.12-SP4
+Date   : Fri Nov  3 10:46:33 2023
+****************************************
+
+Operating Conditions: tt0p85v25c   Library: saed32lvt_tt0p85v25c
+Wire Load Model Mode: enclosed
+
+  Startpoint: iRX/baud_cnt_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: iRX/baud_cnt_reg[11]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  UART               16000                 saed32lvt_tt0p85v25c
+  UART_rx            8000                  saed32lvt_tt0p85v25c
+  UART_rx_DW01_dec_0 ForQA                 saed32lvt_tt0p85v25c
+--More--
+
+--More--
+  Point                                           Incr       Path
+--More--
+  ------------------------------------------------------------------
+--More--
+  clock clk (rise edge)                           0.00       0.00
+--More--
+  clock network delay (ideal)                     0.00       0.00
+--More--
+  iRX/baud_cnt_reg[0]/CLK (DFFX1_LVT)             0.00       0.00 r
+--More--
+  iRX/baud_cnt_reg[0]/Q (DFFX1_LVT)               0.08       0.08 r
+--More--
+  iRX/sub_44_S2/A[0] (UART_rx_DW01_dec_0)         0.00       0.08 r
+--More--
+  iRX/sub_44_S2/U30/Y (OR2X1_LVT)                 0.06       0.14 r
+--More--
+  iRX/sub_44_S2/U29/Y (OR2X1_LVT)                 0.06       0.20 r
+--More--
+  iRX/sub_44_S2/U28/Y (OR2X1_LVT)                 0.06       0.26 r
+--More--
+  iRX/sub_44_S2/U27/Y (OR2X1_LVT)                 0.06       0.32 r
+--More--
+  iRX/sub_44_S2/U26/Y (OR2X1_LVT)                 0.06       0.38 r
+--More--
+  iRX/sub_44_S2/U25/Y (OR2X1_LVT)                 0.06       0.44 r
+--More--
+  iRX/sub_44_S2/U24/Y (OR2X1_LVT)                 0.06       0.50 r
+--More--
+  iRX/sub_44_S2/U23/Y (OR2X1_LVT)                 0.06       0.56 r
+--More--
+  iRX/sub_44_S2/U22/Y (NOR2X0_LVT)                0.07       0.62 f
+--More--
+  iRX/sub_44_S2/U20/Y (NAND2X0_LVT)               0.05       0.67 r
+--More--
+  iRX/sub_44_S2/U19/Y (XNOR2X1_LVT)               0.09       0.76 r
+--More--
+  iRX/sub_44_S2/SUM[11] (UART_rx_DW01_dec_0)      0.00       0.76 r
+--More--
+  iRX/U45/Y (AO221X1_LVT)                         0.06       0.82 r
+--More--
+  iRX/baud_cnt_reg[11]/D (DFFX1_LVT)              0.01       0.83 r
+--More--
+  data arrival time                                          0.83
+--More--
+
+--More--
+  clock clk (rise edge)                           2.00       2.00
+--More--
+  clock network delay (ideal)                     0.00       2.00
+--More--
+  iRX/baud_cnt_reg[11]/CLK (DFFX1_LVT)            0.00       2.00 r
+--More--
+  library setup time                             -0.03       1.97
+--More--
+  data required time                                         1.97
+--More--
+  ------------------------------------------------------------------
+--More--
+  data required time                                         1.97
+--More--
+  data arrival time                                         -0.83
+--More--
+  ------------------------------------------------------------------
+--More--
+  slack (MET)                                                1.14
+--More--
+
+--More--
+
+1
+dc_shell>
+dc_shell>
+dc_shell>
+dc_shell>
+dc_shell>
+dc_shell>
+dc_shell>
+dc_shell>
+dc_shell>
+dc_shell>
+dc_shell>
+dc_shell>
+dc_shell>
+dc_shell>
+dc_shell>
+dc_shell>
+dc_shell>
+dc_shell>
+dc_shell>
+dc_shell>
+dc_shell>
+
+dc_shell> dc_shell> help report_timing -nworst
+Error: unknown option '-nworst' (CMD-010)
+dc_shell> ungroup –all -flatten
+Warning: Can't find cell '–all' in design 'UART'. (UID-95)
+Error: Value for list 'cell_list' must have 1 elements. (CMD-036)
+0
+dc_shell> ungroup -all -flatten
+1
+dc_shell> compile -map_effort medium
+========================================================================================
+| Flow Information
+----------------------------------------------------------------------------------------
+| Flow         | Design Compiler
+========================================================================================
+| Design Information                                      | Value
+========================================================================================
+| Number of Scenarios                                     | 0
+| Leaf Cell Count                                         | 218
+| Number of User Hierarchies                              | 0
+| Sequential Cell Count                                   | 64
+| Macro Count                                             | 0
+| Number of Power Domains                                 | 0
+| Number of Path Groups                                   | 2
+| Number of VT Class                                      | 2
+| Number of Clocks                                        | 1
+| Number of Dont Touch Cells                              | 0
+| Number of Dont Touch Nets                               | 1
+| Number of Size Only Cells                               | 0
+| Design with UPF Data                                    | false
+========================================================================================
+
+Warning: Operating condition tt0p85v25c set on design UART has different process,
+voltage and temperatures parameters than the parameters at which target library
+saed32io_wb_tt1p05v25c_2p5v is characterized. Delays may be inaccurate as a result. (OPT
+
+  Beginning Pass 1 Mapping
+  ------------------------
+  Processing 'UART'
+
+  Updating timing information
+Information: Updating design information... (UID-85)
+
+  Beginning Mapping Optimizations  (Medium effort)
+  -------------------------------
+Information: Command 'do_operand_isolation' is obsolete and is being ignored.  Please recement command 'set power_enable_datapath_gating true' instead. (INFO-118)
+
+                                  TOTAL
+   ELAPSED            WORST NEG   SETUP    DESIGN
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:00     938.6      0.00       0.0     351.2
+    0:00:00     938.6      0.00       0.0     351.2
+    0:00:00     938.6      0.00       0.0     351.2
+    0:00:00     938.6      0.00       0.0     351.2
+    0:00:00     938.6      0.00       0.0     351.2
+    0:00:00     849.1      0.00       0.0     351.2
+    0:00:00     848.6      0.00       0.0     351.2
+    0:00:00     848.6      0.00       0.0     351.2
+    0:00:00     848.6      0.00       0.0     351.2
+    0:00:00     848.6      0.00       0.0     351.2
+    0:00:00     848.6      0.00       0.0     351.2
+    0:00:00     847.6      0.00       0.0     345.7
+    0:00:00     847.6      0.00       0.0     345.7
+    0:00:00     847.6      0.00       0.0     345.7
+    0:00:00     847.6      0.00       0.0     345.7
+
+
+
+  Beginning Delay Optimization Phase
+  ----------------------------------
+
+                                  TOTAL
+   ELAPSED            WORST NEG   SETUP    DESIGN
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:00     847.6      0.00       0.0     345.7
+    0:00:00     847.6      0.00       0.0     345.7
+    0:00:00     786.6      0.00       0.0     345.7
+
+
+  Beginning Design Rule Fixing  (max_transition)
+  ----------------------------
+
+                                  TOTAL
+   ELAPSED            WORST NEG   SETUP    DESIGN
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:00     786.6      0.00       0.0     345.7
+
+
+  Beginning Area-Recovery Phase  (cleanup)
+  -----------------------------
+
+                                  TOTAL
+   ELAPSED            WORST NEG   SETUP    DESIGN
+    TIME      AREA      SLACK     COST    RULE COST         ENDPOINT
+  --------- --------- --------- --------- --------- -------------------------
+    0:00:00     786.6      0.00       0.0     345.7
+    0:00:00     786.6      0.00       0.0     345.7
+    0:00:00     786.6      0.00       0.0     345.7
+    0:00:00     786.6      0.00       0.0     345.7
+    0:00:00     786.6      0.00       0.0     345.7
+    0:00:00     786.6      0.00       0.0     345.7
+    0:00:00     786.1      0.00       0.0     345.7
+    0:00:00     786.1      0.00       0.0     345.7
+    0:00:00     786.1      0.00       0.0     345.7
+    0:00:00     786.1      0.00       0.0     345.7
+    0:00:00     786.1      0.00       0.0     345.7
+    0:00:00     786.1      0.00       0.0     345.7
+    0:00:00     786.1      0.00       0.0     345.7
+
+
+Note: Symbol # after min delay cost means estimated hold TNS across all active scenarios
+
+
+  Optimization Complete
+  ---------------------
+1
+dc_shell> check_design
+1
+dc_shell> report_area
+
+****************************************
+Report : area
+Design : UART
+Version: U-2022.12-SP4
+Date   : Fri Nov  3 10:53:03 2023
+****************************************
+
+Information: Updating design information... (UID-85)
+Library(s) Used:
+
+    saed32lvt_tt0p85v25c (File: /cae/apps/data/saed32_edk-2022/lib/stdcell_lvt/db_nldm/s25c.db)
+
+Number of ports:                           24
+Number of nets:                           269
+Number of cells:                          217
+Number of combinational cells:            153
+Number of sequential cells:                64
+Number of macros/black boxes:               0
+Number of buf/inv:                         25
+Number of references:                      20
+
+Combinational area:                355.547461
+Buf/Inv area:                       37.867457
+Noncombinational area:             430.519948
+Macro/Black Box area:                0.000000
+Net Interconnect area:             173.154212
+--More--
+
+--More--
+Total cell area:                   786.067410
+--More--
+Total area:                        959.221622
+1
+dc_shell>
+dc_shell>
+dc_shell>
+dc_shell>
+dc_shell>
+dc_shell>
+dc_shell>
+dc_shell>
+dc_shell>
+dc_shell>
+dc_shell>
+dc_shell>
+dc_shell>
+dc_shell>
+dc_shell>
+dc_shell>
+dc_shell>
+dc_shell>
+dc_shell>
+dc_shell>
+dc_shell>
+dc_shell> write -format verilog UART -output UART.vg
+Writing verilog file '/filespace/p/plin78/ece551/Exercise18/UART.vg'.
+1
+dc_shell> source UART.dc
+Error: could not open script file "UART.dc" (CMD-015)
+dc_shell> exit
+
+Memory usage for this session 158 Mbytes.
+Memory usage for this session including child processes 158 Mbytes.
+CPU usage for this session 4 seconds ( 0.00 hours ).
+Elapsed time for this session 1354 seconds ( 0.38 hours ).
+
+Thank you...
+tux-168:~/ece551/Exercise18$ ls
+command.log    UART_RX.mr           UART.sv              UART_tx-verilog.syn
+default.svf    UART_rx.sv           UART_TX.mr           UART-verilog.pvl
+designvision/  UART_rx-verilog.pvl  UART_tx.sv           UART-verilog.syn
+UART.mr        UART_rx-verilog.syn  UART_tx-verilog.pvl  UART.vg
+tux-168:~/ece551/Exercise18$ vim UART.vg
+130   AO222X1_LVT U82 ( .A1(n69), .A2(n29), .A3(n159), .A4(n31), .A5(tx_data[6]),
+131         .A6(n6), .Y(\iTX/n23 ) );
+132   AND4X1_LVT U84 ( .A1(\iTX/state ), .A2(n76), .A3(\iTX/n4 ), .A4(n21), .Y(
+133         \iTX/N61 ) );
+134   AND3X1_LVT U85 ( .A1(n68), .A2(n19), .A3(\iTX/n2 ), .Y(n76) );
+135   AO22X1_LVT U86 ( .A1(n77), .A2(n7), .A3(n78), .A4(n143), .Y(\iTX/N44 ) );
+136   AND2X1_LVT U87 ( .A1(\iTX/add_49_S2/carry [11]), .A2(n79), .Y(n78) );
+137   AO21X1_LVT U88 ( .A1(n79), .A2(n9), .A3(n154), .Y(n77) );
+138   AO22X1_LVT U89 ( .A1(\iTX/N31 ), .A2(n79), .A3(n155), .A4(n8), .Y(\iTX/N43 )
+139          );
+140   AO22X1_LVT U90 ( .A1(\iTX/N30 ), .A2(n79), .A3(n156), .A4(n10), .Y(\iTX/N42 ) );
+141   AO22X1_LVT U91 ( .A1(\iTX/N29 ), .A2(n79), .A3(n155), .A4(n11), .Y(\iTX/N41 ) );
+142   AO22X1_LVT U92 ( .A1(\iTX/N28 ), .A2(n79), .A3(n156), .A4(n12), .Y(\iTX/N40 ) );
+143   AO22X1_LVT U93 ( .A1(\iTX/N27 ), .A2(n79), .A3(n155), .A4(n13), .Y(\iTX/N39 ) );
+144   AO22X1_LVT U94 ( .A1(\iTX/N26 ), .A2(n79), .A3(n156), .A4(n14), .Y(\iTX/N38 ) );
+145   AO22X1_LVT U95 ( .A1(\iTX/N25 ), .A2(n79), .A3(n155), .A4(n15), .Y(\iTX/N37 ) );
+146   AO22X1_LVT U96 ( .A1(\iTX/N24 ), .A2(n79), .A3(n156), .A4(n16), .Y(\iTX/N36 ) );
+147   AO22X1_LVT U97 ( .A1(\iTX/N23 ), .A2(n79), .A3(n154), .A4(n17), .Y(\iTX/N35 ) );
+148   AO22X1_LVT U98 ( .A1(\iTX/N22 ), .A2(n79), .A3(n154), .A4(n18), .Y(\iTX/N34 ) );
+149   AO22X1_LVT U99 ( .A1(n79), .A2(\iTX/n5 ), .A3(n154), .A4(n30), .Y(\iTX/N33 )
+150          );
+151   AND2X1_LVT U101 ( .A1(\iTX/state ), .A2(n69), .Y(n79) );
+152   NAND2X0_LVT U103 ( .A1(trmt), .A2(n32), .Y(n68) );
+153   NAND4X0_LVT U104 ( .A1(n128), .A2(n130), .A3(n125), .A4(n83), .Y(n82) );
+154   AND3X1_LVT U105 ( .A1(n132), .A2(n134), .A3(n131), .Y(n83) );
+155   NAND4X0_LVT U106 ( .A1(n16), .A2(n17), .A3(n14), .A4(n84), .Y(n81) );
+156   AND3X1_LVT U107 ( .A1(n7), .A2(n10), .A3(\iTX/n5 ), .Y(n84) );
+157   AO21X1_LVT U108 ( .A1(\iRX/state ), .A2(n85), .A3(n38), .Y(\iRX/n96 ) );
+158   AO22X1_LVT U109 ( .A1(n37), .A2(n65), .A3(n86), .A4(\iRX/n90 ), .Y(\iRX/n95 ) );
+159   AND2X1_LVT U110 ( .A1(n87), .A2(n88), .Y(n86) );
+160   AO22X1_LVT U111 ( .A1(n89), .A2(n64), .A3(\iRX/n89 ), .A4(n90), .Y(\iRX/n94 ) );
+161   AO22X1_LVT U112 ( .A1(n91), .A2(n63), .A3(n92), .A4(n90), .Y(\iRX/n93 ) );
+162   AND2X1_LVT U113 ( .A1(\iRX/n88 ), .A2(n64), .Y(n92) );
+163   AO21X1_LVT U114 ( .A1(n93), .A2(n62), .A3(n94), .Y(\iRX/n92 ) );
+164   AND4X1_LVT U115 ( .A1(\iRX/n87 ), .A2(n90), .A3(n63), .A4(n64), .Y(n94) );
+165   AND3X1_LVT U116 ( .A1(n88), .A2(n65), .A3(n87), .Y(n90) );
+166   AO21X1_LVT U117 ( .A1(\iRX/n88 ), .A2(n88), .A3(n91), .Y(n93) );
+167   AO21X1_LVT U118 ( .A1(\iRX/n89 ), .A2(n88), .A3(n89), .Y(n91) );
+168   AO21X1_LVT U119 ( .A1(\iRX/n90 ), .A2(n88), .A3(n37), .Y(n89) );
+169   AO22X1_LVT U120 ( .A1(rx_rdy), .A2(n4), .A3(n95), .A4(n96), .Y(\iRX/n91 ) );
+                                                                      159,35        42%

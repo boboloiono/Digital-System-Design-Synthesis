@@ -1,0 +1,15 @@
+C:/ECE551/Exercise/Ex02/ring_osc_tb.sv {1 {vlog -work work -sv -stats=none {C:\ECE551\Exercise\Ex02\ring_osc_tb.sv}
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module ring_osc_tb
+
+Top level modules:
+	ring_osc_tb
+
+} {} {}} C:/ECE551/Exercise/Ex02/ring_osc.sv {1 {vlog -work work -sv -stats=none C:/ECE551/Exercise/Ex02/ring_osc.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module ring_osc
+
+Top level modules:
+	ring_osc
+
+} {} {}}

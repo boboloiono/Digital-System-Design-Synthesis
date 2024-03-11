@@ -1,0 +1,59 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA/20.1/modelsim_ase/win32aloem
+vcounter
+DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z0 !s110 1694231827
+!i10b 1
+!s100 nzzAZ[DG_Oej8G9FRYF@n0
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I1AJ`nKnKN2LlBb`UGcmbl1
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+S1
+Z3 dC:/ECE551/Ex01
+w1694211203
+8C:\ECE551\Ex01\counter.sv
+FC:\ECE551\Ex01\counter.sv
+!i122 6
+L0 1 25
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1694231827.000000
+!s107 C:\ECE551\Ex01\counter.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:\ECE551\Ex01\counter.sv|
+!i113 1
+o-work work -sv
+Z6 tCvgOpt 0
+vup_dwn_tb
+R0
+!i10b 1
+!s100 OPj73?<`C1gXgkbCoan<C1
+R1
+IJfcnE4f^BznGSg`NI<V920
+R2
+R3
+w1694211049
+8C:/ECE551/Ex01/counter_tb.v
+FC:/ECE551/Ex01/counter_tb.v
+!i122 7
+L0 1 29
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/ECE551/Ex01/counter_tb.v|
+!s90 -reportprogress|300|-work|work|-stats=none|C:/ECE551/Ex01/counter_tb.v|
+!i113 1
+o-work work
+R6

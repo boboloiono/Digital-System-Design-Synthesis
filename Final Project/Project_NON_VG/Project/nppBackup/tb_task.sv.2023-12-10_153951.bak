@@ -1,0 +1,363 @@
+task automatic sendcmd(ref clk, reg send_cmd);
+	send_cmd = 1'b1;
+	@(posedge clk) send_cmd = 1'b0;
+endtask
+
+task automatic wait4resp(ref clk, reg resp_rdy, ref[7:0]resp, input int clks2wait);
+	fork
+		begin: timeout
+			repeat(clks2wait) @(posedge clk);
+			$display("fail resp_rdy");
+			$stop();
+		end
+		begin
+			@(posedge iDUT.iCMD.cal_done);
+			$display("Calibration is successful");
+			disable timeout;
+		end
+	join
+	//assert(resp === 8'hA5);
+endtask
+
+task automatic check_dsrd_hdng(ref clk, ref send_cmd, ref cmd_rdy, ref [15:0] cmd, reg strt_hdng, ref dsrd_hdng, ref mv_cmplt, input int clks2wait);
+	send_cmd = 1'b1;
+	@(posedge clk) send_cmd = 1'b0;
+	@(posedge cmd_rdy);
+	
+	#1 if(strt_hdng) $display("Pass strt_hdng");
+	else begin $error("Fail to strt_hdng"); $stop(); end
+	
+	// One clock later check that dsrd_hdng is heading direction you sent.
+	@(posedge clk);
+	if(dsrd_hdng === cmd[11:0]) $display("Pass! dsrd_hdng is heading direction I sent");
+	else begin $error("Fail. dsrd_hdng is not heading direction I sent"); $stop(); end
+	
+	fork
+		begin: timeout2
+			repeat(clks2wait) @(posedge clk);
+			$display("fail mv_cmplt");
+			$stop();
+		end
+		begin
+			@(posedge mv_cmplt);
+			$display("pass mv_cmplt");
+			disable timeout2;
+		end
+	join
+endtask
+
+/*task automatic check_stp_lft_or_rght(ref clk, ref send_cmd, ref cmd_rdy, ref [15:0] cmd, reg strt_mv, ref stp_lft, ref stp_rght);
+	send_cmd = 1'b1;
+	@(posedge clk) send_cmd = 1'b0;
+	@(posedge cmd_rdy);
+	
+	#1 if(strt_mv) $display("Pass! MazeRunner starts to move.");
+	else begin $error("Fail. MazeRunner didn't move."); $stop(); end
+	
+	/// clock later check that either stp_lft or stp_rght is asserted.
+	@(posedge clk);
+	#1 if(stp_lft===cmd[1] || stp_rght===cmd[0]) $display("Pass! Movement matches stp_lft or stp_rght");
+	else begin $error("Fail. Movement should stop at a left opening"); $stop(); end
+endtask
+*/
+
+task automatic check_solve_maze(ref clk, ref send_cmd, ref cmd_rdy, ref [15:0] cmd, reg cmd_md);
+	send_cmd = 1'b1;
+	@(posedge clk) send_cmd = 1'b0;
+	@(posedge cmd_rdy);
+	
+	#1 if(!cmd_md) $display("Pass! cmd_md deasserted when start to solve maze puzzle.");
+	else begin $error("Fail. cmd_md should deassert when start to solve maze puzzle."); $stop(); end
+endtask
+
+task automatic check_heading_robot_North(ref clk, ref [19:0] heading_robot, reg resp_rdy, reg [7:0] resp, input int clks2wait);
+	fork 
+		begin: timeout1
+			repeat (clks2wait) @ (posedge clk); 
+			$display("fail heading_robot to north");
+			$stop();
+		end 
+		begin
+			@(posedge resp_rdy);
+			assert(((heading_robot[19:8]) > $signed(12'hFe2)) || ($signed(heading_robot[19:8]) < $signed(12'h020)))
+				$display("pass heading_robot to north");
+			disable timeout1;
+		end
+	join
+	assert(resp === 8'ha5);
+endtask
+task automatic check_heading_robot_South(ref clk, ref [19:0] heading_robot, reg resp_rdy, reg [7:0] resp, input int clks2wait);
+	fork 
+		begin: timeout2
+			repeat (clks2wait) @ (posedge clk); 
+			$display("fail heading_robot to north");
+			$stop();
+		end 
+		begin
+			@(posedge resp_rdy);
+			assert((heading_robot[19:8] > 12'h7df) && (heading_robot[19:8] < 12'h81f))
+				$display("pass heading_robot to south");
+			disable timeout2;
+		end
+	join
+	assert(resp === 8'ha5);
+endtask
+task automatic check_heading_robot_East(ref clk, ref [19:0] heading_robot, reg resp_rdy, reg [7:0] resp, input int clks2wait);
+	fork 
+		begin: timeout3
+			repeat (clks2wait) @ (posedge clk); 
+			$display("fail heading_robot to north");
+			$stop();
+		end 
+		begin
+			@(posedge resp_rdy);
+			assert(($signed(heading_robot[19:8]) < $signed(12'hC21)) && ($signed(heading_robot[19:8]) > $signed(12'hBE0)))
+				$display("pass heading_robot to east");
+			disable timeout3;
+		end
+	join
+	assert(resp === 8'ha5);
+endtask
+task automatic check_heading_robot_West(ref clk, ref [19:0] heading_robot, reg resp_rdy, reg [7:0] resp, input int clks2wait);
+	fork 
+		begin: timeout4
+			repeat (clks2wait) @ (posedge clk); 
+			$display("fail heading_robot to north");
+			$stop();
+		end 
+		begin
+			@(posedge resp_rdy);
+			assert(($signed(heading_robot[19:8]) < $signed(12'h41F)) && ($signed(heading_robot[19:8]) > $signed(12'h3DF)))
+				$display("pass heading_robot to west");
+			disable timeout4;
+		end
+	join
+	assert(resp === 8'ha5);
+endtask
+
+task automatic check_move_to_xx_yy(ref clk, input int pos_x, input int pos_y, ref [14:0] xx, ref [14:0] yy, reg resp_rdy, reg [7:0] resp, input int clks2wait);
+	if(pos_x===0 && pos_y===0) begin
+		fork
+			begin: timeout0
+				repeat(clks2wait) @(posedge clk);
+				$display("fail move to (0,0)"); $stop();
+			end
+			begin
+				@(posedge resp_rdy);
+				assert(xx > 15'h0680 && xx < 15'h0920 && yy > 15'h0680 && yy < 15'h0920)
+					$display("pass move to (0,0)");
+				disable timeout0;
+			end
+		join
+	end
+	else if(pos_x===0 && pos_y===1) begin
+		fork
+			begin: timeout1
+				repeat(clks2wait) @(posedge clk);
+				$display("fail move to (0,1)"); $stop();
+			end
+			begin
+				@(posedge resp_rdy);
+				assert(xx > 15'h0680 && xx < 15'h0920 && yy > 15'h1680 && yy < 15'h1920)
+					$display("pass move to (0,1)");
+				disable timeout1;
+			end
+		join
+	end
+	else if(pos_x===0 && pos_y===2) begin
+		fork
+			begin: timeout2
+				repeat(clks2wait) @(posedge clk);
+				$display("fail move to (0,2)"); $stop();
+			end
+			begin
+				@(posedge resp_rdy);
+				assert(xx > 15'h0680 && xx < 15'h0920 && yy > 15'h2680 && yy < 15'h2920)
+					$display("pass move to (0,2)");
+				disable timeout2;
+			end
+		join
+	end
+	else if(pos_x===0 && pos_y===3) begin
+		fork
+			begin: timeout3
+				repeat(clks2wait) @(posedge clk);
+				$display("fail move to (0,3)"); $stop();
+			end
+			begin
+				@(posedge resp_rdy);
+				assert(xx > 15'h0680 && xx < 15'h0920 && yy > 15'h3680 && yy < 15'h3920)
+					$display("pass move to (0,3)");
+				disable timeout3;
+			end
+		join
+	end
+	else if(pos_x===1 && pos_y===0) begin
+		fork
+			begin: timeout4
+				repeat(clks2wait) @(posedge clk);
+				$display("fail move to (1,0)"); $stop();
+			end
+			begin
+				@(posedge resp_rdy);
+				assert(xx > 15'h1680 && xx < 15'h1920 && yy > 15'h0680 && yy < 15'h0920)
+					$display("pass move to (1,0)");
+				disable timeout4;
+			end
+		join
+	end
+	else if(pos_x===1 && pos_y===1) begin
+		fork
+			begin: timeout5
+				repeat(clks2wait) @(posedge clk);
+				$display("fail move to (1,1)"); $stop();
+			end
+			begin
+				@(posedge resp_rdy);
+				assert(xx > 15'h1680 && xx < 15'h1920 && yy > 15'h1680 && yy < 15'h1920)
+					$display("pass move to (1,1)");
+				disable timeout5;
+			end
+		join
+	end
+	else if(pos_x===1 && pos_y===2) begin
+		fork
+			begin: timeout6
+				repeat(clks2wait) @(posedge clk);
+				$display("fail move to (1,2)"); $stop();
+			end
+			begin
+				@(posedge resp_rdy);
+				assert(xx > 15'h1680 && xx < 15'h1920 && yy > 15'h2680 && yy < 15'h2920)
+					$display("pass move to (1,2)");
+				disable timeout6;
+			end
+		join
+	end
+	else if(pos_x===1 && pos_y===3) begin
+		fork
+			begin: timeout7
+				repeat(clks2wait) @(posedge clk);
+				$display("fail move to (1,3)"); $stop();
+			end
+			begin
+				@(posedge resp_rdy);
+				assert(xx > 15'h1680 && xx < 15'h1920 && yy > 15'h3680 && yy < 15'h3920)
+					$display("pass move to (1,3)");
+				disable timeout7;
+			end
+		join
+	end
+	else if(pos_x===2 && pos_y===0) begin
+		fork
+			begin: timeout8
+				repeat(clks2wait) @(posedge clk);
+				$display("fail move to (2,0)"); $stop();
+			end
+			begin
+				@(posedge resp_rdy);
+				assert(xx > 15'h2680 && xx < 15'h2920 && yy > 15'h0680 && yy < 15'h0920)
+					$display("pass move to (2,0)");
+				disable timeout8;
+			end
+		join
+	end
+	else if(pos_x===2 && pos_y===1) begin
+		fork
+			begin: timeout9
+				repeat(clks2wait) @(posedge clk);
+				$display("fail move to (2,1)"); $stop();
+			end
+			begin
+				@(posedge resp_rdy);
+				assert(xx > 15'h2680 && xx < 15'h2920 && yy > 15'h1680 && yy < 15'h1920)
+					$display("pass move to (2,1)");
+				disable timeout9;
+			end
+		join
+	end
+	else if(pos_x===2 && pos_y===2) begin
+		fork
+			begin: timeout10
+				repeat(clks2wait) @(posedge clk);
+				$display("fail move to (2,2)"); $stop();
+			end
+			begin
+				assert(xx > 15'h2680 && xx < 15'h2920 && yy > 15'h2680 && yy < 15'h2920)
+					$display("pass move to (2,2)");
+				disable timeout10;
+			end
+		join
+	end
+	else if(pos_x===2 && pos_y===3) begin
+		fork
+			begin: timeout11
+				repeat(clks2wait) @(posedge clk);
+				$display("fail move to (2,3)"); $stop();
+			end
+			begin
+				@(posedge resp_rdy);
+				assert(xx > 15'h2680 && xx < 15'h2920 && yy > 15'h3680 && yy < 15'h3920)
+					$display("pass move to (2,3)");
+				disable timeout11;
+			end
+		join
+	end
+	else if(pos_x===3 && pos_y===0) begin
+		fork
+			begin: timeout12
+				repeat(clks2wait) @(posedge clk);
+				$display("fail move to (2,3)"); $stop();
+			end
+			begin
+				@(posedge resp_rdy);
+				assert(xx > 15'h3680 && xx < 15'h3920 && yy > 15'h0680 && yy < 15'h0920)
+					$display("pass move to (2,3)");
+				disable timeout12;
+			end
+		join
+	end
+	else if(pos_x===3 && pos_y===1) begin
+		fork
+			begin: timeout13
+				repeat(clks2wait) @(posedge clk);
+				$display("fail move to (3,1)"); $stop();
+			end
+			begin
+				@(posedge resp_rdy);
+				assert(xx > 15'h3680 && xx < 15'h3920 && yy > 15'h1680 && yy < 15'h1920)
+					$display("pass move to (3,1)");
+				disable timeout13;
+			end
+		join
+	end
+	else if(pos_x===3 && pos_y===2) begin
+		fork
+			begin: timeout14
+				repeat(clks2wait) @(posedge clk);
+				$display("fail move to (3,2)"); $stop();
+			end
+			begin
+				@(posedge resp_rdy);
+				assert(xx > 15'h3680 && xx < 15'h3920 && yy > 15'h2680 && yy < 15'h2920)
+					$display("pass move to (3,2)");
+				disable timeout14;
+			end
+		join
+	end
+	else if(pos_x===3 && pos_y===3) begin
+		fork
+			begin: timeout15
+				repeat(clks2wait) @(posedge clk);
+				$display("fail move to (3,3)"); $stop();
+			end
+			begin
+				@(posedge resp_rdy);
+				assert(xx > 15'h3680 && xx < 15'h3920 && yy > 15'h3680 && yy < 15'h3920)
+					$display("pass move to (3,3)");
+				disable timeout15;
+			end
+		join
+	end
+	assert(resp === 8'ha5);
+endtask

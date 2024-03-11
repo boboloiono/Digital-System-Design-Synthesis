@@ -1,0 +1,7 @@
+(1) mult_accum_gated:
+Total area: 3824.354515
+Total Dynamic Power: 245.3764 uW
+
+(2) mult_accum_gated:
+Total area: 3507.412782
+Total Dynamic Power: 166.7069 uW

@@ -1,0 +1,33 @@
+# Compile of CommTB.v was successful.
+# Compile of RemoteComm.sv was successful.
+# Compile of UART.sv was successful.
+# Compile of UART_rx.sv was successful.
+# Compile of UART_tb.sv was successful.
+# Compile of UART_tx.sv was successful.
+# Compile of UART_wrapper.sv was successful.
+# 7 compiles, 0 failed with no errors.
+vsim -gui work.CommTB
+# vsim -gui work.CommTB 
+# Start time: 10:28:47 on Nov 08,2023
+# Loading work.CommTB
+# Loading sv_std.std
+# Loading work.RemoteComm
+# Loading work.UART
+# Loading work.UART_tx
+# Loading work.UART_rx
+# Loading work.UART_wrapper
+add wave -position insertpoint sim:/CommTB/iDUT/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: HP  Hostname: BOBO-VICTUS  ProcessID: 29004
+#           Attempting to use alternate WLF file "./wlftda2rfg".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlftda2rfg
+add wave -position insertpoint sim:/CommTB/iCLK/*
+run -all
+# pass
+# pass
+# All pass! cmd processed by RemoteComm and Wrapper is still the smame cmd.
+# ** Note: $stop    : C:/ECE551/Exercise/Ex16/CommTB.v(56)
+#    Time: 508115 ps  Iteration: 1  Instance: /CommTB
+# Break in Module CommTB at C:/ECE551/Exercise/Ex16/CommTB.v line 56
+# 

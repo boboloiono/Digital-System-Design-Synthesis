@@ -1,0 +1,73 @@
+3. Convert -16384 to a 16-bit hex number and enter it in verilog number format (i.e. 16'hxxxx) 16'hC000
+4. Convert -125 to an 8-bit hex number and enter it using verilog number format (8'hxx).  Sure you could cheat and use a calculator, but try without. 8'h83
+5. Convert 41 to a 6-bit binary number and represent it in verilog number format (6'bxxxxxx) 6'b101001
+6. In the previous problem if it had been stated the 6-bit number was a signed number would the answer remain the same? (Yes, no?) No.
+7. How many bits are required to represent -321 if it is to be considered a signed number? 10
+8. How many bits are required to represent -43 if it is to be considered a signed number? 7
+9. How many bits are required to represent 726 if the number is considered to be unsigned. 10
+
+10. If two gates were driving a single net, and one was driving '1' and one was driving '0' the results would be (x, -, z, 0, 1) x
+
+11. If two gates were driving a single net, and one was driving 'x' and one was driving 'z' the result would be
+
+12. Match verilog signal strength to description
+
+13.-16. Match verilog signal strength to description
+
+17. Describe the fundamental difference between $monitor vs $display
+=> $display is used to display values of string, variables or expressions while $monitor is used to monitor a signal while its value changes.
+The main difference between $display and $monito is:
+=> We need to call $display every time when we want to print values, but in the case of $monitor, we need to call it only one time, and it will print a value of a variable every time when its value is getting changed.
+
+18. Describe the fundamental difference between $stop and $finish.  When would you choose to use $finish instead of $stop
+$stop should suspend the simulation, and $finish should make the simulator exit and pass control back to the host operating system.
+I will use $stop when debugging or inspecting intermediate results in the design, allowing designers to examine signals, waveforms, or variables at a specific point in execution. However, $finish is used at the end of the simulation, indicating that the design has completed its operation.
+
+13. (This problem is started as Ex04 on Sept 15th).   Submit a structural Verilog file that models a module that can synchronize a signal to a your system clock (clk) and output a signal that is high for 1 clock cycle when that asynch input signal has a falling edge (block should be named synch_detect.  A D-FF was provided as part of Ex04 .  You will need to instantiate a few copies of it to make your synch_detect block. A self-checking testbench was also provided as part of Ex04.  When you have your design completed and passing the testbench upload it.
+
+
+15.-16. logic statement
+19. (This problem is started as Ex04 on Sept 15th).
+Submit a structural Verilog file that models a module that can synchronize a signal to a your system clock (clk) and output a signal that is high for 1 clock cycle when that asynch input signal has a falling edge (block should be named synch_detect.  A D-FF was provided as part of Ex04 .  You will need to instantiate a few copies of it to make your synch_detect block. A self-checking testbench was also provided as part of Ex04.  When you have your design completed and passing the testbench upload it.
+
+synch_detect.sv interface:
+
+20. Research PID control and answer some of the following questions
+
+List some applications where you think it might be useful (2pts)
+temperature control system, fans, heaters...
+
+If you had a two wheel vehicle and wanted to drive it straight forward Romi.PNGwould equal current to each motor work?  Remember...you are an engineer (live in real world) not a mathematician.  If you simply answer (yes/no) you will receive no credit. (4pts)
+No. The wheels must be free to move at different speeds to one another to allow for cornering and variations in road surface, so the current to each motor work is not always be equal.
+
+Describe in your own words why the I-term of PID is useful? (4pts)
+Due to the limitation of p-controller where there always exists an offset between the process variable and setpoint, I-controller is needed to eliminate the steady-state error.
+It integrates the error over a period of time until the error value reaches zero. It holds the value to the final control device at which error becomes zero.
+
+Describe in your own words why the D-term of PID is often needed (4pts)
+I-controller doesn’t have the capability to predict the future behavior of error. So it reacts normally once the setpoint is changed. D-controller overcomes this problem by anticipating the future behavior of the error. Its output depends on the rate of change of error with respect to time, multiplied by derivative constant. It gives the kick start for the output thereby increasing system response.
+
+21. Look into PWM.  
+Describe in your own words the difference between the frequency of the PWM signal, and the duty cycle of the PWM signal (3pts).
+Duty cycle: A duty cycle is the fraction of one period when a system or signal is active. A period is the time it takes for a signal to conclude a full ON-OFF cycle.
+Frequency: The rate at which something repeats or occurs over a particular period.
+e.g. 
+A frequency or period is specific to controlling a particular servo. Typically, a servo motor anticipates an update every 20 ms with a pulse between 1 ms and 2 ms. This equates to a duty cycle of 5% to 10% at 50 Hz. 
+
+If we used a 12-bit PWM running at 50MHz clock what would be the frequency of the PWM signal? (2pts)
+50MHz
+
+If PWM was used to control the speed of a DC motor why would the motor not run jerky (starting and stopping according to the applied duty cycle)? (3pts)
+PWM is used to control DC motor speed and can do so by varying the duty cycle, pulse frequency, pulse duration, pulse voltage and current. PWM allows a simple DC motor to rotate from around 20% to 100% of RPM UNDER LOAD with higher torque than you get by reducing voltage resistively. A DC motor's torque is determined by current, and current is determined by voltage (Ohm’s law). To slow a motor using resistance, you decrease the voltage, but this also decreases the current, so torque drops more or less linearly with voltage. With PWM, we can control RPM to turn at 25% maximum RPM under load and still have 50% or more of maximum torque because the voltage and current remain high, but they're delivered in brief pulses instead of steady, weaker current and lower voltage, like with resistors.
+
+22. Lookup the datasheet for a OPB733TR
+Does this part produce a digital or analog output (3pts).
+What (roughly) is the maximum distance it can sense? (3pts)IR_Sen.PNG
+Given we use it in the circuit as shown does the signal increase or decrease with increasing distance? (3pts)
+We drive the IR emitter by driving what signal (give verbal description of the signal from schematic shown) (mention the polarity as well) (3pts).
+Can we drive this signal using PWM to vary the intensity of the emitter portion of this reflective IR sensor? (3pts)
+
+23. The remaining questions all pertain to this circuit: (an oscillator, a negtive/postive edge triggered FF, an enable low/high latch, a track and hold circuit) 
+24. Create a testbench to instantiate and simulate this circuit.  Submit a .zip (rar files not accepted) of both the testbench and a screen capture of waveforms proving you ran it.
+25. Submit a drawing (can draw by hand and take a picture with your phone) of this circuit modified to have an asynch active low reset signal.
+26. The cost of adding the reset (in terms of number of transistors) was (low<25%, medium>=30%, high>70%)

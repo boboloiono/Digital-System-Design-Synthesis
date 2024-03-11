@@ -1,0 +1,28 @@
+
+State Machine - |inert_intf_test|state
+Name state.IDLE state.CAL state.DISP 
+state.IDLE 0 0 0 
+state.DISP 1 0 1 
+state.CAL 1 1 0 
+
+State Machine - |inert_intf_test|inert_intf:iINTF|state
+Name state.WAIT state.READH state.READL state.INIT3 state.INIT2 state.INIT1 
+state.INIT1 0 0 0 0 0 0 
+state.INIT2 0 0 0 0 1 1 
+state.INIT3 0 0 0 1 0 1 
+state.READL 0 0 1 0 0 1 
+state.READH 0 1 0 0 0 1 
+state.WAIT 1 0 0 0 0 1 
+
+State Machine - |inert_intf_test|inert_intf:iINTF|inertial_integrator:iINT|state
+Name state.IDLE state.RUNNING state.CALIBRATING 
+state.IDLE 0 0 0 
+state.CALIBRATING 1 0 1 
+state.RUNNING 1 1 0 
+
+State Machine - |inert_intf_test|inert_intf:iINTF|SPI_mnrch:iSPI|state
+Name state.BACK_PRCH state.BITS state.FWRD_PRCH state.IDLE 
+state.IDLE 0 0 0 0 
+state.FWRD_PRCH 0 0 1 1 
+state.BITS 0 1 0 1 
+state.BACK_PRCH 1 0 0 1 

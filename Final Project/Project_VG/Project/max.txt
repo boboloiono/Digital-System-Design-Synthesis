@@ -1,0 +1,77 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : MazeRunner
+Version: U-2022.12-SP4
+Date   : Mon Dec 11 02:19:19 2023
+****************************************
+
+Operating Conditions: tt0p85v25c   Library: saed32lvt_tt0p85v25c
+Wire Load Model Mode: enclosed
+
+  Startpoint: iNAV/frwrd_spd_reg[4]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: iNEMO/iINT/yaw_int_reg[25]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  MazeRunner         16000                 saed32lvt_tt0p85v25c
+
+  Point                                                                 Incr       Path
+  ----------------------------------------------------------------------------------------
+  clock clk (rise edge)                                                 0.00       0.00
+  clock network delay (ideal)                                           0.00       0.00
+  iNAV/frwrd_spd_reg[4]/CLK (DFFARX1_LVT)                               0.00       0.00 r
+  iNAV/frwrd_spd_reg[4]/Q (DFFARX1_LVT)                                 0.11       0.11 r
+  U5166/Y (AO21X1_LVT)                                                  0.06       0.17 r
+  U5165/Y (AO21X1_LVT)                                                  0.05       0.22 r
+  U5735/Y (AOI21X1_LVT)                                                 0.06       0.29 f
+  U6029/Y (INVX1_LVT)                                                   0.06       0.34 r
+  U3918/Y (AND2X1_LVT)                                                  0.06       0.40 r
+  U3917/Y (AND2X1_LVT)                                                  0.04       0.45 r
+  iNEMO/iINT/add_0_root_add_0_root_add_188_2/U1_5/CO (FADDX1_LVT)       0.08       0.52 r
+  iNEMO/iINT/add_0_root_add_0_root_add_188_2/U1_6/CO (FADDX1_LVT)       0.08       0.61 r
+  iNEMO/iINT/add_0_root_add_0_root_add_188_2/U1_7/CO (FADDX1_LVT)       0.08       0.69 r
+  iNEMO/iINT/add_0_root_add_0_root_add_188_2/U1_8/CO (FADDX1_LVT)       0.08       0.77 r
+  iNEMO/iINT/add_0_root_add_0_root_add_188_2/U1_9/CO (FADDX1_LVT)       0.08       0.85 r
+  iNEMO/iINT/add_0_root_add_0_root_add_188_2/U1_10/CO (FADDX1_LVT)      0.08       0.93 r
+  iNEMO/iINT/add_0_root_add_0_root_add_188_2/U1_11/CO (FADDX1_LVT)      0.08       1.01 r
+  iNEMO/iINT/add_0_root_add_0_root_add_188_2/U1_12/CO (FADDX1_LVT)      0.08       1.10 r
+  iNEMO/iINT/add_0_root_add_0_root_add_188_2/U1_13/CO (FADDX1_LVT)      0.08       1.18 r
+  iNEMO/iINT/add_0_root_add_0_root_add_188_2/U1_14/CO (FADDX1_LVT)      0.08       1.26 r
+  iNEMO/iINT/add_0_root_add_0_root_add_188_2/U1_15/CO (FADDX1_LVT)      0.08       1.34 r
+  iNEMO/iINT/add_0_root_add_0_root_add_188_2/U1_16/CO (FADDX1_LVT)      0.08       1.42 r
+  iNEMO/iINT/add_0_root_add_0_root_add_188_2/U1_17/CO (FADDX1_LVT)      0.08       1.50 r
+  iNEMO/iINT/add_0_root_add_0_root_add_188_2/U1_18/CO (FADDX1_LVT)      0.08       1.58 r
+  iNEMO/iINT/add_0_root_add_0_root_add_188_2/U1_19/CO (FADDX1_LVT)      0.08       1.67 r
+  iNEMO/iINT/add_0_root_add_0_root_add_188_2/U1_20/CO (FADDX1_LVT)      0.08       1.75 r
+  iNEMO/iINT/add_0_root_add_0_root_add_188_2/U1_21/CO (FADDX1_LVT)      0.08       1.83 r
+  iNEMO/iINT/add_0_root_add_0_root_add_188_2/U1_22/CO (FADDX1_LVT)      0.08       1.91 r
+  iNEMO/iINT/add_0_root_add_0_root_add_188_2/U1_23/CO (FADDX1_LVT)      0.08       1.99 r
+  iNEMO/iINT/add_0_root_add_0_root_add_188_2/U1_24/CO (FADDX1_LVT)      0.08       2.08 r
+  U5736/Y (XNOR3X1_LVT)                                                 0.13       2.21 r
+  U3894/Y (AO22X1_LVT)                                                  0.05       2.26 r
+  iNEMO/iINT/yaw_int_reg[25]/D (DFFARX1_LVT)                            0.01       2.27 r
+  data arrival time                                                                2.27
+
+  clock clk (rise edge)                                                 2.50       2.50
+  clock network delay (ideal)                                           0.00       2.50
+  clock uncertainty                                                    -0.12       2.38
+  iNEMO/iINT/yaw_int_reg[25]/CLK (DFFARX1_LVT)                          0.00       2.38 r
+  library setup time                                                   -0.03       2.35
+  data required time                                                               2.35
+  ----------------------------------------------------------------------------------------
+  data required time                                                               2.35
+  data arrival time                                                               -2.27
+  ----------------------------------------------------------------------------------------
+  slack (MET)                                                                      0.08
+
+
+1

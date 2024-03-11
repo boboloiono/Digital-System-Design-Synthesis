@@ -1,0 +1,115 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/ECE551/Homework/Hw5/Problem1
+vDutyScaleROM
+Z0 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z1 !s110 1701451512
+!i10b 1
+!s100 loPJmLG8a1<2o3K:V2SYm1
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I:AL<LTMDOjIiSZ0C=n_;m2
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+S1
+Z4 dC:/ECE551/Exercise/Ex23
+w1695224583
+8C:/ECE551/Exercise/Ex23/DutyScaleROM.sv
+FC:/ECE551/Exercise/Ex23/DutyScaleROM.sv
+!i122 143
+L0 1 18
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z6 !s108 1701451512.000000
+!s107 C:/ECE551/Exercise/Ex23/DutyScaleROM.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/ECE551/Exercise/Ex23/DutyScaleROM.sv|
+!i113 1
+Z7 o-work work -sv
+Z8 tCvgOpt 0
+n@duty@scale@r@o@m
+vMtrDrv
+R0
+R1
+!i10b 1
+!s100 A8=hKSXoT=ZkZz[gQzK]W0
+R2
+IL?YT9<UZ2CoUobl@9DHT]3
+R3
+S1
+R4
+w1701451510
+8C:/ECE551/Exercise/Ex23/MtrDrv.sv
+FC:/ECE551/Exercise/Ex23/MtrDrv.sv
+!i122 144
+L0 1 50
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/ECE551/Exercise/Ex23/MtrDrv.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/ECE551/Exercise/Ex23/MtrDrv.sv|
+!i113 1
+R7
+R8
+n@mtr@drv
+vMtrDrv_tb
+R0
+Z9 !s110 1701451513
+!i10b 1
+!s100 g5__cz;lMcIa2YnX8]EGC2
+R2
+I5g=Baho@gEbFF1g7FU`ji0
+R3
+S1
+R4
+w1701451258
+8C:/ECE551/Exercise/Ex23/MtrDrv_tb.sv
+FC:/ECE551/Exercise/Ex23/MtrDrv_tb.sv
+!i122 145
+L0 1 90
+R5
+r1
+!s85 0
+31
+Z10 !s108 1701451513.000000
+!s107 C:/ECE551/Exercise/Ex23/MtrDrv_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/ECE551/Exercise/Ex23/MtrDrv_tb.sv|
+!i113 1
+R7
+R8
+n@mtr@drv_tb
+vPWM12
+R0
+R9
+!i10b 1
+!s100 2lET>5_8HIkgSAH5=jKzz2
+R2
+IhVJ6C:Md5QMbfK7TH0]WL3
+R3
+S1
+R4
+w1701448127
+8C:/ECE551/Exercise/Ex23/PWM12.sv
+FC:/ECE551/Exercise/Ex23/PWM12.sv
+!i122 146
+L0 60 66
+R5
+r1
+!s85 0
+31
+R10
+!s107 C:/ECE551/Exercise/Ex23/PWM12.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/ECE551/Exercise/Ex23/PWM12.sv|
+!i113 1
+R7
+R8
+n@p@w@m12

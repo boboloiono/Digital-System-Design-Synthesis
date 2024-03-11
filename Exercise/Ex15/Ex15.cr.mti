@@ -1,0 +1,30 @@
+C:/ECE551/Exercise/Ex15/UART_rx.sv {1 {vlog -work work -sv -stats=none C:/ECE551/Exercise/Ex15/UART_rx.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module UART_rx
+
+Top level modules:
+	UART_rx
+
+} {} {}} C:/ECE551/Exercise/Ex15/UART_tx.sv {2 {vlog -work work -sv -stats=none C:/ECE551/Exercise/Ex15/UART_tx.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module UART_tx
+** Warning: C:/ECE551/Exercise/Ex15/UART_tx.sv(55): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+
+Top level modules:
+	UART_tx
+
+} {} {}} C:/ECE551/Exercise/Ex15/UART.sv {1 {vlog -work work -sv -stats=none C:/ECE551/Exercise/Ex15/UART.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module UART
+
+Top level modules:
+	UART
+
+} {} {}} C:/ECE551/Exercise/Ex15/UART_wrapper.sv {1 {vlog -work work -sv -stats=none C:/ECE551/Exercise/Ex15/UART_wrapper.sv
+Model Technology ModelSim - Intel FPGA Edition vlog 2020.1 Compiler 2020.02 Feb 28 2020
+-- Compiling module UART_wrapper
+
+Top level modules:
+	UART_wrapper
+
+} {} {}}

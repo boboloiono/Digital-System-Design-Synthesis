@@ -1,0 +1,61 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/ECE551/Exercise/Ex09
+vlshift__rot_tb
+Z0 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z1 !s110 1696001726
+!i10b 1
+!s100 Com`z8HOP7^9k=h_Z7>G@0
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+InJR5@b7C4Z7AJIX^DEEk@3
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+S1
+Z4 dC:/ECE551/Homework/Hw2/Q1
+w1696001723
+8C:/ECE551/Homework/Hw2/Q1/lshift__rot_tb.sv
+FC:/ECE551/Homework/Hw2/Q1/lshift__rot_tb.sv
+!i122 66
+L0 1 78
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z6 !s108 1696001726.000000
+!s107 C:/ECE551/Homework/Hw2/Q1/lshift__rot_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/ECE551/Homework/Hw2/Q1/lshift__rot_tb.sv|
+!i113 1
+Z7 o-work work -sv
+Z8 tCvgOpt 0
+vlshift_rot
+R0
+R1
+!i10b 1
+!s100 S?`fh]W5=4eJjzj9Pn2=e1
+R2
+IGc[_Jd[gJai`D<SF]k=M:3
+R3
+S1
+R4
+w1696000896
+8C:/ECE551/Homework/Hw2/Q1/lshift_rot.sv
+FC:/ECE551/Homework/Hw2/Q1/lshift_rot.sv
+!i122 67
+L0 1 53
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/ECE551/Homework/Hw2/Q1/lshift_rot.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/ECE551/Homework/Hw2/Q1/lshift_rot.sv|
+!i113 1
+R7
+R8

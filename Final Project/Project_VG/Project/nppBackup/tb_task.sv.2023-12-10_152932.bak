@@ -1,0 +1,14 @@
+task automatic wait4caldone(ref clk, ref[7:0]resp, input int clks2wait);
+	fork
+		begin: timeout
+			repeat(clks2wait) @(posedge clk);
+			$display("fail resp_rdy");
+			$stop();
+		end
+		begin
+			@(posedge iDUT.iCMD.cal_done);
+			$display("Calibration is successful");
+			disable timeout;
+		end
+	join
+endtask

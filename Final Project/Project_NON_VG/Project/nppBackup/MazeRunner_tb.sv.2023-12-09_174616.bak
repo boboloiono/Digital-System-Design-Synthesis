@@ -1,0 +1,189 @@
+module MazeRunner_tb();
+	`include "tb_task.sv";
+	//<< optional include or import >>
+
+	reg clk,RST_n;
+	reg send_cmd;					// assert to send command to MazeRunner_tb
+	reg [15:0] cmd;				// 16-bit command to send
+	reg [11:0] batt;				// battery voltage 0xDA0 is nominal
+
+	logic cmd_sent;				
+	logic resp_rdy;				// MazeRunner has sent a pos acknowledge
+	logic [7:0] resp;				// resp byte from MazeRunner (hopefully 0xA5)
+	logic hall_n;					// magnet found?
+
+	/////////////////////////////////////////////////////////////////////////
+	// Signals interconnecting MazeRunner to RunnerPhysics and RemoteComm //
+	///////////////////////////////////////////////////////////////////////
+	wire TX_RX,RX_TX;
+	wire INRT_SS_n,INRT_SCLK,INRT_MOSI,INRT_MISO,INRT_INT;
+	wire lftPWM1,lftPWM2,rghtPWM1,rghtPWM2;
+	wire A2D_SS_n,A2D_SCLK,A2D_MOSI,A2D_MISO;
+	wire IR_lft_en,IR_cntr_en,IR_rght_en;  
+
+	localparam FAST_SIM = 1'b1;
+
+	logic iDUT_iCMD_cmd_rdy, iDUT_iCMD_strt_hdng, iDUT_iCMD_dsrd_hdng, iDUT_iCMD_mv_cmplt;
+	logic iDUT_iCMD_strt_mv, iDUT_iCMD_stp_lft, iDUT_iCMD_stp_rght, iDUT_iCMD_cmd_md;
+		
+	//////////////////////
+	// Instantiate DUT //
+	////////////////////
+	MazeRunner iDUT(.clk(clk),.RST_n(RST_n),.INRT_SS_n(INRT_SS_n),.INRT_SCLK(INRT_SCLK),
+				  .INRT_MOSI(INRT_MOSI),.INRT_MISO(INRT_MISO),.INRT_INT(INRT_INT),
+				  .A2D_SS_n(A2D_SS_n),.A2D_SCLK(A2D_SCLK),.A2D_MOSI(A2D_MOSI),
+				  .A2D_MISO(A2D_MISO),.lftPWM1(lftPWM1),.lftPWM2(lftPWM2),
+				  .rghtPWM1(rghtPWM1),.rghtPWM2(rghtPWM2),.RX(RX_TX),.TX(TX_RX),
+				  .hall_n(hall_n),.piezo(),.piezo_n(),.IR_lft_en(IR_lft_en),
+				  .IR_rght_en(IR_rght_en),.IR_cntr_en(IR_cntr_en),.LED());
+
+	///////////////////////////////////////////////////////////////////////////////////////
+	// Instantiate RemoteComm which models bluetooth module receiving & forwarding cmds //
+	/////////////////////////////////////////////////////////////////////////////////////
+	RemoteComm iCMD(.clk(clk), .rst_n(RST_n), .RX(TX_RX), .TX(RX_TX), .cmd(cmd), .send_cmd(send_cmd),
+			   .cmd_sent(cmd_sent), .resp_rdy(resp_rdy), .resp(resp));
+			   
+				  
+	RunnerPhysics iPHYS(.clk(clk),.RST_n(RST_n),.SS_n(INRT_SS_n),.SCLK(INRT_SCLK),.MISO(INRT_MISO),
+					  .MOSI(INRT_MOSI),.INT(INRT_INT),.lftPWM1(lftPWM1),.lftPWM2(lftPWM2),
+					  .rghtPWM1(rghtPWM1),.rghtPWM2(rghtPWM2),
+					 .IR_lft_en(IR_lft_en),.IR_cntr_en(IR_cntr_en),.IR_rght_en(IR_rght_en),
+					 .A2D_SS_n(A2D_SS_n),.A2D_SCLK(A2D_SCLK),.A2D_MOSI(A2D_MOSI),
+					 .A2D_MISO(A2D_MISO),.hall_n(hall_n),.batt(batt));
+	
+	// local parameter for testing "com_proc"
+	assign iDUT_iCMD_cmd_rdy = iDUT.iCMD.cmd_rdy;
+	assign iDUT_iCMD_strt_hdng = iDUT.iCMD.strt_hdng;
+	assign iDUT_iCMD_dsrd_hdng = iDUT.iCMD.dsrd_hdng;
+	assign iDUT_iCMD_mv_cmplt = iDUT.iCMD.mv_cmplt;
+	assign iDUT_iCMD_strt_mv = iDUT.iCMD.strt_mv;
+	assign iDUT_iCMD_stp_lft = iDUT.iCMD.stp_lft;
+	assign iDUT_iCMD_stp_rght = iDUT.iCMD.stp_rght;
+	assign iDUT_iCMD_cmd_md = iDUT.iCMD.cmd_md;
+	
+	localparam RESP_REPEAT_CLK = 1000000;
+	localparam MV_CMPLT_REPEAT_CLK = 100000;
+	
+	initial begin
+		clk = 0;
+		RST_n = 0;
+		send_cmd = 1'b0;
+		iDUT.iCMD.cmd_md = 1;
+		
+		@(negedge clk) RST_n = 1;
+		batt = 12'hDA0;  	// this is value to use with RunnerPhysics
+		
+		/// task 1: set up - calibrate
+		cmd = 16'h0000;
+		send_cmd = 1'b1;
+		@(posedge clk) send_cmd = 1'b0;
+		wait4caldone(clk, resp, RESP_REPEAT_CLK);
+		@(posedge resp_rdy) assert(resp === 8'hA5); // asserting we received a5 before sending another command
+		
+		//@(posedge resp_rdy);
+		cmd[15:13] = 3'b010;
+		cmd[0] = 1'b1;
+		send_cmd = 1'b1;
+		@(posedge clk) send_cmd = 1'b0;
+		fork
+			begin: timeout3
+				repeat(1000000) @(posedge clk);
+				$display("fail heading_robot");
+				$stop();
+			end
+			begin
+				$display($signed(iPHYS.heading_robot[19:8])); // fff //4095 //
+				// This test is checking if it's still heading north, which it should
+				if (($signed(iPHYS.heading_robot[19:8]) > $signed(12'hF61)) && ($signed(iPHYS.heading_robot[19:8]) < $signed(12'h09F))) begin
+					$display("pass heading_robot");
+					disable timeout3;
+				end
+			end
+		join
+		
+
+		//wait4resp(clk, resp, RESP_REPEAT_CLK); // Waiting for A5 before checking Y coordinates.
+		//@(posedge resp_rdy);
+		fork 
+			begin: timeout4
+				repeat (15000000) @ (posedge clk); 
+				$display("Test 2: timed out.");
+				$stop();
+			end 
+			begin
+				//$display(iPHYS.yy);
+				@(posedge resp_rdy);
+			//since we have not maze_solved yet, it should have this coordinates before the A5;
+				assert (iPHYS.yy > 16'h1650 && iPHYS.yy < 16'h1950)
+					$display("The Y coordinates of the maze runner changed.");
+					disable timeout4;
+				end 
+		join
+		
+		assert(resp === 8'ha5);
+		
+		///////////////////////////////////////////////
+		//////////HEADING/////////////////////////////
+		//////////////////////////////////////////////
+		
+		cmd = {4'b0010, 12'h3ff}; // changing the heading to west 
+		send_cmd = 1;
+		@(posedge clk) send_cmd = 0;
+		
+		// check for the robot heading should be 3ff, if our test passes
+		fork 
+			begin: timeout5
+				repeat (15000000) @ (posedge clk); 
+				$display("Test 3: timed out.");
+				$stop();
+			end 
+			begin
+				@(posedge resp_rdy);
+				$display(iPHYS.heading_robot[19:8]);
+			//since we have not maze_solved yet, it should have this coordinates before the A5;
+				//if (iPHYS.heading_robot[19:8] < 12'h42f && iPHYS.heading_robot[19:8] >12'h3df)begin
+				assert (($signed(iPHYS.heading_robot[19:8]) > $signed(12'h3df)) && ($signed(iPHYS.heading_robot[19:8]) < $signed(12'h42f)))
+					$display("robot_direction test passed.");
+					disable timeout5;
+			end 
+		join
+		
+		assert(resp === 8'ha5);
+		
+		// NOw giving a move command and see if it goes to (1,1) in the maze
+		
+		
+		cmd[15:13] = 3'b010;
+		cmd[0] = 1'b1;
+		send_cmd = 1'b1;
+		@(posedge clk) send_cmd = 1'b0;
+	
+		fork 
+			begin: timeout5
+				repeat (15000000) @ (posedge clk); 
+				$display("Test 2: timed out.");
+				$stop();
+			end 
+			begin
+				//$display(iPHYS.yy);
+				@(posedge resp_rdy);
+			//since we have not maze_solved yet, it should have this coordinates before the A5;
+				assert (iPHYS.xx > 15'h1680 && iPHYS.xx < 15'h1920 && iPHYS.yy > 15'h1680 && iPHYS.yy < 15'h1920))
+					$display("The Y coordinates of the maze runner changed.");
+					disable timeout5;
+				end 
+		join
+		
+		assert(resp === 8'ha5);
+		$display("Yahoo! All Pass!");
+		$stop();
+	end
+	always
+		#5 clk = ~clk;
+
+endmodule
+
+// what is the resp used for 
+// do xx, yy change?
+// do we need to assign new cmd or each position
+// when to assgin cmd to maze_solve

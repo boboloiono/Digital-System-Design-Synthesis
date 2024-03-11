@@ -1,0 +1,40 @@
+# Compile of dff.v was successful.
+# Compile of synch_detect.sv was successful.
+# Compile of synch_detect_tb.v was successful.
+# 3 compiles, 0 failed with no errors.
+vsim -gui work.synch_detect_tb
+# vsim -gui work.synch_detect_tb 
+# Start time: 11:49:21 on Sep 18,2023
+# Loading work.synch_detect_tb
+# Loading sv_std.std
+# Loading work.synch_detect
+# Loading work.dff
+add wave -position insertpoint sim:/synch_detect_tb/iDUT/*
+run -all
+# YAHOO!! test passed!
+# 
+# ** Note: $stop    : C:/ECE551/Exercise/Ex04/synch_detect_tb.v(46)
+#    Time: 191 ps  Iteration: 0  Instance: /synch_detect_tb
+# Break in Module synch_detect_tb at C:/ECE551/Exercise/Ex04/synch_detect_tb.v line 46
+# Compile of dff.v was successful.
+# Compile of synch_detect.sv was successful.
+# Compile of synch_detect_tb.v was successful.
+# 3 compiles, 0 failed with no errors.
+vsim -gui work.synch_detect_tb
+# End time: 11:50:15 on Sep 18,2023, Elapsed time: 0:00:54
+# Errors: 0, Warnings: 6
+# vsim -gui work.synch_detect_tb 
+# Start time: 11:50:15 on Sep 18,2023
+# Loading work.synch_detect_tb
+# Loading sv_std.std
+# Loading work.synch_detect
+# Loading work.dff
+add wave -position insertpoint sim:/synch_detect_tb/iDUT/*
+run -all
+# YAHOO!! test passed!
+# 
+# ** Note: $stop    : C:/ECE551/Exercise/Ex04/synch_detect_tb.v(46)
+#    Time: 191 ps  Iteration: 0  Instance: /synch_detect_tb
+# Break in Module synch_detect_tb at C:/ECE551/Exercise/Ex04/synch_detect_tb.v line 46
+# End time: 11:53:11 on Sep 18,2023, Elapsed time: 0:02:56
+# Errors: 0, Warnings: 2

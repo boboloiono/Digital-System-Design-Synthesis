@@ -1,0 +1,61 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/ECE551/Homework/Hw3/Problem1
+vnavigate
+Z0 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+!s110 1697783933
+!i10b 1
+!s100 bhKBae3Lf=;ZbF8Q2bzAi3
+Z1 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I>;>z^H;i@i7;`V<`81MQQ0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+S1
+Z3 dC:/ECE551/Exercise/Ex14
+w1697643769
+8C:/ECE551/Exercise/Ex14/navigate.sv
+FC:/ECE551/Exercise/Ex14/navigate.sv
+!i122 53
+L0 1 125
+Z4 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z5 !s108 1697783933.000000
+!s107 C:/ECE551/Exercise/Ex14/navigate.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/ECE551/Exercise/Ex14/navigate.sv|
+!i113 1
+Z6 o-work work -sv
+Z7 tCvgOpt 0
+vnavigate_tb
+R0
+!s110 1697783934
+!i10b 1
+!s100 3BWYfD><LB[2a1Oa713=M2
+R1
+I@hWIea^e9CCD^G7YPIg[l1
+R2
+S1
+R3
+w1697783926
+8C:/ECE551/Exercise/Ex14/navigate_tb.sv
+FC:/ECE551/Exercise/Ex14/navigate_tb.sv
+!i122 54
+L0 1 183
+R4
+r1
+!s85 0
+31
+R5
+!s107 C:/ECE551/Exercise/Ex14/navigate_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/ECE551/Exercise/Ex14/navigate_tb.sv|
+!i113 1
+R6
+R7

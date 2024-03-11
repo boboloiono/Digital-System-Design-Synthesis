@@ -1,0 +1,61 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA/20.1
+vring_osc
+Z0 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z1 !s110 1694446536
+!i10b 1
+!s100 bUO@ifVc<J<KQ8^U?Um?z2
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+Id:E9b@_IZWo@=?5VU;9UM2
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+S1
+Z4 dC:/ECE551/Exercise/Ex02
+w1694445669
+8C:/ECE551/Exercise/Ex02/ring_osc.sv
+FC:/ECE551/Exercise/Ex02/ring_osc.sv
+!i122 19
+L0 1 10
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+!s108 1694446535.000000
+!s107 C:/ECE551/Exercise/Ex02/ring_osc.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/ECE551/Exercise/Ex02/ring_osc.sv|
+!i113 1
+Z6 o-work work -sv
+Z7 tCvgOpt 0
+vring_osc_tb
+R0
+R1
+!i10b 1
+!s100 n:]Q`XT5Yakl:YA8eV5`[3
+R2
+IciKTKZai@kWIk:@4BD^R72
+R3
+S1
+R4
+w1694446257
+8C:\ECE551\Exercise\Ex02\ring_osc_tb.sv
+FC:\ECE551\Exercise\Ex02\ring_osc_tb.sv
+!i122 20
+L0 1 11
+R5
+r1
+!s85 0
+31
+!s108 1694446536.000000
+!s107 C:\ECE551\Exercise\Ex02\ring_osc_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:\ECE551\Exercise\Ex02\ring_osc_tb.sv|
+!i113 1
+R6
+R7

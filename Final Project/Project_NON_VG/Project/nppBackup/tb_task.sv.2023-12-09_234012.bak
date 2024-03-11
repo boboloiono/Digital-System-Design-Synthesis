@@ -1,0 +1,64 @@
+task automatic wait4caldone(ref clk, ref[7:0]resp, input int clks2wait);
+	fork
+		begin: timeout
+			repeat(clks2wait) @(posedge clk);
+			$display("fail resp_rdy");
+			$stop();
+		end
+		begin
+			@(posedge iDUT.iCMD.cal_done);
+			$display("Calibration is successful");
+			disable timeout;
+		end
+	join
+endtask
+
+task automatic check_dsrd_hdng(ref clk, ref send_cmd, ref cmd_rdy, ref [15:0] cmd, reg strt_hdng, ref dsrd_hdng, ref mv_cmplt, input int clks2wait);
+	send_cmd = 1'b1;
+	@(posedge clk) send_cmd = 1'b0;
+	@(posedge cmd_rdy);
+	
+	#1 if(strt_hdng) $display("Pass strt_hdng");
+	else begin $error("Fail to strt_hdng"); $stop(); end
+	
+	/// One clock later check that dsrd_hdng is heading direction you sent.
+	@(posedge clk);
+	if(dsrd_hdng === cmd[11:0]) $display("Pass! dsrd_hdng is heading direction I sent");
+	else begin $error("Fail. dsrd_hdng is not heading direction I sent"); $stop(); end
+			
+	fork
+		begin: timeout3
+			repeat(clks2wait) @(posedge clk);
+			$display("fail mv_cmplt");
+			$stop();
+		end
+		begin
+			@(posedge mv_cmplt);
+			$display("pass mv_cmplt");
+			disable timeout3;
+		end
+	join
+endtask
+
+task automatic check_stp_lft_or_rght(ref clk, ref send_cmd, ref cmd_rdy, ref [15:0] cmd, reg strt_mv, ref stp_lft, ref stp_rght);
+	send_cmd = 1'b1;
+	@(posedge clk) send_cmd = 1'b0;
+	@(posedge cmd_rdy);
+	
+	#1 if(strt_mv) $display("Pass! MazeRunner starts to move.");
+	else begin $error("Fail. MazeRunner didn't move."); $stop(); end
+	
+	/// clock later check that either stp_lft or stp_rght is asserted.
+	@(posedge clk);
+	#1 if(stp_lft===cmd[1] || stp_rght===cmd[0]) $display("Pass! Movement stopped at a left opening");
+	else begin $error("Fail. Movement should stop at a left opening"); $stop(); end
+endtask
+
+task automatic check_solve_maze(ref clk, ref send_cmd, ref cmd_rdy, ref [15:0] cmd, reg cmd_md);
+	send_cmd = 1'b1;
+	@(posedge clk) send_cmd = 1'b0;
+	@(posedge cmd_rdy);
+	
+	#1 if(!cmd_md) $display("Pass! cmd_md deasserted when start to solve maze puzzle.");
+	else begin $error("Fail. cmd_md should deassert when start to solve maze puzzle."); $stop(); end
+endtask

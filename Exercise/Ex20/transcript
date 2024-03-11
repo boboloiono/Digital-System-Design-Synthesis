@@ -1,0 +1,218 @@
+# Compile of cmd_proc.sv failed with 1 errors.
+# Compile of cmd_proc_tb.sv was successful with warnings.
+# Compile of CommTB.v was successful.
+# Compile of inert_intf.sv was successful.
+# Compile of inert_intf_test.sv was successful.
+# Compile of inertial_integrator.sv was successful.
+# Compile of navigate.sv was successful.
+# Compile of piezo_drv.sv was successful.
+# Compile of piezo_drv_test.sv was successful.
+# Compile of RemoteComm.sv was successful.
+# Compile of reset_synch.sv was successful.
+# Compile of SPI_iNEMO2.sv was successful.
+# Compile of SPI_mnrch.sv was successful.
+# Compile of UART.sv was successful.
+# Compile of UART_rx.sv was successful.
+# Compile of UART_tx.sv was successful.
+# Compile of UART_wrapper.sv was successful.
+# 17 compiles, 1 failed with 1 error.
+# Compile of cmd_proc.sv failed with 3 errors.
+# Compile of cmd_proc_tb.sv was successful with warnings.
+# Compile of CommTB.v was successful.
+# Compile of inert_intf.sv was successful.
+# Compile of inert_intf_test.sv was successful.
+# Compile of inertial_integrator.sv was successful.
+# Compile of navigate.sv was successful.
+# Compile of piezo_drv.sv was successful.
+# Compile of piezo_drv_test.sv was successful.
+# Compile of RemoteComm.sv was successful.
+# Compile of reset_synch.sv was successful.
+# Compile of SPI_iNEMO2.sv was successful.
+# Compile of SPI_mnrch.sv was successful.
+# Compile of UART.sv was successful.
+# Compile of UART_rx.sv was successful.
+# Compile of UART_tx.sv was successful.
+# Compile of UART_wrapper.sv was successful.
+# 17 compiles, 1 failed with 3 errors.
+# Compile of cmd_proc.sv was successful.
+# Compile of cmd_proc_tb.sv was successful with warnings.
+# Compile of CommTB.v was successful.
+# Compile of inert_intf.sv was successful.
+# Compile of inert_intf_test.sv was successful.
+# Compile of inertial_integrator.sv was successful.
+# Compile of navigate.sv was successful.
+# Compile of piezo_drv.sv was successful.
+# Compile of piezo_drv_test.sv was successful.
+# Compile of RemoteComm.sv was successful.
+vsim -gui work.cmd_proc_tb
+# vsim -gui work.cmd_proc_tb 
+# Start time: 11:47:33 on Nov 20,2023
+# Loading sv_std.std
+# Loading work.cmd_proc_tb
+# Loading work.RemoteComm
+# Loading work.UART
+# Loading work.UART_tx
+# Loading work.UART_rx
+# Loading work.UART_wrapper
+# Loading work.cmd_proc
+# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (1) for port 'dsrd_hdng'. The port definition is at: C:/ECE551/Exercise/Ex21/cmd_proc.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /cmd_proc_tb/iPROC File: C:/ECE551/Exercise/Ex21/cmd_proc_tb.sv Line: 40
+# Compile of reset_synch.sv was successful.
+# Compile of SPI_iNEMO2.sv was successful.
+# Compile of SPI_mnrch.sv was successful.
+# Compile of UART.sv was successful.
+# Compile of UART_rx.sv was successful.
+add wave -position insertpoint sim:/cmd_proc_tb/iPROC/*
+# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
+#           File in use by: HP  Hostname: BOBO-VICTUS  ProcessID: 48216
+#           Attempting to use alternate WLF file "./wlft4xdt3y".
+# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
+#           Using alternate file: ./wlft4xdt3y
+# Compile of UART_tx.sv was successful.
+# Compile of UART_wrapper.sv was successful.
+# 17 compiles, 0 failed with no errors.
+run -all
+# Pass. Waiting for cal_done asserted.
+# pass resp_rdy
+# Pass strt_hdng
+# Pass! dsrd_hdng is heading direction I sent
+# pass mv_cmplt
+# Pass! RemoteComm got the OxA5 response
+# Pass! MazeRunner starts to move.
+# ** Error: Fail. Movement should stop at a left opening
+#    Time: 2045305 ps  Scope: cmd_proc_tb File: C:/ECE551/Exercise/Ex21/cmd_proc_tb.sv Line: 149
+# ** Note: $stop    : C:/ECE551/Exercise/Ex21/cmd_proc_tb.sv(149)
+#    Time: 2045305 ps  Iteration: 1  Instance: /cmd_proc_tb
+# Break in Module cmd_proc_tb at C:/ECE551/Exercise/Ex21/cmd_proc_tb.sv line 149
+# Compile of cmd_proc.sv was successful.
+# Compile of cmd_proc_tb.sv was successful with warnings.
+# Compile of CommTB.v was successful.
+# Compile of inert_intf.sv was successful.
+# Compile of inert_intf_test.sv was successful.
+# Compile of inertial_integrator.sv was successful.
+# Compile of navigate.sv was successful.
+# Compile of piezo_drv.sv was successful.
+# Compile of piezo_drv_test.sv was successful.
+# Compile of RemoteComm.sv was successful.
+# Compile of reset_synch.sv was successful.
+# Compile of SPI_iNEMO2.sv was successful.
+# Compile of SPI_mnrch.sv was successful.
+# Compile of UART.sv was successful.
+# Compile of UART_rx.sv was successful.
+# Compile of UART_tx.sv was successful.
+# Compile of UART_wrapper.sv was successful.
+# 17 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.cmd_proc_tb
+# Loading work.RemoteComm
+# Loading work.UART
+# Loading work.UART_tx
+# Loading work.UART_rx
+# Loading work.UART_wrapper
+# Loading work.cmd_proc
+# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (1) for port 'dsrd_hdng'. The port definition is at: C:/ECE551/Exercise/Ex21/cmd_proc.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /cmd_proc_tb/iPROC File: C:/ECE551/Exercise/Ex21/cmd_proc_tb.sv Line: 40
+run -all
+# GetModuleFileName: 找不到指定的模組。
+# 
+# 
+# Pass. Waiting for cal_done asserted.
+# pass resp_rdy
+# Pass strt_hdng
+# Pass! dsrd_hdng is heading direction I sent
+# pass mv_cmplt
+# Pass! RemoteComm got the OxA5 response
+# Pass! MazeRunner starts to move.
+# Pass! Movement stopped at a left opening
+# Pass! cmd_md deasserted when start to solve maze puzzle.
+# Yahoo! All Pass!
+# ** Note: $finish    : C:/ECE551/Exercise/Ex21/cmd_proc_tb.sv(168)
+#    Time: 2813906 ps  Iteration: 0  Instance: /cmd_proc_tb
+# 1
+# Break in Module cmd_proc_tb at C:/ECE551/Exercise/Ex21/cmd_proc_tb.sv line 168
+# Compile of cmd_proc.sv failed with 2 errors.
+# Compile of cmd_proc_tb.sv was successful with warnings.
+# Compile of CommTB.v was successful.
+# Compile of inert_intf.sv was successful.
+# Compile of inert_intf_test.sv was successful.
+# Compile of inertial_integrator.sv was successful.
+# Compile of navigate.sv was successful.
+# Compile of piezo_drv.sv was successful.
+# Compile of piezo_drv_test.sv was successful.
+# Compile of RemoteComm.sv was successful.
+# Compile of reset_synch.sv was successful.
+# Compile of SPI_iNEMO2.sv was successful.
+# Compile of SPI_mnrch.sv was successful.
+# Compile of UART.sv was successful.
+# Compile of UART_rx.sv was successful.
+# Compile of UART_tx.sv was successful.
+# Compile of UART_wrapper.sv was successful.
+# 17 compiles, 1 failed with 2 errors.
+# Compile of cmd_proc.sv failed with 3 errors.
+# Compile of cmd_proc_tb.sv was successful with warnings.
+# Compile of CommTB.v was successful.
+# Compile of inert_intf.sv was successful.
+# Compile of inert_intf_test.sv was successful.
+# Compile of inertial_integrator.sv was successful.
+# Compile of navigate.sv was successful.
+# Compile of piezo_drv.sv was successful.
+# Compile of piezo_drv_test.sv was successful.
+# Compile of RemoteComm.sv was successful.
+# Compile of reset_synch.sv was successful.
+# Compile of SPI_iNEMO2.sv was successful.
+# Compile of SPI_mnrch.sv was successful.
+# Compile of UART.sv was successful.
+# Compile of UART_rx.sv was successful.
+# Compile of UART_tx.sv was successful.
+# Compile of UART_wrapper.sv was successful.
+# 17 compiles, 1 failed with 3 errors.
+# Compile of cmd_proc.sv was successful.
+# Compile of cmd_proc_tb.sv was successful with warnings.
+# Compile of CommTB.v was successful.
+# Compile of inert_intf.sv was successful.
+# Compile of inert_intf_test.sv was successful.
+# Compile of inertial_integrator.sv was successful.
+# Compile of navigate.sv was successful.
+# Compile of piezo_drv.sv was successful.
+# Compile of piezo_drv_test.sv was successful.
+# Compile of RemoteComm.sv was successful.
+# Compile of reset_synch.sv was successful.
+# Compile of SPI_iNEMO2.sv was successful.
+# Compile of SPI_mnrch.sv was successful.
+# Compile of UART.sv was successful.
+# Compile of UART_rx.sv was successful.
+# Compile of UART_tx.sv was successful.
+# Compile of UART_wrapper.sv was successful.
+# 17 compiles, 0 failed with no errors.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# Loading work.cmd_proc_tb
+# Loading work.RemoteComm
+# Loading work.UART
+# Loading work.UART_tx
+# Loading work.UART_rx
+# Loading work.UART_wrapper
+# Loading work.cmd_proc
+# ** Warning: (vsim-3015) [PCDPC] - Port size (12) does not match connection size (1) for port 'dsrd_hdng'. The port definition is at: C:/ECE551/Exercise/Ex21/cmd_proc.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /cmd_proc_tb/iPROC File: C:/ECE551/Exercise/Ex21/cmd_proc_tb.sv Line: 40
+run -all
+# GetModuleFileName: 找不到指定的模組。
+# 
+# 
+# Pass. Waiting for cal_done asserted.
+# pass resp_rdy
+# Pass strt_hdng
+# Pass! dsrd_hdng is heading direction I sent
+# pass mv_cmplt
+# Pass! RemoteComm got the OxA5 response
+# Pass! MazeRunner starts to move.
+# Pass! Movement stopped at a left opening
+# Pass! cmd_md deasserted when start to solve maze puzzle.
+# Yahoo! All Pass!
+# ** Note: $finish    : C:/ECE551/Exercise/Ex21/cmd_proc_tb.sv(168)
+#    Time: 2813906 ps  Iteration: 0  Instance: /cmd_proc_tb
+# 1
+# Break in Module cmd_proc_tb at C:/ECE551/Exercise/Ex21/cmd_proc_tb.sv line 168
+# End time: 15:17:57 on Nov 20,2023, Elapsed time: 3:30:24
+# Errors: 0, Warnings: 3

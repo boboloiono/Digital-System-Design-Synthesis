@@ -1,0 +1,49 @@
+module ex3(d, clk, q);
+
+input d, clk;
+output q;
+wire md, mq, sd;
+
+notif1 #1	(md, d, !clk);
+not 		inv1(mp, md);
+not (weak0, weak1)	inv2(md, mp);
+notif1 #1	(sd, mq, clk);
+not			inv3(q, sd);
+not (weak0, weak1)	inv4(sd, q);
+
+endmodule
+
+// reset
+/*
+
+module ex3(input d, input rst, input clk, output q);
+
+reg q;
+logic md, mq, sd, en;
+reg state, nextState;
+
+always (posedge clk) begin
+	if(rst) begin
+		d = 1'b0;
+		clk = 1'b0;
+	end
+	else begin
+		
+	end
+end
+
+??
+always (posedge clk) being
+	en <= !clk
+end
+
+not			inv0(en, clk);
+notif1 #1	(md, d, en);
+not 		inv1(mp, md);
+not (weak0)	inv2(md, mp);
+notif1 #1	(sd, mq, clk);
+not			inv3(q, sd);
+not (weak1)	inv4(sd, q);
+
+endmodule
+*/

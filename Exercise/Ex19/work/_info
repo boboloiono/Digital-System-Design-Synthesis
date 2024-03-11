@@ -1,0 +1,138 @@
+m255
+K4
+z2
+!s11f vlog 2020.1 2020.02, Feb 28 2020
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/ECE551/Exercise/Ex20
+vinert_intf
+Z0 DXx6 sv_std 3 std 0 22 VYECXdT12H8WgbUP_5Y6:3
+Z1 !s110 1699895756
+!i10b 1
+!s100 ahG=gX@F7k8VA:nb3XegR1
+Z2 !s11b Dg1SIo80bB@j0V0VzS_@n1
+I_MUjcTOH:I16gF6Pm8^oJ2
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+S1
+Z4 dC:/ECE551/Exercise/Ex19
+w1699895553
+8C:/ECE551/Exercise/Ex19/inert_intf.sv
+FC:/ECE551/Exercise/Ex19/inert_intf.sv
+!i122 194
+L0 7 158
+Z5 OV;L;2020.1;71
+r1
+!s85 0
+31
+Z6 !s108 1699895756.000000
+!s107 C:/ECE551/Exercise/Ex19/inert_intf.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/ECE551/Exercise/Ex19/inert_intf.sv|
+!i113 1
+Z7 o-work work -sv
+Z8 tCvgOpt 0
+vinert_intf_tb
+R0
+R1
+!i10b 1
+!s100 =]S<Qd_Ad5Q=ad8oWNQ<I0
+R2
+IYd_bXDifNCD>b[9Fj4?7A0
+R3
+S1
+R4
+w1699895746
+8C:/ECE551/Exercise/Ex19/inert_intf_tb.sv
+FC:/ECE551/Exercise/Ex19/inert_intf_tb.sv
+!i122 195
+L0 1 56
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/ECE551/Exercise/Ex19/inert_intf_tb.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/ECE551/Exercise/Ex19/inert_intf_tb.sv|
+!i113 1
+R7
+R8
+vinertial_integrator
+R0
+Z9 !s110 1699895757
+!i10b 1
+!s100 zFCz=?KO7bL<jUEdR_Y6D0
+R2
+IgKDQSHI5ncJ@Ple7_BOMU1
+R3
+S1
+R4
+w1695224487
+8C:/ECE551/Exercise/Ex19/inertial_integrator.sv
+FC:/ECE551/Exercise/Ex19/inertial_integrator.sv
+!i122 196
+L0 1 216
+R5
+r1
+!s85 0
+31
+Z10 !s108 1699895757.000000
+!s107 C:/ECE551/Exercise/Ex19/inertial_integrator.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/ECE551/Exercise/Ex19/inertial_integrator.sv|
+!i113 1
+R7
+R8
+vSPI_iNEMO2
+R0
+R9
+!i10b 1
+!s100 na1EHOZI[S>bkQzbB?3`C2
+R2
+IaYJ92I<>WW5OF9KAHd]Y31
+R3
+S1
+R4
+w1699817153
+8C:/ECE551/Exercise/Ex19/SPI_iNEMO2.sv
+FC:/ECE551/Exercise/Ex19/SPI_iNEMO2.sv
+!i122 197
+L0 1 225
+R5
+r1
+!s85 0
+31
+R10
+!s107 C:/ECE551/Exercise/Ex19/SPI_iNEMO2.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/ECE551/Exercise/Ex19/SPI_iNEMO2.sv|
+!i113 1
+R7
+R8
+n@s@p@i_i@n@e@m@o2
+vSPI_mnrch
+R0
+R9
+!i10b 1
+!s100 ]7zk0<I89o;<46:0mJFU=2
+R2
+IM:gfMn>8a[gEzE=X5zneJ3
+R3
+S1
+R4
+w1699816069
+8C:/ECE551/Exercise/Ex19/SPI_mnrch.sv
+FC:/ECE551/Exercise/Ex19/SPI_mnrch.sv
+!i122 198
+L0 1 123
+R5
+r1
+!s85 0
+31
+R10
+!s107 C:/ECE551/Exercise/Ex19/SPI_mnrch.sv|
+!s90 -reportprogress|300|-work|work|-sv|-stats=none|C:/ECE551/Exercise/Ex19/SPI_mnrch.sv|
+!i113 1
+R7
+R8
+n@s@p@i_mnrch

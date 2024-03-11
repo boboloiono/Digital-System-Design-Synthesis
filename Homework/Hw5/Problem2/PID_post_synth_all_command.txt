@@ -1,0 +1,28 @@
+create a testbench for PID_tb.sv
+	note: make sure add "`timescale 1ns/1ps" in the beginning
+---------------------------
+before go to dc_shell, we should create PID.dc
+	note: 
+	(1) cope UART.dc and change all of name to PID
+	(2) for creating .vg file, we should add "write –format verilog PID –output PID.vg" at the last line on PID.dc
+	(3) change the clk period to from 5 to "10", like: create_clock -name "clk" -period 10 -waveform { 0 2.3 }  { clk  }
+--------------------------
+command on Linux for creating .vg and open vsim
+	cd ~ejhoffman/ece551/public/
+	cp -r SAED32_lib/ ~plin78/ece551	// copy the path from poffessor's file
+	cd ~plin78/ece551
+	cd/HW5/P2
+	dc_shell
+	// check slack (MET). If positive, it is passed.
+	vsim
+	// it will bump out "Questa" software
+---------------------------
+1. create a project for this homework
+2. add "PID.vg" and "PID_tb.sv" file
+3. click "Simulate"->"Start Simulation"
+4. click "Enable optimization", and then choose "Optimization Options" at the right corner
+5. On "Visibility" Panel, click the 2nd : Apply full visibility to all modules(full debug mode)
+6. Go to "Libraries" Panel, choose my path of SAED32_lib by typing "~/ece551/
+7. and then I will see the library of "SAED32_lib.lib", choose it.
+8. Finish starting simulation, add waveform, run it!
+9. Making sure there is no error.
