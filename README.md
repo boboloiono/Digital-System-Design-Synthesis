@@ -32,7 +32,7 @@ o IC Compiler (Simple APR of netlist)
 
 # Final Project: Maze Runner
 ### Toplevel Digital of our Design:
-![image](https://github.com/boboloiono/UW-Madison-ECE-551/assets/62455939/9e2fec37-49ec-409f-a1b1-34e574900591)
+![image](https://github.com/boboloiono/Digital-System-Design-Synthesis/assets/62455939/b8e29114-da0c-49e1-9669-9f1a846ec152)
 The blocks outlined in red are pure digital blocks, and will be coded with the intent of being synthesized via **Synopsys** to our standard cell library.
 ### Demo Video
 https://youtube.com/shorts/6qb4DCTUtKc?si=v2lmSNh50QzI3fUD
